@@ -185,6 +185,7 @@ footer a{text-decoration:none;margin-right:14px}
       <button class="chip">Find me a video tool</button>
       <button class="chip">Any AI coding agents?</button>
       <button class="chip">How do I subscribe?</button>
+      <button class="chip">Show me the Nov 5 edition</button>
     </div>
     <div class="composer">
       <div class="composer-box">
@@ -318,7 +319,7 @@ function showChat(){
   $('#chatTitle').textContent = c ? (c.title || 'Chat') : 'New chat';
   const box = $('#msgs'); box.innerHTML = '';
   if (!c || !c.msgs.length){
-    box.innerHTML = '<div class="msg ai">Ask me about any project in the rankings — what it does, why it is trending, or which day it appeared. I search every edition in the archive.</div>';
+    box.innerHTML = '<div class="msg ai">Ask me about any project in the rankings — what it does, why it is trending, or which day it appeared. I search every edition in the archive. Ask when a project first appeared, what was #1 on Nov 5, or say show me the Nov 6 edition and I will pull it up.</div>';
   } else {
     c.msgs.forEach(m => box.appendChild(msgEl(m)));
   }
@@ -342,7 +343,7 @@ $('#chatBack').addEventListener('click', showNav);
 $('#askBtn').addEventListener('click', () => { setSB(true); newChat(); });
 
 /* ---------- the archive brain (answers from the editions, on-device) ---------- */
-const STOP = new Set(['the','a','an','and','or','for','of','to','in','on','is','are','any','me','show','find','what','which','that','this','with','about','have','has','it','its','do','does','can','you','i','my','some','good','best','top']);
+const STOP = new Set(['the','a','an','and','or','for','of','to','in','on','is','are','any','me','show','find','what','which','that','this','with','about','have','has','it','its','do','does','can','you','i','my','some','good','best','top','when','did','was','were','will','would','how','who','been','before','ever','first','appear','appeared','ranked','ago','many','get','got','there','their','them','then','than','from','day','days','edition','editions','project','projects','open','source','list','give','tell','look','looking','want','need','please','one','two','three']);
 function projCard(p, ed){
   return '<span class="proj"><b>#' + p.rank + ' — ' + esc(p.name) + '</b>' + (p.stars ? ' (' + esc(p.stars) + ')' : '') +
     '<br><span style="color:var(--muted);font-size:12.5px">' + esc(ed.label) + '</span><br>' + esc(p.desc.slice(0, 220)) +
@@ -357,9 +358,24 @@ function brain(qRaw){
   if (q.includes('meridian')) return 'Meridian is an AI receptionist for local businesses — it answers the calls you miss. There is a free 7-day pilot, no setup fee: meridian-open.netlify.app.';
   if (q.includes('stan')) return 'The digital products live on the Stan Store: stan.store/hunter82.';
   if (q.includes('github') || q.includes('repo')) return 'Every edition is archived in the open on GitHub: github.com/agentbridgehq-oss/daily-open-source-rankings.';
+  if (q.includes('how many editions') || q.includes('list editions') || q.includes('all editions') || q.includes('past editions') || q.includes('previous editions'))
+    return 'There are ' + EDS.length + ' editions in the archive:' + EDS.map(e => '<br>' + esc(e.label) + ' <button class="go chip" data-ed="' + e.id + '">Read</button>').join('');
+  const MON = { january:1, february:2, march:3, april:4, may:5, june:6, july:7, august:8, september:9, october:10, november:11, december:12, jan:1, feb:2, mar:3, apr:4, jun:6, jul:7, aug:8, sep:9, sept:9, oct:10, nov:11, dec:12 };
+  const MONN = ['','January','February','March','April','May','June','July','August','September','October','November','December'];
+  let edHit = null;
+  for (const k in MON){ const mm = q.match(new RegExp(k + '\\s*(\\d{1,2})')); if (mm){ const lab = MONN[MON[k]] + ' ' + (+mm[1]); const cands = EDS.filter(e => e.label.includes(lab)); if (cands.length){ edHit = q.includes('evening') ? (cands.find(e => e.id.includes('evening')) || cands[0]) : q.includes('morning') ? (cands.find(e => e.id.includes('morning')) || cands[0]) : cands[0]; } break; } }
+  if (edHit) return esc(edHit.label) + ' — "' + esc(edHit.headline) + '". Its top 3:' + topOf(edHit, 3);
   if (q.includes('yesterday')) { const ed = EDS[1]; return ed ? 'Yesterday\'s board (' + esc(ed.label) + ') — the top 3:' + topOf(ed, 3) : 'No earlier edition in the archive yet.'; }
   if (q.includes('#1') || q.includes('number one') || q.includes('top today') || q.includes('today') || q.includes('latest') || q.includes('newest'))
     return 'Today\'s board — ' + esc(TODAY.label) + '. The top 3:' + topOf(TODAY, 3);
+  const histCue = /(when|first|history|before|appear|ever|times|again)/.test(q);
+  const groups = {};
+  EDS.forEach(ed => ed.projects.forEach(p => { const k = p.name.toLowerCase(); (groups[k] = groups[k] || []).push({p, ed}); }));
+  let bestName = null, bestNS = 0;
+  const nameToks = q.split(/[^a-z0-9+#.\-]+/).filter(t => t.length > 1 && !STOP.has(t));
+  Object.keys(groups).forEach(k => { const segs = k.split(/[^a-z0-9]+/).filter(Boolean); let s = 0; nameToks.forEach(t => { if (segs.includes(t)) s += 5; else if (t.length >= 6 && k.replace(/[^a-z0-9]/g, '').includes(t)) s += 2; }); if (s > bestNS){ bestNS = s; bestName = k; } });
+  if (bestName && (histCue || bestNS >= 10))
+    return esc(groups[bestName][0].p.name) + ' has appeared ' + groups[bestName].length + ' time(s) in the archive:' + groups[bestName].map(x => projCard(x.p, x.ed)).join('');
   const toks = q.split(/[^a-z0-9+#.\-]+/).filter(t => t.length > 1 && !STOP.has(t));
   const scored = [];
   EDS.forEach(ed => ed.projects.forEach(p => {
@@ -373,7 +389,7 @@ function brain(qRaw){
     const best = scored.slice(0, 3);
     return 'Here is what the archive has for that:' + best.map(x => projCard(x.p, x.ed)).join('');
   }
-  return 'Nothing in the archive matches that yet — new projects land every morning, so it may show up soon. Try "video", "agent", "AI", "database", or ask "what is #1 today?".';
+  return 'Nothing in the archive matches that yet — new projects land every morning, so it may show up soon. Try "video", "agent", "AI", "database", or ask "what is #1 today?", "when did a project first appear?", or "show me the Nov 5 edition".';
 }
 
 /* ---------- sending ---------- */
