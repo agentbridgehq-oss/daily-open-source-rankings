@@ -3,126 +3,385 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Open Source Rankings — Top 10 Open-Source Projects</title>
-<meta name="description" content="The 10 open-source projects most likely to blow up — ranked every day. Today's edition: a free studio for 600 AI models, a fleet of coding agents, and a dictation app that never phones home.">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Daily Open Source Rankings">
-<meta property="og:title" content="A Free Studio for 600 AI Models, a Fleet of Coding Agents, and a Dictation App That Never Phones Home — Today's 10 Open-Source Breakouts">
-<meta property="og:description" content="The 10 open-source projects most likely to blow up — every day. Saturday, November 7, 2026, daily edition.">
-<meta property="og:url" content="https://daily-open-source-rankings.netlify.app/">
-<meta property="og:image" content="https://daily-open-source-rankings.netlify.app/images/banner-2026-11-07.webp">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Daily Open Source Rankings — Nov 7, 2026 Daily Edition">
-<meta name="twitter:description" content="The 10 open-source projects most likely to blow up — every day.">
-<meta name="twitter:image" content="https://daily-open-source-rankings.netlify.app/images/banner-2026-11-07.webp">
+<title>Daily Open Source Rankings — Top 10 Open-Source Projects, Every Day</title>
+<meta name="description" content="The 10 open-source projects most likely to blow up — ranked every day, with an AI assistant that searches the full archive.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230a1120'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23d4af37' font-family='Arial' font-weight='bold'%3E10%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="/styles.css">
-<!-- build: 2026-11-07 -->
+<style>
+:root{
+  --navy:#0a1120; --navy2:#0d1526; --gold:#d4af37; --gold2:#f0d47a;
+  --ink:#eef1f6; --muted:#a9b4c6; --panel:rgba(10,17,32,.78); --panel2:rgba(13,21,38,.92);
+  --line:rgba(212,175,55,.28); --radius:16px;
+  --sidebar-w:330px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--navy);overflow-x:hidden}
+a{color:var(--gold2)}
+button{font-family:inherit;cursor:pointer}
+
+/* ---- fixed background: stays put while content scrolls ---- */
+.bg-video{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3;background:var(--navy) url('/assets/bg-poster.jpg') center/cover no-repeat}
+.bg-shade{position:fixed;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(10,17,32,.72) 0%,rgba(10,17,32,.82) 45%,rgba(10,17,32,.94) 100%)}
+.bg-glow{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(900px 480px at 75% -5%,rgba(212,175,55,.14),transparent 60%)}
+
+/* ---- top bar ---- */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;gap:14px;padding:12px 18px;background:rgba(10,17,32,.66);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.burger{width:42px;height:42px;border-radius:11px;border:1px solid var(--line);background:rgba(212,175,55,.08);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;flex:0 0 auto}
+.burger span{display:block;width:19px;height:2px;background:var(--gold2);border-radius:2px;transition:transform .3s,opacity .3s}
+body.sb-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+body.sb-open .burger span:nth-child(2){opacity:0}
+body.sb-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.brand{font-family:Georgia,'Times New Roman',serif;font-size:19px;letter-spacing:.4px;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand b{color:var(--gold)}
+.topbar .spacer{flex:1}
+.btn{display:inline-block;border:1px solid var(--line);background:rgba(212,175,55,.1);color:var(--gold2);padding:9px 16px;border-radius:999px;font-size:14px;text-decoration:none;transition:background .2s,transform .2s}
+.btn:hover{background:rgba(212,175,55,.22);transform:translateY(-1px)}
+.btn.solid{background:linear-gradient(180deg,var(--gold2),var(--gold));color:#14100a;font-weight:700;border-color:transparent}
+
+/* ---- sidebar (pop-out) ---- */
+.sidebar{position:fixed;top:0;left:0;bottom:0;width:var(--sidebar-w);max-width:88vw;z-index:50;background:var(--panel2);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-right:1px solid var(--line);transform:translateX(-105%);transition:transform .38s cubic-bezier(.22,.9,.3,1);display:flex;flex-direction:column}
+body.sb-open .sidebar{transform:translateX(0)}
+.sb-head{padding:70px 20px 8px}
+.sb-brand{font-family:Georgia,serif;font-size:21px;color:#fff}
+.sb-brand b{color:var(--gold)}
+.sb-tag{color:var(--muted);font-size:13px;margin-top:4px;line-height:1.45}
+.sb-nav{padding:10px 14px;display:flex;flex-direction:column;gap:4px}
+.sb-nav a{display:flex;justify-content:space-between;align-items:center;color:var(--ink);text-decoration:none;padding:10px 12px;border-radius:10px;font-size:15px}
+.sb-nav a:hover{background:rgba(212,175,55,.09)}
+.sb-nav a small{color:var(--muted);font-size:12px}
+.sb-sec{padding:14px 20px 6px;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold)}
+.newchat{margin:4px 14px 8px;padding:11px;border-radius:11px;border:1px dashed var(--line);background:rgba(212,175,55,.07);color:var(--gold2);font-size:14px;font-weight:600}
+.newchat:hover{background:rgba(212,175,55,.16)}
+.chatlist{flex:1;overflow-y:auto;padding:2px 14px 10px;display:flex;flex-direction:column;gap:4px}
+.chatitem{display:flex;align-items:center;gap:8px;padding:9px 11px;border-radius:10px;border:1px solid transparent;color:var(--ink);font-size:14px;text-align:left;background:transparent;width:100%}
+.chatitem:hover{background:rgba(255,255,255,.05)}
+.chatitem.active{border-color:var(--line);background:rgba(212,175,55,.08)}
+.chatitem .t{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chatitem .del{color:var(--muted);background:none;border:none;font-size:15px;padding:2px 4px;flex:0 0 auto}
+.chatitem .del:hover{color:#ff8a8a}
+.chatempty{color:var(--muted);font-size:13px;padding:8px 12px;line-height:1.5}
+.sb-foot{padding:12px 20px 16px;border-top:1px solid rgba(255,255,255,.07);font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+.sb-foot a{text-decoration:none}
+.sb-scrim{position:fixed;inset:0;background:rgba(4,6,12,.55);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+@media (max-width:1023px){ body.sb-open .sb-scrim{opacity:1;pointer-events:auto} }
+@media (min-width:1024px){
+  .main{transition:margin .38s cubic-bezier(.22,.9,.3,1)}
+  body.sb-open .main{margin-left:var(--sidebar-w)}
+}
+
+/* ---- chat view inside sidebar ---- */
+.chatview{display:none;flex-direction:column;height:100%}
+.sidebar.chatting .chatview{display:flex}
+.sidebar.chatting .navview{display:none}
+.navview{display:flex;flex-direction:column;height:100%}
+.chat-head{display:flex;align-items:center;gap:10px;padding:70px 16px 10px;border-bottom:1px solid rgba(255,255,255,.07)}
+.chat-head .back{background:none;border:1px solid var(--line);color:var(--gold2);width:34px;height:34px;border-radius:9px;font-size:16px}
+.chat-head .ct{flex:1;font-size:15px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.msgs{flex:1;overflow-y:auto;padding:14px 14px 8px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:92%;padding:10px 12px;border-radius:13px;font-size:14px;line-height:1.55;white-space:pre-wrap;word-wrap:break-word}
+.msg.user{align-self:flex-end;background:linear-gradient(180deg,#e8cd6d,var(--gold));color:#171106;border-bottom-right-radius:4px}
+.msg.ai{align-self:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-bottom-left-radius:4px}
+.msg.ai .proj{display:block;margin-top:8px;padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:rgba(10,17,32,.5)}
+.msg.ai .proj b{color:var(--gold2)}
+.msg.ai .proj .go{margin-top:6px;display:inline-block;font-size:12.5px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;padding:6px 14px 0}
+.chip{font-size:12.5px;padding:6px 11px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--gold2)}
+.chip:hover{background:rgba(212,175,55,.14)}
+.composer{display:flex;gap:8px;padding:12px 14px 16px;border-top:1px solid rgba(255,255,255,.07)}
+.composer textarea{flex:1;resize:none;height:44px;max-height:110px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--ink);padding:11px 12px;font-size:14px;font-family:inherit;outline:none}
+.composer textarea:focus{border-color:var(--gold)}
+.composer .send{width:44px;height:44px;border-radius:12px;border:none;background:linear-gradient(180deg,var(--gold2),var(--gold));color:#171106;font-size:17px;font-weight:700}
+.ai-note{padding:0 16px 10px;font-size:11.5px;color:var(--muted);line-height:1.45}
+
+/* ---- main column ---- */
+.main{position:relative;z-index:1;padding:96px 20px 70px}
+.wrap{max-width:860px;margin:0 auto}
+.hero{text-align:left;padding:26px 0 8px}
+.kicker{color:var(--gold);letter-spacing:2.4px;font-size:12px;text-transform:uppercase;font-weight:700}
+.hero h1{font-family:Georgia,serif;font-weight:600;font-size:clamp(28px,4.6vw,44px);line-height:1.16;color:#fff;margin:12px 0 10px}
+.hero .sub{color:var(--muted);font-size:16.5px;line-height:1.6;max-width:640px}
+.hero .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.panel{background:var(--panel);border:1px solid rgba(255,255,255,.09);border-radius:var(--radius);padding:22px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.subscribe{margin:26px 0}
+.subscribe h2{margin:0 0 6px;font-size:19px;color:#fff}
+.subscribe p{margin:0 0 14px;color:var(--muted);font-size:14.5px;line-height:1.55}
+.subscribe form{display:flex;gap:8px;flex-wrap:wrap}
+.subscribe input[type=email]{flex:1;min-width:210px;padding:12px 14px;border-radius:11px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--ink);font-size:15px;outline:none}
+.subscribe button{padding:12px 20px;border-radius:11px;border:none;background:linear-gradient(180deg,var(--gold2),var(--gold));color:#171106;font-weight:700;font-size:15px}
+.subscribe .fine{margin-top:10px;font-size:12.5px}
+.hp{position:absolute;left:-9999px}
+.edition-label{color:var(--gold);font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700}
+article h2.art-title{font-family:Georgia,serif;font-size:clamp(23px,3.4vw,32px);line-height:1.25;color:#fff;margin:8px 0 16px;font-weight:600}
+.article-body p{font-size:16.5px;line-height:1.75;color:#dde4ee;margin:0 0 15px}
+.article-body strong{color:#fff}
+.sec-title{font-family:Georgia,serif;color:#fff;font-size:24px;margin:38px 0 14px}
+.archive-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.card{text-align:left;background:var(--panel);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:16px;color:var(--ink);transition:border-color .2s,transform .2s;width:100%}
+.card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.card .d{color:var(--gold);font-size:12px;letter-spacing:1.2px;text-transform:uppercase;font-weight:700}
+.card .h{font-family:Georgia,serif;font-size:16.5px;line-height:1.4;margin-top:7px;color:#fff}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid rgba(255,255,255,.09);color:var(--muted);font-size:13.5px;line-height:1.7}
+footer a{text-decoration:none;margin-right:14px}
+@media (max-width:640px){ .main{padding:86px 14px 56px} .panel{padding:17px} }
+</style>
 </head>
 <body>
-<div class="wrap">
 
-  <header class="masthead">
-    <p class="brand">Daily Open Source Rankings</p>
-    <p class="tagline">The 10 open-source projects most likely to blow up — every day.</p>
-    <nav class="topnav">
-      <a href="/">Home</a>
+<video class="bg-video" autoplay muted loop playsinline poster="/assets/bg-poster.jpg">
+  <source src="/assets/bg.mp4" type="video/mp4">
+</video>
+<div class="bg-shade"></div>
+<div class="bg-glow"></div>
+
+<header class="topbar">
+  <button class="burger" id="burger" aria-label="Open or close the side panel"><span></span><span></span><span></span></button>
+  <div class="brand">Daily <b>Open Source</b> Rankings</div>
+  <div class="spacer"></div>
+  <a class="btn" href="https://github.com/agentbridgehq-oss/daily-open-source-rankings" target="_blank" rel="noopener">GitHub</a>
+  <a class="btn solid" href="#subscribe">Subscribe free</a>
+</header>
+
+<aside class="sidebar" id="sidebar" aria-label="Side panel">
+  <div class="navview" id="navView">
+    <div class="sb-head">
+      <div class="sb-brand">Daily <b>Open Source</b> Rankings</div>
+      <div class="sb-tag">The 10 open-source projects most likely to blow up — researched and ranked every day.</div>
+    </div>
+    <nav class="sb-nav">
+      <a href="#today" data-nav>Today's Top 10 <small>latest</small></a>
+      <a href="#archive" data-nav>Archive <small>past editions</small></a>
+      <a href="#subscribe" data-nav>Subscribe <small>free</small></a>
       <a href="/about.html">About</a>
       <a href="/privacy.html">Privacy</a>
     </nav>
-  </header>
-
-  <div class="banner">
-    <img src="/images/banner-2026-11-07.webp" alt="Daily Open Source Rankings — daily edition header banner" width="2480" height="992">
+    <div class="sb-sec">AI Assistant</div>
+    <button class="newchat" id="newChatBtn">+ New chat</button>
+    <div class="chatlist" id="chatList"></div>
+    <div class="sb-foot">
+      <a href="https://github.com/agentbridgehq-oss/daily-open-source-rankings" target="_blank" rel="noopener">GitHub repo</a>
+      <a href="https://stan.store/hunter82" target="_blank" rel="noopener">Stan Store</a>
+      <a href="https://theaiadvantagenewsletter.beehiiv.com" target="_blank" rel="noopener">The AI Advantage newsletter</a>
+      <span>By Kenny Hunter — The AI Advantage</span>
+    </div>
   </div>
 
-  <!-- Ad slot: leaderboard (728x90) — reserved for a future ad network. Empty until ads are enabled. -->
-  <div class="ad-slot ad-leaderboard" aria-hidden="true"></div>
+  <div class="chatview" id="chatView">
+    <div class="chat-head">
+      <button class="back" id="chatBack" aria-label="Back to menu">←</button>
+      <div class="ct" id="chatTitle">New chat</div>
+      <button class="back" id="chatNew" aria-label="Start another chat">+</button>
+    </div>
+    <div class="msgs" id="msgs"></div>
+    <div class="chips" id="chips">
+      <button class="chip">What's #1 today?</button>
+      <button class="chip">Find me a video tool</button>
+      <button class="chip">Any AI coding agents?</button>
+      <button class="chip">How do I subscribe?</button>
+    </div>
+    <div class="composer">
+      <textarea id="composer" placeholder="Ask about any project in the rankings…" rows="1"></textarea>
+      <button class="send" id="sendBtn" aria-label="Send">↑</button>
+    </div>
+    <div class="ai-note">The assistant searches every edition of the rankings archive and answers from it. Chats are saved in this panel, on your device only.</div>
+  </div>
+</aside>
+<div class="sb-scrim" id="scrim"></div>
 
-  <section class="subscribe" id="subscribe-top">
-    <h2>Get the Top 10 in your inbox</h2>
-    <p>Every edition, the moment it drops — the open-source projects about to blow up, before everyone else finds them.</p>
-    <form name="rankings-subscribers" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="rankings-subscribers">
-      <p class="hp"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
-      <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
-      <button type="submit">Subscribe</button>
-    </form>
-    <p class="fineprint">One email per edition. No spam, unsubscribe anytime.</p>
-  </section>
+<div class="main">
+  <div class="wrap">
+    <section class="hero">
+      <div class="kicker" id="heroDate">Today's edition</div>
+      <h1 id="heroHeadline"></h1>
+      <p class="sub">Every morning I research the newest open-source projects on the planet, rank the 10 most likely to blow up, and write up what they do and why they matter. Ask the assistant in the side panel about any of them.</p>
+      <div class="cta-row">
+        <a class="btn solid" href="#today">Read today's Top 10</a>
+        <button class="btn" id="askBtn">Ask the archive</button>
+      </div>
+    </section>
 
-  <article>
-    <p class="edition-meta">Daily Edition — Saturday, November 7, 2026</p>
-    <h1>A Free Studio for 600 AI Models, a Fleet of Coding Agents, and a Dictation App That Never Phones Home — Today's 10 Open-Source Breakouts</h1>
+    <section class="panel subscribe" id="subscribe">
+      <h2>Get the Top 10 in your inbox</h2>
+      <p>Every edition, the moment it drops — the open-source projects about to blow up, before everyone else finds them.</p>
+      <form name="rankings-subscribers" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="rankings-subscribers">
+        <p class="hp"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+        <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="fine">One email per edition. No spam, unsubscribe anytime.</p>
+    </section>
 
-    <p>I'll be honest: today's board is a do-it-yourself board. The biggest names on it aren't asking you to sign up for anything — they're handing you the whole machine and letting you run it on your own hardware. A free studio covering 600 image and video models, a fleet of coding agents you drive yourself, a security center that needs zero API keys, and a dictation app that never sends a word to the cloud. The rest is the gear that makes the DIY stack actually work — fine-tuning from a single file, resumes that write themselves, and a WhatsApp client built for speed.</p>
+    <article class="panel" id="today">
+      <div class="edition-label" id="artLabel"></div>
+      <h2 class="art-title" id="artTitle"></h2>
+      <div class="article-body" id="artBody"></div>
+    </article>
 
-    <p><strong>1. Anil-matcha/Open-Generative-AI (★32.8K, +398 today)</strong> — A free, open-source AI image and video generation studio that supports over 600 models, self-hosted under an MIT license. Six hundred models under one roof, no subscription, no per-image bill. If you've been paying a monthly fee to generate images, this is the repo that makes you ask what the fee was for.</p>
+    <h3 class="sec-title" id="archive">Previous editions</h3>
+    <div class="archive-grid" id="archiveGrid"></div>
 
-    <p><strong>2. stablyai/orca (★117k, +6.6k/7d)</strong> — Orca runs a fleet of coding agents — Claude Code, Codex, and the rest — with your own models and your own rules. One operator, many agents, all working in parallel. The agent era keeps producing fleets and dashboards because nobody wants to babysit one agent at a time anymore.</p>
-
-    <p><strong>3. patchy631/ai-engineering-hub (★40.5k, +1,191/day)</strong> — Ninety-three production-ready AI projects in one repo: OCR, RAG, agentic workflows, MCP integrations, voice agents — organized by difficulty, beginner to advanced. It's a curriculum disguised as a repo, and it's gaining more than a thousand stars a day because people want to learn this stuff by building it, not by reading about it.</p>
-
-    <p><strong>4. beenuar/AiSOC (★6.4k, +446/day)</strong> — An open-source AI Security Operations Center running 2,538 executable detection rules from a 7,023-rule library, with a local LLM doing the agent triage and every prompt and tool call recorded in a replayable Investigation Ledger. Zero API keys required. A SOC you can run at home is a sentence that would have sounded strange two years ago; today it's just Saturday's trending list.</p>
-
-    <p><strong>5. anomalyco/hex (★3.5k, +1,179/day)</strong> — A Rust-based local voice dictation app for macOS, Windows, and Linux. Hold a key, speak, and it pastes — the first run downloads a speech model and nothing ever leaves your machine. More than a thousand stars a day for a dictation app says a lot of people are done sending their voice to someone else's server.</p>
-
-    <!-- Ad slot: in-content — reserved for a future ad network. Empty until ads are enabled. -->
-    <div class="ad-slot ad-incontent" aria-hidden="true"></div>
-
-    <p><strong>6. AienTech/dossier (★4.8k, +1.3k/7d)</strong> — A self-hosted job search and resume builder that writes tailored resumes and cover letters for each application. Your job hunt, your data, your machine — and the resume actually matches the posting instead of the generic one you've been sending everywhere.</p>
-
-    <p><strong>7. MakazhanAlpamys/Soup (★10k, +433/7d)</strong> — Fine-tune LLMs from one YAML file. Layer streaming trains an 8B model on a 4 GB laptop GPU. Fine-tuning used to mean a cloud bill and a weekend of setup; now it's a config file and a laptop that fits in a backpack.</p>
-
-    <p><strong>8. HKUDS/nanobot (★50k, +203/7d)</strong> — Your lightweight open-source personal agent, from the University of Hong Kong's data science lab. Small, fast, and personal — the opposite of the giant agent platforms that want to own your whole workflow.</p>
-
-    <p><strong>9. crmne/zapfast (★3.1K, +296 today)</strong> — ZapFast is a fast, native WhatsApp client in Rust and egui. No Electron, no browser tab eating your RAM — just a quick native app that opens fast and stays out of the way. Sometimes the breakout isn't a new idea at all; it's the old idea done properly.</p>
-
-    <p><strong>10. tembo/voxl (★1.2K, +214 today)</strong> — Extremely fast web remote desktop streaming. Your desktop, in a browser tab, with the lag squeezed out. Remote work keeps getting more fluid, and the tools that remove the friction between you and your machine keep climbing.</p>
-
-    <p>That's your ten. My pick? Open-Generative-AI — because 600 models, self-hosted, free, is the kind of math that ends subscriptions. If I've got an hour free, I'm installing Hex, because talking to my computer and having the words just appear still feels like the future, and this one does it without phoning home.</p>
-
-    <p class="footnote">Star counts reflect the November 7 trending snapshot (Trendar rising now, updated 2026-11-07 12:00 UTC; GitDiscover daily picks, Sat Nov 7, 2026; findarepo trending + local AI, Nov 7, 2026; ghtrends daily, Nov 7, 2026; OpenPulse, Nov 7, 2026).</p>
-  </article>
-
-  <section class="subscribe" id="subscribe-bottom">
-    <h2>Don't miss tomorrow's edition</h2>
-    <p>The board changes fast. Get each new Top 10 delivered as it publishes.</p>
-    <form name="rankings-subscribers" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="rankings-subscribers">
-      <p class="hp"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
-      <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
-      <button type="submit">Subscribe</button>
-    </form>
-    <p class="fineprint">One email per edition. No spam, unsubscribe anytime.</p>
-  </section>
-
-  <section class="section-block prev-edition">
-    <h2>Previous edition</h2>
-    <p><a href="/editions/2026-11-06-evening.html">A Control Surface for Every Coding Agent, an IDE Rebuilt in Rust, and a File Converter That Does 263 Formats — Tonight's 10 Open-Source Breakouts</a>
-    <span class="when">Evening Edition — Friday, November 6, 2026</span></p>
-  </section>
-
-  <section class="section-block">
-    <h2>About</h2>
-    <p>Daily Open Source Rankings is a daily briefing by Ken of The AI Advantage. Every day, it ranks the 10 open-source projects most likely to blow up — picked on star velocity, novelty, and plain usefulness — and explains in plain language why each one matters. No copied press releases, no filler: just the board, and what it means.</p>
-  </section>
-
-  <!-- Ad slot: page bottom (728x90) — reserved for a future ad network. Empty until ads are enabled. -->
-  <div class="ad-slot ad-bottom" aria-hidden="true"></div>
-
-  <footer>
-    <nav>
-      <a href="/">Home</a>
+    <footer>
       <a href="/about.html">About</a>
       <a href="/privacy.html">Privacy</a>
-      <a href="https://stan.store/hunter82">Stan Store</a>
-      <a href="https://theaiadvantagenewsletter.beehiiv.com">The AI Advantage Newsletter</a>
-    </nav>
-    <p>Daily Open Source Rankings — part of The AI Advantage.</p>
-    <p>© 2026 The AI Advantage. Rankings are editorial picks, not endorsements.</p>
-  </footer>
-
+      <a href="https://github.com/agentbridgehq-oss/daily-open-source-rankings" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://stan.store/hunter82" target="_blank" rel="noopener">Stan Store</a>
+      <br>Daily Open Source Rankings — by Kenny Hunter, The AI Advantage. Rankings are editorial picks based on public trending data.
+    </footer>
+  </div>
 </div>
+
+<script src="/data.js"></script>
+<script>
+
+const $ = s => document.querySelector(s);
+const EDS = window.EDITIONS || [];
+const TODAY = EDS[0];
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* ---------- sidebar open/close ---------- */
+const sidebar = $('#sidebar');
+function setSB(open){ document.body.classList.toggle('sb-open', open); }
+$('#burger').addEventListener('click', () => setSB(!document.body.classList.contains('sb-open')));
+$('#scrim').addEventListener('click', () => setSB(false));
+if (window.innerWidth >= 1024) setSB(true);
+document.querySelectorAll('[data-nav]').forEach(a => a.addEventListener('click', () => { if (window.innerWidth < 1024) setSB(false); }));
+
+/* ---------- editions ---------- */
+function showEdition(id){
+  const ed = EDS.find(e => e.id === id) || TODAY;
+  $('#artLabel').textContent = ed.label;
+  $('#artTitle').textContent = ed.headline;
+  $('#artBody').innerHTML = ed.html;
+}
+$('#heroHeadline').textContent = TODAY ? TODAY.headline : '';
+$('#heroDate').textContent = TODAY ? TODAY.label : '';
+showEdition('today');
+const grid = $('#archiveGrid');
+EDS.slice(1).forEach(ed => {
+  const b = document.createElement('button');
+  b.className = 'card';
+  b.innerHTML = '<div class="d">' + esc(ed.label) + '</div><div class="h">' + esc(ed.headline) + '</div>';
+  b.addEventListener('click', () => { showEdition(ed.id); document.getElementById('today').scrollIntoView({behavior:'smooth'}); });
+  grid.appendChild(b);
+});
+
+/* ---------- chat: state + persistence ---------- */
+const LS_KEY = 'dosr.chats.v1';
+let chats = [];
+try { chats = JSON.parse(localStorage.getItem(LS_KEY) || '[]'); } catch(e){ chats = []; }
+let activeId = null;
+function saveChats(){ try { localStorage.setItem(LS_KEY, JSON.stringify(chats)); } catch(e){} }
+function activeChat(){ return chats.find(c => c.id === activeId) || null; }
+
+function renderChatList(){
+  const list = $('#chatList');
+  list.innerHTML = '';
+  if (!chats.length){ list.innerHTML = '<div class="chatempty">No chats yet. Start one and it will be saved here, in this panel.</div>'; return; }
+  chats.slice().reverse().forEach(c => {
+    const row = document.createElement('div');
+    const b = document.createElement('button');
+    b.className = 'chatitem' + (c.id === activeId ? ' active' : '');
+    b.innerHTML = '<span class="t">' + esc(c.title || 'Chat') + '</span>';
+    b.addEventListener('click', () => openChat(c.id));
+    const d = document.createElement('button');
+    d.className = 'del'; d.textContent = '×'; d.title = 'Delete chat';
+    d.addEventListener('click', ev => { ev.stopPropagation(); chats = chats.filter(x => x.id !== c.id); if (activeId === c.id){ activeId = null; showNav(); } saveChats(); renderChatList(); });
+    b.appendChild(d); row.appendChild(b); list.appendChild(row);
+  });
+}
+function showNav(){ sidebar.classList.remove('chatting'); renderChatList(); }
+function showChat(){
+  sidebar.classList.add('chatting'); setSB(true);
+  const c = activeChat();
+  $('#chatTitle').textContent = c ? (c.title || 'Chat') : 'New chat';
+  const box = $('#msgs'); box.innerHTML = '';
+  if (!c || !c.msgs.length){
+    box.innerHTML = '<div class="msg ai">Ask me about any project in the rankings — what it does, why it is trending, or which day it appeared. I search every edition in the archive.</div>';
+  } else {
+    c.msgs.forEach(m => box.appendChild(msgEl(m)));
+  }
+  box.scrollTop = box.scrollHeight;
+}
+function msgEl(m){
+  const d = document.createElement('div');
+  d.className = 'msg ' + (m.r === 'u' ? 'user' : 'ai');
+  if (m.r === 'u') d.textContent = m.t; else d.innerHTML = m.t;
+  d.querySelectorAll('[data-ed]').forEach(btn => btn.addEventListener('click', () => { showEdition(btn.getAttribute('data-ed')); document.getElementById('today').scrollIntoView({behavior:'smooth'}); }));
+  return d;
+}
+function openChat(id){ activeId = id; showChat(); }
+function newChat(){
+  activeId = null; showChat();
+  $('#composer').focus();
+}
+$('#newChatBtn').addEventListener('click', newChat);
+$('#chatNew').addEventListener('click', newChat);
+$('#chatBack').addEventListener('click', showNav);
+$('#askBtn').addEventListener('click', () => { setSB(true); newChat(); });
+
+/* ---------- the archive brain (answers from the editions, on-device) ---------- */
+const STOP = new Set(['the','a','an','and','or','for','of','to','in','on','is','are','any','me','show','find','what','which','that','this','with','about','have','has','it','its','do','does','can','you','i','my','some','good','best','top']);
+function projCard(p, ed){
+  return '<span class="proj"><b>#' + p.rank + ' — ' + esc(p.name) + '</b>' + (p.stars ? ' (' + esc(p.stars) + ')' : '') +
+    '<br><span style="color:var(--muted);font-size:12.5px">' + esc(ed.label) + '</span><br>' + esc(p.desc.slice(0, 220)) +
+    (p.desc.length > 220 ? '…' : '') + '<br><button class="go chip" data-ed="' + ed.id + '">Read that edition</button></span>';
+}
+function topOf(ed, n){ return ed.projects.slice(0, n).map(p => projCard(p, ed)).join(''); }
+function brain(qRaw){
+  const q = qRaw.toLowerCase();
+  if (/^(hi|hey|hello|yo|morning|afternoon)\b/.test(q)) return 'Hey. I search every edition of the rankings — ask me things like "what is the #1 today?", "find a video tool", or "any coding agents this week?".';
+  if (q.includes('subscribe') || q.includes('email') || q.includes('inbox') || q.includes('newsletter') && q.includes('rankings'))
+    return 'Easy — use the subscribe box right on this page (the gold button up top jumps to it). One email per edition, no spam, unsubscribe anytime. The separate AI Advantage newsletter lives at theaiadvantagenewsletter.beehiiv.com.';
+  if (q.includes('meridian')) return 'Meridian is Kenny\'s AI receptionist for local businesses — it answers the calls you miss. There is a free 7-day pilot, no setup fee: meridian-open.netlify.app.';
+  if (q.includes('stan')) return 'Kenny\'s digital products live on his Stan Store: stan.store/hunter82.';
+  if (q.includes('github') || q.includes('repo')) return 'Every edition is archived in the open on GitHub: github.com/agentbridgehq-oss/daily-open-source-rankings.';
+  if (q.includes('yesterday')) { const ed = EDS[1]; return ed ? 'Yesterday\'s board (' + esc(ed.label) + ') — the top 3:' + topOf(ed, 3) : 'No earlier edition in the archive yet.'; }
+  if (q.includes('#1') || q.includes('number one') || q.includes('top today') || q.includes('today') || q.includes('latest') || q.includes('newest'))
+    return 'Today\'s board — ' + esc(TODAY.label) + '. The top 3:' + topOf(TODAY, 3);
+  const toks = q.split(/[^a-z0-9+#.\-]+/).filter(t => t.length > 1 && !STOP.has(t));
+  const scored = [];
+  EDS.forEach(ed => ed.projects.forEach(p => {
+    const name = p.name.toLowerCase(), desc = p.desc.toLowerCase(), head = ed.headline.toLowerCase();
+    let s = 0;
+    toks.forEach(t => { if (name.includes(t)) s += 5; if (desc.includes(t)) s += 2; if (head.includes(t)) s += 1; });
+    if (s > 0) scored.push({s, p, ed});
+  }));
+  scored.sort((a, b) => b.s - a.s);
+  if (scored.length){
+    const best = scored.slice(0, 3);
+    return 'Here is what the archive has for that:' + best.map(x => projCard(x.p, x.ed)).join('');
+  }
+  return 'Nothing in the archive matches that yet — new projects land every morning, so it may show up soon. Try "video", "agent", "AI", "database", or ask "what is #1 today?".';
+}
+
+/* ---------- sending ---------- */
+function send(){
+  const ta = $('#composer');
+  const text = ta.value.trim();
+  if (!text) return;
+  ta.value = ''; ta.style.height = '44px';
+  let c = activeChat();
+  if (!c){
+    c = { id: 'c' + Date.now(), title: text.slice(0, 38), msgs: [] };
+    chats.push(c); activeId = c.id;
+  }
+  c.msgs.push({r:'u', t:text});
+  $('#chatTitle').textContent = c.title;
+  const box = $('#msgs');
+  if (box.querySelector('.msg.ai') && c.msgs.length === 1) box.innerHTML = '';
+  box.appendChild(msgEl({r:'u', t:text}));
+  const reply = brain(text);
+  c.msgs.push({r:'a', t:reply});
+  box.appendChild(msgEl({r:'a', t:reply}));
+  box.scrollTop = box.scrollHeight;
+  saveChats(); renderChatList();
+}
+$('#sendBtn').addEventListener('click', send);
+$('#composer').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey){ e.preventDefault(); send(); } });
+$('#composer').addEventListener('input', e => { e.target.style.height = '44px'; e.target.style.height = Math.min(110, e.target.scrollHeight) + 'px'; });
+document.querySelectorAll('#chips .chip').forEach(ch => ch.addEventListener('click', () => { $('#composer').value = ch.textContent; send(); }));
+
+renderChatList();
+</script>
 </body>
 </html>
