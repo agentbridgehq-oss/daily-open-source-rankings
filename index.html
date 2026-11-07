@@ -11,7 +11,7 @@
   --navy:#0a1120; --navy2:#0d1526; --gold:#d4af37; --gold2:#f0d47a;
   --ink:#eef1f6; --muted:#a9b4c6; --panel:rgba(10,17,32,.78); --panel2:rgba(13,21,38,.92);
   --line:rgba(212,175,55,.28); --radius:16px;
-  --sidebar-w:330px;
+  --sidebar-w:168px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -41,7 +41,7 @@ body.sb-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)
 /* ---- sidebar (pop-out) ---- */
 .sidebar{position:fixed;top:0;left:0;bottom:0;width:var(--sidebar-w);max-width:88vw;z-index:50;background:var(--panel2);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-right:1px solid var(--line);transform:translateX(-105%);transition:transform .38s cubic-bezier(.22,.9,.3,1);display:flex;flex-direction:column}
 body.sb-open .sidebar{transform:translateX(0)}
-.sb-head{padding:70px 20px 8px}
+.sb-head{padding:70px 14px 6px}
 .sb-brand{font-family:Georgia,serif;font-size:21px;color:#fff}
 .sb-brand b{color:var(--gold)}
 .sb-tag{color:var(--muted);font-size:13px;margin-top:4px;line-height:1.45}
@@ -60,7 +60,7 @@ body.sb-open .sidebar{transform:translateX(0)}
 .chatitem .del{color:var(--muted);background:none;border:none;font-size:15px;padding:2px 4px;flex:0 0 auto}
 .chatitem .del:hover{color:#ff8a8a}
 .chatempty{color:var(--muted);font-size:13px;padding:8px 12px;line-height:1.5}
-.sb-foot{padding:12px 20px 16px;border-top:1px solid rgba(255,255,255,.07);font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+.sb-foot{padding:12px 14px 16px;border-top:1px solid rgba(255,255,255,.07);font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
 .sb-foot a{text-decoration:none}
 .sb-scrim{position:fixed;inset:0;background:rgba(4,6,12,.55);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
 @media (max-width:1023px){ body.sb-open .sb-scrim{opacity:1;pointer-events:auto} }
@@ -74,11 +74,11 @@ body.sb-open .sidebar{transform:translateX(0)}
 .sidebar.chatting .chatview{display:flex}
 .sidebar.chatting .navview{display:none}
 .navview{display:flex;flex-direction:column;height:100%}
-.chat-head{display:flex;align-items:center;gap:10px;padding:70px 16px 10px;border-bottom:1px solid rgba(255,255,255,.07)}
+.chat-head{display:flex;align-items:center;gap:10px;padding:70px 10px 8px;border-bottom:1px solid rgba(255,255,255,.07)}
 .chat-head .back{background:none;border:1px solid var(--line);color:var(--gold2);width:34px;height:34px;border-radius:9px;font-size:16px}
 .chat-head .ct{flex:1;font-size:15px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .msgs{flex:1;overflow-y:auto;padding:14px 14px 8px;display:flex;flex-direction:column;gap:10px}
-.msg{max-width:92%;padding:10px 12px;border-radius:13px;font-size:14px;line-height:1.55;white-space:pre-wrap;word-wrap:break-word}
+.msg{max-width:92%;padding:10px 12px;border-radius:13px;font-size:13.5px;line-height:1.55;white-space:pre-wrap;word-wrap:break-word}
 .msg.user{align-self:flex-end;background:linear-gradient(180deg,#e8cd6d,var(--gold));color:#171106;border-bottom-right-radius:4px}
 .msg.ai{align-self:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-bottom-left-radius:4px}
 .msg.ai .proj{display:block;margin-top:8px;padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:rgba(10,17,32,.5)}
@@ -93,6 +93,9 @@ body.sb-open .sidebar{transform:translateX(0)}
 .composer .send{width:44px;height:44px;border-radius:12px;border:none;background:linear-gradient(180deg,var(--gold2),var(--gold));color:#171106;font-size:17px;font-weight:700}
 .ai-note{padding:0 16px 10px;font-size:11.5px;color:var(--muted);line-height:1.45}
 
+.side-tab{position:fixed;top:96px;left:0;z-index:55;width:22px;height:64px;border-radius:0 10px 10px 0;border:1px solid var(--line);border-left:none;background:var(--panel2);color:var(--gold2);font-size:15px;line-height:1;padding:0;transition:left .38s cubic-bezier(.22,.9,.3,1)}
+body.sb-open .side-tab{left:var(--sidebar-w)}
+.side-tab:hover{background:rgba(212,175,55,.18)}
 /* ---- main column ---- */
 .main{position:relative;z-index:1;padding:96px 20px 70px}
 .wrap{max-width:860px;margin:0 auto}
@@ -160,8 +163,6 @@ footer a{text-decoration:none;margin-right:14px}
     <div class="sb-foot">
       <a href="https://github.com/agentbridgehq-oss/daily-open-source-rankings" target="_blank" rel="noopener">GitHub repo</a>
       <a href="https://stan.store/hunter82" target="_blank" rel="noopener">Stan Store</a>
-      <a href="https://theaiadvantagenewsletter.beehiiv.com" target="_blank" rel="noopener">The AI Advantage newsletter</a>
-      <span>By Kenny Hunter — The AI Advantage</span>
     </div>
   </div>
 
@@ -185,6 +186,7 @@ footer a{text-decoration:none;margin-right:14px}
     <div class="ai-note">The assistant searches every edition of the rankings archive and answers from it. Chats are saved in this panel, on your device only.</div>
   </div>
 </aside>
+<button class="side-tab" id="sideTab" aria-label="Open or close the side panel">&#8250;</button>
 <div class="sb-scrim" id="scrim"></div>
 
 <div class="main">
@@ -225,7 +227,7 @@ footer a{text-decoration:none;margin-right:14px}
       <a href="/privacy.html">Privacy</a>
       <a href="https://github.com/agentbridgehq-oss/daily-open-source-rankings" target="_blank" rel="noopener">GitHub</a>
       <a href="https://stan.store/hunter82" target="_blank" rel="noopener">Stan Store</a>
-      <br>Daily Open Source Rankings — by Kenny Hunter, The AI Advantage. Rankings are editorial picks based on public trending data.
+      <br>Daily Open Source Rankings. Rankings are editorial picks based on public trending data.
     </footer>
   </div>
 </div>
@@ -240,10 +242,11 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>'
 
 /* ---------- sidebar open/close ---------- */
 const sidebar = $('#sidebar');
-function setSB(open){ document.body.classList.toggle('sb-open', open); }
+function setSB(open){ document.body.classList.toggle('sb-open', open); $('#sideTab').innerHTML = open ? '&#8249;' : '&#8250;'; }
+$('#sideTab').addEventListener('click', () => setSB(!document.body.classList.contains('sb-open')));
 $('#burger').addEventListener('click', () => setSB(!document.body.classList.contains('sb-open')));
 $('#scrim').addEventListener('click', () => setSB(false));
-if (window.innerWidth >= 1024) setSB(true);
+if (window.innerWidth >= 1024) setSB(true); else setSB(false);
 document.querySelectorAll('[data-nav]').forEach(a => a.addEventListener('click', () => { if (window.innerWidth < 1024) setSB(false); }));
 
 /* ---------- editions ---------- */
@@ -331,9 +334,9 @@ function brain(qRaw){
   const q = qRaw.toLowerCase();
   if (/^(hi|hey|hello|yo|morning|afternoon)\b/.test(q)) return 'Hey. I search every edition of the rankings — ask me things like "what is the #1 today?", "find a video tool", or "any coding agents this week?".';
   if (q.includes('subscribe') || q.includes('email') || q.includes('inbox') || q.includes('newsletter') && q.includes('rankings'))
-    return 'Easy — use the subscribe box right on this page (the gold button up top jumps to it). One email per edition, no spam, unsubscribe anytime. The separate AI Advantage newsletter lives at theaiadvantagenewsletter.beehiiv.com.';
-  if (q.includes('meridian')) return 'Meridian is Kenny\'s AI receptionist for local businesses — it answers the calls you miss. There is a free 7-day pilot, no setup fee: meridian-open.netlify.app.';
-  if (q.includes('stan')) return 'Kenny\'s digital products live on his Stan Store: stan.store/hunter82.';
+    return 'Easy — use the subscribe box right on this page (the gold button up top jumps to it). One email per edition, no spam, unsubscribe anytime.';
+  if (q.includes('meridian')) return 'Meridian is an AI receptionist for local businesses — it answers the calls you miss. There is a free 7-day pilot, no setup fee: meridian-open.netlify.app.';
+  if (q.includes('stan')) return 'The digital products live on the Stan Store: stan.store/hunter82.';
   if (q.includes('github') || q.includes('repo')) return 'Every edition is archived in the open on GitHub: github.com/agentbridgehq-oss/daily-open-source-rankings.';
   if (q.includes('yesterday')) { const ed = EDS[1]; return ed ? 'Yesterday\'s board (' + esc(ed.label) + ') — the top 3:' + topOf(ed, 3) : 'No earlier edition in the archive yet.'; }
   if (q.includes('#1') || q.includes('number one') || q.includes('top today') || q.includes('today') || q.includes('latest') || q.includes('newest'))
