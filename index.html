@@ -87,11 +87,18 @@ body.sb-open .sidebar{transform:translateX(0)}
 .chips{display:flex;gap:6px;flex-wrap:wrap;padding:6px 14px 0}
 .chip{font-size:12.5px;padding:6px 11px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--gold2)}
 .chip:hover{background:rgba(212,175,55,.14)}
-.composer{display:flex;gap:8px;padding:12px 14px 16px;border-top:1px solid rgba(255,255,255,.07)}
-.composer textarea{flex:1;resize:none;height:44px;max-height:110px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--ink);padding:11px 12px;font-size:14px;font-family:inherit;outline:none}
-.composer textarea:focus{border-color:var(--gold)}
-.composer .send{width:44px;height:44px;border-radius:12px;border:none;background:linear-gradient(180deg,var(--gold2),var(--gold));color:#171106;font-size:17px;font-weight:700}
-.ai-note{padding:0 16px 10px;font-size:11.5px;color:var(--muted);line-height:1.45}
+.composer{padding:10px 12px 8px;border-top:1px solid rgba(255,255,255,.06)}
+.composer-box{display:flex;align-items:flex-end;gap:6px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.09);border-radius:26px;padding:6px 6px 6px 15px;box-shadow:0 12px 32px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.05);transition:border-color .2s,background .2s,box-shadow .2s}
+.composer-box:focus-within{border-color:rgba(212,175,55,.5);background:rgba(255,255,255,.075);box-shadow:0 14px 36px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.06)}
+.composer-box .spark{flex:0 0 auto;width:15px;height:15px;margin-bottom:9px;opacity:.55}
+.composer-box textarea{flex:1;min-width:0;resize:none;height:24px;max-height:120px;border:none;background:transparent;color:var(--ink);padding:5px 0 4px;font-size:14.5px;line-height:1.45;font-family:inherit;outline:none}
+.composer-box textarea::placeholder{color:rgba(233,238,246,.38)}
+.composer-box .send{flex:0 0 auto;width:32px;height:32px;border-radius:50%;border:none;background:rgba(255,255,255,.13);color:rgba(238,241,246,.55);display:flex;align-items:center;justify-content:center;padding:0;transition:background .2s,color .2s,transform .15s}
+.composer-box .send svg{width:16px;height:16px}
+.composer-box .send.on{background:linear-gradient(180deg,var(--gold2),var(--gold));color:#171106}
+.composer-box .send.on:hover{transform:scale(1.07)}
+.ai-note{padding:2px 16px 12px;font-size:10.5px;color:rgba(169,180,198,.75);line-height:1.45;text-align:center}
+.ad-slot{margin:0}
 
 .side-tab{position:fixed;top:96px;left:0;z-index:55;width:22px;height:64px;border-radius:0 10px 10px 0;border:1px solid var(--line);border-left:none;background:var(--panel2);color:var(--gold2);font-size:15px;line-height:1;padding:0;transition:left .38s cubic-bezier(.22,.9,.3,1)}
 body.sb-open .side-tab{left:var(--sidebar-w)}
@@ -180,8 +187,11 @@ footer a{text-decoration:none;margin-right:14px}
       <button class="chip">How do I subscribe?</button>
     </div>
     <div class="composer">
-      <textarea id="composer" placeholder="Ask about any project in the rankings…" rows="1"></textarea>
-      <button class="send" id="sendBtn" aria-label="Send">↑</button>
+      <div class="composer-box">
+        <svg class="spark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9L12 2z" fill="#d4af37"/></svg>
+        <textarea id="composer" placeholder="Chat about any project…" rows="1"></textarea>
+        <button class="send" id="sendBtn" aria-label="Send message"><svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5m0 0l-6 6m6-6l6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
     </div>
     <div class="ai-note">The assistant searches every edition of the rankings archive and answers from it. Chats are saved in this panel, on your device only.</div>
   </div>
@@ -201,6 +211,9 @@ footer a{text-decoration:none;margin-right:14px}
       </div>
     </section>
 
+
+    <!-- Ad slot (leaderboard, below hero) — reserved for a future ad network. Empty until ads are enabled. -->
+    <div class="ad-slot" aria-hidden="true"></div>
     <section class="panel subscribe" id="subscribe">
       <h2>Get the Top 10 in your inbox</h2>
       <p>Every edition, the moment it drops — the open-source projects about to blow up, before everyone else finds them.</p>
@@ -210,7 +223,7 @@ footer a{text-decoration:none;margin-right:14px}
         <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
         <button type="submit">Subscribe</button>
       </form>
-      <p class="fine">One email per edition. No spam, unsubscribe anytime.</p>
+      <p class="fine">Free forever. One email per edition. No spam, unsubscribe anytime.</p>
     </section>
 
     <article class="panel" id="today">
@@ -219,9 +232,15 @@ footer a{text-decoration:none;margin-right:14px}
       <div class="article-body" id="artBody"></div>
     </article>
 
+
+    <!-- Ad slot (mid-page, after article) — reserved for a future ad network. Empty until ads are enabled. -->
+    <div class="ad-slot" aria-hidden="true"></div>
     <h3 class="sec-title" id="archive">Previous editions</h3>
     <div class="archive-grid" id="archiveGrid"></div>
 
+
+    <!-- Ad slot (page bottom, above footer) — reserved for a future ad network. Empty until ads are enabled. -->
+    <div class="ad-slot" aria-hidden="true"></div>
     <footer>
       <a href="/about.html">About</a>
       <a href="/privacy.html">Privacy</a>
@@ -362,7 +381,7 @@ function send(){
   const ta = $('#composer');
   const text = ta.value.trim();
   if (!text) return;
-  ta.value = ''; ta.style.height = '44px';
+  ta.value = ''; ta.style.height = '24px'; $('#sendBtn').classList.remove('on');
   let c = activeChat();
   if (!c){
     c = { id: 'c' + Date.now(), title: text.slice(0, 38), msgs: [] };
@@ -381,7 +400,7 @@ function send(){
 }
 $('#sendBtn').addEventListener('click', send);
 $('#composer').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey){ e.preventDefault(); send(); } });
-$('#composer').addEventListener('input', e => { e.target.style.height = '44px'; e.target.style.height = Math.min(110, e.target.scrollHeight) + 'px'; });
+$('#composer').addEventListener('input', e => { e.target.style.height = '24px'; e.target.style.height = Math.min(120, e.target.scrollHeight) + 'px'; $('#sendBtn').classList.toggle('on', !!e.target.value.trim()); });
 document.querySelectorAll('#chips .chip').forEach(ch => ch.addEventListener('click', () => { $('#composer').value = ch.textContent; send(); }));
 
 renderChatList();
