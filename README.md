@@ -2,15 +2,16 @@
 
 The **Top 10 open-source projects most likely to blow up**, ranked and written up fresh every day.
 
-**Live site:** https://daily-open-source-rankings.netlify.app — read today's edition and subscribe free. One email per edition, no spam, unsubscribe anytime.
+**Live site:** https://daily-open-source-rankings.netlify.app — an interactive edition with an animated background, a slide-out side panel, and an AI assistant that searches the full archive. Read today's edition and subscribe free. One email per edition, no spam, unsubscribe anytime.
 
 ## What's in this repo
 
-- `index.html` — the current edition, exactly as served on the live site
-- `editions/` — the archive of past editions, one page per day
+- `index.html` — the interactive site (fixed video background, hamburger side panel, saved AI chats, scrolling articles)
+- `data.js` / `editions.json` — every edition's article and Top 10 list, powering the site and the assistant
+- `editions/` — static archive pages, one per day
 - `about.html`, `privacy.html`, `thanks.html`, `styles.css` — the rest of the site
 
-Banner images are served from the live site (they are not stored in this repo).
+Media (the background video and the daily banner images) is served from the live site and is not stored in this repo.
 
 ## How it works
 
