@@ -99,6 +99,30 @@ body.sb-open .sidebar{transform:translateX(0)}
 .composer-box .send.on:hover{transform:scale(1.07)}
 .ai-note{padding:2px 16px 12px;font-size:10.5px;color:rgba(169,180,198,.75);line-height:1.45;text-align:center}
 .ad-slot{margin:0}
+.vid-slot{margin:22px 0}
+.vidbox{max-width:100%;background:var(--panel);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:14px}
+.vid-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}
+.vid-row .vid-slot{margin:0}
+@media(max-width:640px){.vid-row{grid-template-columns:1fr}}
+.pj{cursor:pointer;color:var(--gold2);text-decoration:underline dotted rgba(212,175,55,.55);text-underline-offset:3px}
+.pj:hover{color:var(--gold)}
+.pj-hint{color:var(--gold2);font-size:11.5px;font-weight:600;white-space:nowrap}
+#chooser{position:fixed;inset:0;z-index:210;background:rgba(2,6,14,.9);display:none;align-items:center;justify-content:center;padding:18px}
+#chooser.open{display:flex}
+.ch-card{position:relative;width:min(430px,94vw);background:var(--panel2);border:1px solid rgba(212,175,55,.35);border-radius:16px;padding:26px 22px 20px}
+.ch-name{font-family:Georgia,serif;font-size:21px;color:#fff;margin-bottom:4px;word-break:break-word}
+.ch-sub{color:var(--muted);font-size:13px;margin-bottom:18px;line-height:1.5}
+.ch-btn{display:block;width:100%;box-sizing:border-box;text-align:center;padding:13px 14px;border-radius:11px;margin-bottom:10px;font-size:15px;font-weight:700;background:rgba(255,255,255,.07);color:#eef1f6;border:1px solid rgba(255,255,255,.14);cursor:pointer;text-decoration:none}
+.ch-btn.gold{background:linear-gradient(180deg,var(--gold2),var(--gold));color:#171106;border:none}
+.ch-btn.ghost{background:transparent;font-weight:600}
+.vidbox .vid-t{font-weight:700;color:#fff;font-size:14.5px;margin-bottom:9px}
+.vidbox video{width:100%;display:block;border-radius:10px;border:1px solid rgba(212,175,55,.35);background:#000;cursor:pointer}
+.vidbox .vid-s{color:var(--muted);font-size:12.5px;margin-top:9px;line-height:1.5}
+.vidbox .vid-hint{display:block;color:var(--gold2);font-size:11.5px;margin-top:3px}
+#lightbox{position:fixed;inset:0;z-index:200;background:rgba(2,6,14,.92);display:none;align-items:center;justify-content:center;padding:18px}
+#lightbox.open{display:flex}
+#lightbox video{width:min(920px,94vw);max-height:86vh;border-radius:14px;background:#000}
+.lb-close{position:absolute;top:14px;right:18px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;font-size:20px}
 
 .side-tab{position:fixed;top:96px;left:0;z-index:55;width:22px;height:64px;border-radius:0 10px 10px 0;border:1px solid var(--line);border-left:none;background:var(--panel2);color:var(--gold2);font-size:15px;line-height:1;padding:0;transition:left .38s cubic-bezier(.22,.9,.3,1)}
 body.sb-open .side-tab{left:var(--sidebar-w)}
@@ -170,6 +194,7 @@ footer a{text-decoration:none;margin-right:14px}
     <div class="sb-foot">
       <a href="https://github.com/agentbridgehq-oss/daily-open-source-rankings" target="_blank" rel="noopener">GitHub repo</a>
       <a href="https://stan.store/hunter82" target="_blank" rel="noopener">Stan Store</a>
+      <a href="https://stan.store/hunter82/p/hire-native" target="_blank" rel="noopener">Hire Native</a>
     </div>
   </div>
 
@@ -213,6 +238,8 @@ footer a{text-decoration:none;margin-right:14px}
     </section>
 
 
+    <div class="vid-slot" data-vslot="0"></div>
+
     <!-- Ad slot (leaderboard, below hero) — reserved for a future ad network. Empty until ads are enabled. -->
     <div class="ad-slot" aria-hidden="true"></div>
     <section class="panel subscribe" id="subscribe">
@@ -227,17 +254,23 @@ footer a{text-decoration:none;margin-right:14px}
       <p class="fine">Free forever. One email per edition. No spam, unsubscribe anytime.</p>
     </section>
 
+    <div class="vid-slot" data-vslot="1"></div>
     <article class="panel" id="today">
       <div class="edition-label" id="artLabel"></div>
       <h2 class="art-title" id="artTitle"></h2>
       <div class="article-body" id="artBody"></div>
     </article>
 
+    <div class="vid-row">
+      <div class="vid-slot" data-vslot="3"></div>
+      <div class="vid-slot" data-vslot="4"></div>
+    </div>
 
     <!-- Ad slot (mid-page, after article) — reserved for a future ad network. Empty until ads are enabled. -->
     <div class="ad-slot" aria-hidden="true"></div>
     <h3 class="sec-title" id="archive">Previous editions</h3>
     <div class="archive-grid" id="archiveGrid"></div>
+    <div class="vid-slot" data-vslot="2"></div>
 
 
     <!-- Ad slot (page bottom, above footer) — reserved for a future ad network. Empty until ads are enabled. -->
@@ -247,12 +280,28 @@ footer a{text-decoration:none;margin-right:14px}
       <a href="/privacy.html">Privacy</a>
       <a href="https://github.com/agentbridgehq-oss/daily-open-source-rankings" target="_blank" rel="noopener">GitHub</a>
       <a href="https://stan.store/hunter82" target="_blank" rel="noopener">Stan Store</a>
+      <a href="https://stan.store/hunter82/p/hire-native" target="_blank" rel="noopener">Hire Native</a>
       <br>Daily Open Source Rankings. Rankings are editorial picks based on public trending data.
     </footer>
   </div>
 </div>
 
+<div id="lightbox" role="dialog" aria-label="Video player">
+  <button class="lb-close" id="lbClose" aria-label="Close video">×</button>
+  <video id="lbVideo" controls playsinline></video>
+</div>
+<div id="chooser" role="dialog" aria-label="Open project">
+  <div class="ch-card">
+    <button class="lb-close" id="chClose" aria-label="Close">×</button>
+    <div class="ch-name" id="chName"></div>
+    <div class="ch-sub" id="chSub"></div>
+    <a class="ch-btn gold" id="chApp" target="_blank" rel="noopener">▶ Open the app / website</a>
+    <a class="ch-btn" id="chRepo" target="_blank" rel="noopener">View the GitHub repo</a>
+    <button class="ch-btn ghost" id="chEd">Read that edition</button>
+  </div>
+</div>
 <script src="/data.js"></script>
+<script src="/videos.js"></script>
 <script>
 
 const $ = s => document.querySelector(s);
@@ -275,6 +324,44 @@ function showEdition(id){
   $('#artLabel').textContent = ed.label;
   $('#artTitle').textContent = ed.headline;
   $('#artBody').innerHTML = ed.html;
+  enhanceArticle(ed);
+}
+
+/* ---------- project chooser: open the app, or the GitHub repo ---------- */
+window.__PJ = window.__PJ || {};
+function regPJ(p, ed){ if (p && p.name) window.__PJ[p.name.toLowerCase()] = { p: p, ed: ed }; }
+EDS.forEach(ed => (ed.projects || []).forEach(p => regPJ(p, ed)));
+let chCtx = null;
+function openChooser(p, ed){
+  chCtx = { p: p, ed: ed };
+  $('#chName').textContent = p.name;
+  $('#chSub').textContent = '#' + p.rank + ' — ' + (ed ? ed.label : '') + (p.app ? '' : ' · This project has no separate app or website, so the GitHub repo is the way in.');
+  const app = $('#chApp');
+  if (p.app){ app.style.display = 'block'; app.href = p.app; } else { app.style.display = 'none'; }
+  $('#chRepo').href = 'https://github.com/' + p.name;
+  $('#chooser').classList.add('open');
+}
+function closeChooser(){ $('#chooser').classList.remove('open'); chCtx = null; }
+$('#chClose').addEventListener('click', closeChooser);
+$('#chooser').addEventListener('click', e => { if (e.target.id === 'chooser') closeChooser(); });
+$('#chEd').addEventListener('click', () => { if (chCtx && chCtx.ed){ showEdition(chCtx.ed.id); } closeChooser(); document.getElementById('today').scrollIntoView({behavior:'smooth'}); });
+document.addEventListener('click', e => {
+  const t = e.target.closest ? e.target.closest('[data-pj]') : null;
+  if (!t) return;
+  const hit = window.__PJ[(t.getAttribute('data-pj') || '').toLowerCase()];
+  if (hit) openChooser(hit.p, hit.ed);
+});
+function enhanceArticle(ed){
+  if (!ed || !ed.projects) return;
+  document.querySelectorAll('#artBody p > strong').forEach(st => {
+    const m = (st.textContent || '').match(/^\s*\d+\.\s+(\S+\/\S+)/);
+    if (!m) return;
+    const p = ed.projects.find(x => x.name.toLowerCase() === m[1].toLowerCase());
+    if (!p) return;
+    st.classList.add('pj'); st.setAttribute('data-pj', p.name); st.title = 'Open ' + p.name;
+    const hint = document.createElement('span'); hint.className = 'pj-hint'; hint.textContent = ' — tap the name to open it ↗';
+    st.appendChild(hint);
+  });
 }
 $('#heroHeadline').textContent = TODAY ? TODAY.headline : '';
 $('#heroDate').textContent = TODAY ? TODAY.label : '';
@@ -286,6 +373,22 @@ EDS.slice(1).forEach(ed => {
   b.innerHTML = '<div class="d">' + esc(ed.label) + '</div><div class="h">' + esc(ed.headline) + '</div>';
   b.addEventListener('click', () => { showEdition(ed.id); document.getElementById('today').scrollIntoView({behavior:'smooth'}); });
   grid.appendChild(b);
+});
+
+/* ---------- video boxes (interchangeable via /videos.js) ---------- */
+function openLightbox(v){
+  const lb = $('#lightbox'), lv = $('#lbVideo');
+  lv.src = v.src; if (v.poster) lv.poster = v.poster;
+  lb.classList.add('open'); lv.play().catch(() => {});
+}
+function closeLightbox(){ const lb = $('#lightbox'), lv = $('#lbVideo'); lv.pause(); lv.removeAttribute('src'); lv.load(); lb.classList.remove('open'); }
+$('#lbClose').addEventListener('click', closeLightbox);
+$('#lightbox').addEventListener('click', e => { if (e.target.id === 'lightbox') closeLightbox(); });
+(window.VIDEOS || []).forEach((v, i) => {
+  const slot = document.querySelector('[data-vslot="' + i + '"]');
+  if (!slot) return;
+  slot.innerHTML = '<div class="vidbox"><div class="vid-t">' + esc(v.title) + '</div><video src="' + v.src + '" poster="' + (v.poster || '') + '" autoplay muted loop playsinline preload="metadata"></video><div class="vid-s">' + esc(v.sub) + '<span class="vid-hint">Tap the video to watch it big</span></div></div>';
+  slot.querySelector('video').addEventListener('click', () => openLightbox(v));
 });
 
 /* ---------- chat: state + persistence ---------- */
@@ -345,7 +448,8 @@ $('#askBtn').addEventListener('click', () => { setSB(true); newChat(); });
 /* ---------- the archive brain (answers from the editions, on-device) ---------- */
 const STOP = new Set(['the','a','an','and','or','for','of','to','in','on','is','are','any','me','show','find','what','which','that','this','with','about','have','has','it','its','do','does','can','you','i','my','some','good','best','top','when','did','was','were','will','would','how','who','been','before','ever','first','appear','appeared','ranked','ago','many','get','got','there','their','them','then','than','from','day','days','edition','editions','project','projects','open','source','list','give','tell','look','looking','want','need','please','one','two','three']);
 function projCard(p, ed){
-  return '<span class="proj"><b>#' + p.rank + ' — ' + esc(p.name) + '</b>' + (p.stars ? ' (' + esc(p.stars) + ')' : '') +
+  regPJ(p, ed);
+  return '<span class="proj"><b>#' + p.rank + ' — <span class="pj" data-pj="' + esc(p.name) + '" title="Open ' + esc(p.name) + '">' + esc(p.name) + '</span></b>' + (p.stars ? ' (' + esc(p.stars) + ')' : '') +
     '<br><span style="color:var(--muted);font-size:12.5px">' + esc(ed.label) + '</span><br>' + esc(p.desc.slice(0, 220)) +
     (p.desc.length > 220 ? '…' : '') + '<br><button class="go chip" data-ed="' + ed.id + '">Read that edition</button></span>';
 }
