@@ -11,7 +11,7 @@
   --navy:#0a1120; --navy2:#0d1526; --gold:#d4af37; --gold2:#f0d47a;
   --ink:#eef1f6; --muted:#a9b4c6; --panel:rgba(10,17,32,.78); --panel2:rgba(13,21,38,.92);
   --line:rgba(212,175,55,.28); --radius:16px;
-  --sidebar-w:168px;
+  --sidebar-w:248px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -39,11 +39,11 @@ body.sb-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)
 .btn.solid{background:linear-gradient(180deg,var(--gold2),var(--gold));color:#14100a;font-weight:700;border-color:transparent}
 
 /* ---- sidebar (pop-out) ---- */
-.sidebar{position:fixed;top:0;left:0;bottom:0;width:var(--sidebar-w);max-width:88vw;z-index:50;background:var(--panel2);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-right:1px solid var(--line);transform:translateX(-105%);transition:transform .38s cubic-bezier(.22,.9,.3,1);display:flex;flex-direction:column}
+.sidebar{position:fixed;top:0;left:0;bottom:0;width:var(--sidebar-w);max-width:94vw;z-index:50;background:var(--panel2);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-right:1px solid var(--line);transform:translateX(-105%);transition:transform .38s cubic-bezier(.22,.9,.3,1);display:flex;flex-direction:column}
 body.sb-open .sidebar{transform:translateX(0)}
-.sb-resize{position:absolute;top:0;right:-5px;width:10px;height:100%;cursor:ew-resize;z-index:5;touch-action:none}
-.sb-resize::after{content:"";position:absolute;top:50%;right:4px;transform:translateY(-50%);width:3px;height:44px;border-radius:2px;background:rgba(212,175,55,.35)}
-.sb-resize:hover::after,body.sb-dragging .sb-resize::after{background:var(--gold)}
+.sb-resize{position:absolute;top:0;right:-11px;width:22px;height:100%;cursor:ew-resize;z-index:5;touch-action:none;outline:none}
+.sb-resize::after{content:"";position:absolute;top:50%;right:9px;transform:translateY(-50%);width:4px;height:72px;border-radius:2px;background:rgba(212,175,55,.55);box-shadow:0 0 0 1px rgba(0,0,0,.25)}
+.sb-resize:hover::after,.sb-resize:focus-visible::after,body.sb-dragging .sb-resize::after{background:var(--gold);height:110px}
 body.sb-dragging{user-select:none;cursor:ew-resize}
 body.sb-dragging .sidebar,body.sb-dragging .main,body.sb-dragging .side-tab{transition:none}
 .sb-head{padding:70px 14px 6px}
@@ -232,7 +232,7 @@ footer a{text-decoration:none;margin-right:14px}
     </div>
     <div class="ai-note">The assistant searches every edition of the rankings archive and answers from it. Chats are saved in this panel, on your device only.</div>
   </div>
-  <div class="sb-resize" id="sbResize" title="Drag to resize the panel"></div>
+  <div class="sb-resize" id="sbResize" tabindex="0" role="slider" aria-label="Resize side panel" aria-valuemin="150" aria-valuemax="900" title="Drag to resize the panel — your size is remembered on this device. Double-click resets."></div>
 </aside>
 <button class="side-tab" id="sideTab" aria-label="Open or close the side panel">&#8250;</button>
 <div class="sb-scrim" id="scrim"></div>
@@ -329,19 +329,45 @@ function setSB(open){ document.body.classList.toggle('sb-open', open); $('#sideT
 $('#sideTab').addEventListener('click', () => setSB(!document.body.classList.contains('sb-open')));
 $('#burger').addEventListener('click', () => setSB(!document.body.classList.contains('sb-open')));
 
-/* Side panel resize: drag the gold edge; the width is remembered on this device. */
+/* Side panel resize: drag the gold edge (mouse, touch, or pen), use arrow keys when
+   the edge is focused, or double-click it to reset. Range 150px up to 900px (never
+   wider than 94% of the screen). Each visitor's width is remembered on their own
+   device (localStorage 'dosr.sbw') — every user keeps their own preference. */
 (function(){
+  var MINW = 150, HARDMAX = 900, DEFAULTW = 248;
+  function maxW(){ return Math.max(MINW, Math.min(HARDMAX, Math.floor(window.innerWidth * 0.94))); }
+  function clampW(w){ return Math.max(MINW, Math.min(maxW(), Math.round(w))); }
+  function applyW(w, save){
+    w = clampW(w);
+    document.documentElement.style.setProperty('--sidebar-w', w + 'px');
+    var h = document.getElementById('sbResize');
+    if (h) h.setAttribute('aria-valuenow', String(w));
+    if (save) try { localStorage.setItem('dosr.sbw', String(w)); } catch(e){}
+    return w;
+  }
+  window.__sbw = function(){ var v = getComputedStyle(document.documentElement).getPropertyValue('--sidebar-w'); return parseInt(v, 10) || DEFAULTW; };
   var saved = parseInt(localStorage.getItem('dosr.sbw') || '', 10);
-  if (saved >= 140 && saved <= 520) document.documentElement.style.setProperty('--sidebar-w', saved + 'px');
+  if (saved >= MINW) applyW(saved, false);
   var handle = document.getElementById('sbResize');
   if (!handle) return;
+  handle.setAttribute('aria-valuenow', String(window.__sbw()));
   var dragging = false;
-  function setW(x){ var w = Math.max(140, Math.min(520, Math.round(x))); document.documentElement.style.setProperty('--sidebar-w', w + 'px'); return w; }
-  handle.addEventListener('pointerdown', function(e){ dragging = true; document.body.classList.add('sb-dragging'); handle.setPointerCapture(e.pointerId); e.preventDefault(); });
-  handle.addEventListener('pointermove', function(e){ if (dragging) setW(e.clientX); });
-  function end(e){ if (!dragging) return; dragging = false; document.body.classList.remove('sb-dragging'); localStorage.setItem('dosr.sbw', String(setW(e.clientX))); }
+  handle.addEventListener('pointerdown', function(e){ dragging = true; document.body.classList.add('sb-dragging'); try { handle.setPointerCapture(e.pointerId); } catch(err){} e.preventDefault(); });
+  handle.addEventListener('pointermove', function(e){ if (dragging) applyW(e.clientX, false); });
+  function end(e){ if (!dragging) return; dragging = false; document.body.classList.remove('sb-dragging'); applyW(e.clientX, true); }
   handle.addEventListener('pointerup', end);
   handle.addEventListener('pointercancel', end);
+  handle.addEventListener('dblclick', function(){ applyW(DEFAULTW, true); });
+  handle.addEventListener('keydown', function(e){
+    var step = e.shiftKey ? 40 : 10, cur = window.__sbw(), used = true;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowUp') applyW(cur + step, true);
+    else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') applyW(cur - step, true);
+    else if (e.key === 'Home') applyW(MINW, true);
+    else if (e.key === 'End') applyW(maxW(), true);
+    else used = false;
+    if (used) e.preventDefault();
+  });
+  window.addEventListener('resize', function(){ applyW(window.__sbw(), false); });
 })();
 $('#scrim').addEventListener('click', () => setSB(false));
 if (window.innerWidth >= 1024) setSB(true); else setSB(false);
