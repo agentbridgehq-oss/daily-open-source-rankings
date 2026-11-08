@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join free — Daily Open Source Rankings</title>
+<meta name="description" content="Create your free account: get the daily Top 10 open-source rankings in your email every morning, plus new articles, videos, and subscriber-only product offers.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Daily Open Source Rankings">
+<meta property="og:title" content="Join free — Daily Open Source Rankings">
+<meta property="og:description" content="The Top 10 open-source projects about to blow up — in your inbox every morning. Free account, no card, unsubscribe anytime.">
+<meta property="og:url" content="https://daily-open-source-rankings.netlify.app/join.html">
+<meta property="og:image" content="https://daily-open-source-rankings.netlify.app/images/banner-2026-11-08.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230a1120'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23d4af37' font-family='Arial' font-weight='bold'%3E10%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/styles.css">
+<style>
+.join-panel{background:rgba(13,22,41,.72);border:1px solid rgba(212,175,55,.35);border-radius:16px;padding:26px 24px;margin:22px 0}
+.join-panel h2{margin-top:0}
+.join-form{display:flex;flex-direction:column;gap:12px}
+.join-form label{font-size:14px;color:#c8d2e0;display:flex;flex-direction:column;gap:6px}
+.join-form input[type=text],.join-form input[type=email]{padding:13px 14px;border-radius:11px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#eef1f6;font-size:15.5px;outline:none}
+.join-form input:focus{border-color:#d4af37}
+.join-checks{border:1px solid rgba(255,255,255,.1);border-radius:11px;padding:12px 14px;display:flex;flex-direction:column;gap:9px}
+.join-checks legend{font-size:13px;color:#d4af37;font-weight:700;padding:0 4px}
+.join-checks label{flex-direction:row;align-items:center;gap:9px;font-size:14.5px;color:#e6ecf5;cursor:pointer}
+.join-checks input{width:17px;height:17px;accent-color:#d4af37}
+.join-btn{padding:14px 20px;border-radius:11px;border:none;background:linear-gradient(180deg,#ecd27a,#d4af37);color:#171106;font-weight:800;font-size:16.5px;cursor:pointer}
+.perks{margin:14px 0 4px;padding-left:20px;line-height:1.75;color:#dbe4f0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="brand">Daily Open Source Rankings</p>
+    <p class="tagline">Your daily AI &amp; open-source news station — the Top 10, every morning.</p>
+    <nav class="topnav">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <article>
+    <p class="edition-meta">Free membership</p>
+    <h1>Create your free account</h1>
+    <p>Join the subscriber list and the Top 10 comes to you. Every morning, the 10 open-source projects most likely to blow up — ranked, explained in plain language, and one tap from opening the app or the code — land in your email so you start the day ahead of everyone else.</p>
+    <ul class="perks">
+      <li><strong>The daily Top 10 email</strong> — every edition, the moment it drops.</li>
+      <li><strong>New articles and videos first</strong> — the day's open-source news, before it spreads.</li>
+      <li><strong>Subscriber-only offers</strong> — product drops, discounts, and promotions from the store.</li>
+      <li><strong>Free forever</strong> — no card, no trial clock, unsubscribe anytime.</li>
+    </ul>
+
+    <section class="join-panel">
+      <h2>Join the list</h2>
+      <form class="join-form" name="site-members" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="site-members">
+        <p class="hp"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+        <label>Your name
+          <input type="text" name="name" placeholder="What should we call you?" required autocomplete="name">
+        </label>
+        <label>Email address
+          <input type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+        </label>
+        <fieldset class="join-checks">
+          <legend>Send me</legend>
+          <label><input type="checkbox" name="interests" value="daily-top-10" checked> The daily Top 10 email (every morning)</label>
+          <label><input type="checkbox" name="interests" value="articles-videos" checked> New articles &amp; videos</label>
+          <label><input type="checkbox" name="interests" value="product-offers"> Product offers &amp; promotions</label>
+        </fieldset>
+        <button class="join-btn" type="submit">Create my free account</button>
+      </form>
+      <p class="fineprint">Your account is your subscription — no password to remember, no card. We email what you ticked above and nothing else. Unsubscribe anytime with one click. See the <a href="/privacy.html">privacy policy</a>.</p>
+    </section>
+
+    <p>Prefer to browse first? <a href="/">Read today's Top 10</a> — every project on the list opens its app or its code in one tap.</p>
+  </article>
+
+  <footer>
+    <a href="/about.html">About</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="https://github.com/agentbridgehq-oss/daily-open-source-rankings" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://stan.store/hunter82" target="_blank" rel="noopener">Stan Store</a>
+    <a href="https://stan.store/hunter82/p/hire-native" target="_blank" rel="noopener">Hire Native</a>
+    <br>Daily Open Source Rankings. Rankings are editorial picks based on public trending data.
+  </footer>
+</div>
+</body>
+</html>
