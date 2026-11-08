@@ -13,6 +13,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://daily-open-source-rankings.netlify.app/answers/best-free-alternative-to-chatgpt.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://daily-open-source-rankings.netlify.app/answers/best-free-video-editor.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://daily-open-source-rankings.netlify.app/about.html</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>

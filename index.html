@@ -413,10 +413,10 @@ function openLightbox(v){
 function closeLightbox(){ const lb = $('#lightbox'), lv = $('#lbVideo'); lv.pause(); lv.removeAttribute('src'); lv.load(); lb.classList.remove('open'); }
 $('#lbClose').addEventListener('click', closeLightbox);
 $('#lightbox').addEventListener('click', e => { if (e.target.id === 'lightbox') closeLightbox(); });
-/* Video slots: pools rotate every hour, so the page is always changing.
+/* Video slots: pools rotate every 2 hours, so the page is always changing.
    Landscape pool -> slots 0,1,2 · Avatar pool -> the pair, slots 3,4. */
 (function(){
-  const seed = Math.floor(Date.now() / 3600000);
+  const seed = Math.floor(Date.now() / 7200000);
   function rot(arr){ if (!arr || !arr.length) return []; const o = seed % arr.length; return arr.slice(o).concat(arr.slice(0, o)); }
   const land = rot(window.VIDEOS || []);
   const av = rot(window.AVATAR_VIDEOS || []);
