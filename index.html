@@ -108,6 +108,12 @@ body.sb-dragging .sidebar,body.sb-dragging .main,body.sb-dragging .side-tab{tran
 .vidbox{max-width:100%;background:var(--panel);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:14px}
 .vid-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}
 .vid-row .vid-slot{margin:0}
+.vid-row .vidbox{aspect-ratio:4/5}
+.support{margin:26px 0;background:rgba(13,22,41,.72);border:1px solid rgba(212,175,55,.35);border-radius:16px;padding:22px 22px 18px}
+.support h3{margin:0 0 8px;font-size:20px}
+.support p{color:#c8d2e0;line-height:1.65;margin:0 0 14px}
+.support .sbtn{display:inline-block;padding:12px 22px;border-radius:11px;background:linear-gradient(180deg,var(--gold2),var(--gold));color:#171106;font-weight:800;text-decoration:none;margin-right:10px}
+.support .sbtn.ghost{background:transparent;border:1px solid var(--line);color:var(--gold2)}
 @media(max-width:640px){.vid-row{grid-template-columns:1fr}}
 .pj{cursor:pointer;color:var(--gold2);text-decoration:underline dotted rgba(212,175,55,.55);text-underline-offset:3px}
 .pj:hover{color:var(--gold)}
@@ -269,6 +275,13 @@ footer a{text-decoration:none;margin-right:14px}
 
     <!-- Ad slot (mid-page, after article) — reserved for a future ad network. Empty until ads are enabled. -->
     <div class="ad-slot" aria-hidden="true"></div>
+    <section class="support" id="support">
+      <h3>Keep this station free for everyone</h3>
+      <p>The rankings, the archive, and the daily email are free — and staying free. If the Top 10 saves you money every week, you can chip in a few bucks as a Supporter: it's the buy-me-a-coffee tier, and it keeps the lights on and the editions coming. Supporters get a thank-you spot in the station's credits.</p>
+      <a class="sbtn" href="https://stan.store/hunter82" target="_blank" rel="noopener">☕ Support the station</a>
+      <a class="sbtn ghost" href="/join.html">Create a free account</a>
+    </section>
+
     <h3 class="sec-title" id="archive">Previous editions</h3>
     <div class="archive-grid" id="archiveGrid"></div>
     <div class="vid-slot" data-vslot="2"></div>
@@ -400,12 +413,22 @@ function openLightbox(v){
 function closeLightbox(){ const lb = $('#lightbox'), lv = $('#lbVideo'); lv.pause(); lv.removeAttribute('src'); lv.load(); lb.classList.remove('open'); }
 $('#lbClose').addEventListener('click', closeLightbox);
 $('#lightbox').addEventListener('click', e => { if (e.target.id === 'lightbox') closeLightbox(); });
-(window.VIDEOS || []).forEach((v, i) => {
-  const slot = document.querySelector('[data-vslot="' + i + '"]');
-  if (!slot) return;
-  slot.innerHTML = '<div class="vidbox"><div class="vid-t">' + esc(v.title) + '</div><video src="' + v.src + '" poster="' + (v.poster || '') + '" autoplay muted loop playsinline preload="metadata"></video><div class="vid-s">' + esc(v.sub) + '<span class="vid-hint">Tap the video to watch it big</span></div></div>';
-  slot.querySelector('video').addEventListener('click', () => openLightbox(v));
-});
+/* Video slots: pools rotate every hour, so the page is always changing.
+   Landscape pool -> slots 0,1,2 · Avatar pool -> the pair, slots 3,4. */
+(function(){
+  const seed = Math.floor(Date.now() / 3600000);
+  function rot(arr){ if (!arr || !arr.length) return []; const o = seed % arr.length; return arr.slice(o).concat(arr.slice(0, o)); }
+  const land = rot(window.VIDEOS || []);
+  const av = rot(window.AVATAR_VIDEOS || []);
+  const assign = { 0: land[0], 1: land[1], 2: land[2], 3: av[0] || land[3], 4: av[1] || land[4] };
+  Object.keys(assign).forEach(k => {
+    const v = assign[k]; if (!v) return;
+    const slot = document.querySelector('[data-vslot="' + k + '"]');
+    if (!slot) return;
+    slot.innerHTML = '<div class="vidbox"><div class="vid-t">' + esc(v.title) + '</div><video src="' + v.src + '" poster="' + (v.poster || '') + '" autoplay muted loop playsinline preload="metadata"></video><div class="vid-s">' + esc(v.sub) + '<span class="vid-hint">Tap the video to watch it big</span></div></div>';
+    slot.querySelector('video').addEventListener('click', () => openLightbox(v));
+  });
+})();
 
 /* ---------- chat: state + persistence ---------- */
 const LS_KEY = 'dosr.chats.v1';
