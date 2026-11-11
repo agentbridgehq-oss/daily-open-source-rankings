@@ -1,6 +1,84 @@
 window.EDITIONS = [
   {
     "id": "today",
+    "label": "Daily Edition — Wednesday, November 11, 2026",
+    "headline": "Meta's Design System Won't Slow Down, an iOS Switch-Flipper Surges, and the Skills Wave Rolls On — Today's 10 Open-Source Breakouts",
+    "html": "<p>I'll be honest: today's board has a theme, and it's not subtle. Four of the ten are agent skills — little instruction packs that teach your coding agent to do one job properly — and the top spot belongs to Meta's design system, which has now stacked more than nine thousand stars in three days. Around them: an iOS tool that flips hidden device switches, a download manager built from scratch in Rust, and a plugin that claims your agent sessions can run for a month. Wednesday, November 11, 2026 — here's the ten.</p>\n\n    <p><strong>1. meta/astryx (★24.2k, +3,100 today)</strong> — Meta's open-source, agent-ready design system, built inside the company over eight years: 150+ accessible React components, brand theming, dark mode, ready-made templates, and a CLI as one cohesive system. Second yesterday, still gaining three thousand stars a day. Eight years of internal polish, now free for anyone to build on.</p>\n\n    <p><strong>2. huamidev/GestaltX (★5.8k, +2,519/day)</strong> — A MobileGestalt editor for iOS 27.x, with region-code tweaks, device presets, backups, and support for seven languages. Two days old and the fastest-rising brand-new repo on the board. Tools that poke at device identity values aren't for everyone — I'd read the warnings first — but twenty-five hundred stars a day says a lot of people were waiting for exactly this.</p>\n\n    <p><strong>3. storytold/craft-anything (★27.7k, +1,936/day)</strong> — Study how any app or game works, then have an agent rebuild it. A clean-room engine in pure Rust: it studies the original with real inspection tools, then your coding agent builds your version in the stack you name and refines it against the original. Early alpha, 314 tools, third straight day on this board.</p>\n\n    <p><strong>4. morluto/rea (★451.5k, +1,804 today)</strong> — Point your agent at any app and learn how it works. It inspects native binaries through Hopper or Ghidra, JavaScript and Electron apps, .NET assemblies, and websites, then explains how a feature works — with the evidence, and the limits, behind each conclusion. The analysis runs locally. Four hundred and fifty-one thousand stars, still gaining nearly two thousand a day.</p>\n\n    <p><strong>5. anthropics/skills (★192.8k, +1,700 today)</strong> — Anthropic's public repository for Agent Skills: folders of instructions, scripts, and resources that teach an agent to do one job the right way. Seventeen hundred stars a day on a repo that mostly holds folders of markdown tells you where the agent wave actually lives now — not in bigger models, in better instructions.</p>\n\n    <!-- Ad slot: in-content — reserved for a future ad network. Empty until ads are enabled. -->\n    <div class=\"ad-slot ad-incontent\" aria-hidden=\"true\"></div>\n\n    <p><strong>6. janestreet/agent_skills (★4.8k, +1,622/day)</strong> — Jane Street's first public skill collection — the trading firm famous for hiring sharp people just published the skills it uses to teach agents to tutor, Socratic style. Seven days old, nearly five thousand stars. When a firm that guarded its edge for decades starts publishing, I pay attention.</p>\n\n    <p><strong>7. anefzaoui/misterdownloadmanager (★6.3k, +1,405/day)</strong> — The ultimate open-source, clean-room download manager, written from scratch in pure Rust for Windows, Mac, and Linux. Thirteen days old, and it pulled in more than fourteen hundred stars in the last day alone. Download managers look like a solved problem — until a fresh one shows up and reminds you the old ones all have rough edges.</p>\n\n    <p><strong>8. mattpocock/skills (★321.5k, +1,200 today)</strong> — A small set of reusable instructions that make coding agents work like a careful senior engineer instead of guessing. Matt Pocock teaches TypeScript to hundreds of thousands of developers, and this is the skill pack distilled from how he actually works, straight from his .agents directory. Three hundred twenty-one thousand stars says the \"just tell the agent to be careful\" era is over.</p>\n\n    <p><strong>9. homeassistant-ai/ha-mcp (★7.0k, +790 today)</strong> — Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants. Your lights, your locks, your thermostat — driven by the same agent that writes your code. Seven thousand stars and climbing, because the smart home finally got a front door your agent can walk through.</p>\n\n    <p><strong>10. ranxianglei/billion-context (★6.7k, +375 today)</strong> — A context-compression plugin for month-long single sessions — billions of tokens through a window as small as 100K, with five times fewer tokens burned. The least flashy idea on today's board and maybe the most useful: an agent that doesn't forget what you built last week, or last month.</p>\n\n    <p>That's your ten. My pick? janestreet/agent_skills — because when a firm that kept its edge locked away for decades starts publishing how it teaches agents, that's a signal worth reading. If I've got an hour free, I'm installing billion-context first, because an agent that remembers last month is the difference between a tool and a teammate.</p>\n\n    <p class=\"footnote\">Star counts reflect the November 11 morning trending snapshot (Daily Diff, Nov 11, 2026; GitDiscover daily picks, Wed Nov 11, 2026; Trendar rising now, updated 2026-11-11 06:00 UTC; ghtrends daily, Nov 11, 2026).</p>",
+    "projects": [
+      {
+        "rank": 1,
+        "name": "meta/astryx",
+        "stars": "★24.2k, +3,100 today",
+        "desc": "Meta's open-source, agent-ready design system, built inside the company over eight years: 150+ accessible React components, brand theming, dark mode, ready-made templates, and a CLI as one cohesive system. Second yesterday, still gaining three thousand stars a day. Eight years of internal polish, now free for anyone to build on.",
+        "app": "http://astryx.atmeta.com"
+      },
+      {
+        "rank": 2,
+        "name": "huamidev/GestaltX",
+        "stars": "★5.8k, +2,519/day",
+        "desc": "A MobileGestalt editor for iOS 27.x, with region-code tweaks, device presets, backups, and support for seven languages. Two days old and the fastest-rising brand-new repo on the board. Tools that poke at device identity values aren't for everyone — I'd read the warnings first — but twenty-five hundred stars a day says a lot of people were waiting for exactly this.",
+        "app": ""
+      },
+      {
+        "rank": 3,
+        "name": "storytold/craft-anything",
+        "stars": "★27.7k, +1,936/day",
+        "desc": "Study how any app or game works, then have an agent rebuild it. A clean-room engine in pure Rust: it studies the original with real inspection tools, then your coding agent builds your version in the stack you name and refines it against the original. Early alpha, 314 tools, third straight day on this board.",
+        "app": ""
+      },
+      {
+        "rank": 4,
+        "name": "morluto/rea",
+        "stars": "★451.5k, +1,804 today",
+        "desc": "Point your agent at any app and learn how it works. It inspects native binaries through Hopper or Ghidra, JavaScript and Electron apps, .NET assemblies, and websites, then explains how a feature works — with the evidence, and the limits, behind each conclusion. The analysis runs locally. Four hundred and fifty-one thousand stars, still gaining nearly two thousand a day.",
+        "app": "https://rea.tools"
+      },
+      {
+        "rank": 5,
+        "name": "anthropics/skills",
+        "stars": "★192.8k, +1,700 today",
+        "desc": "Anthropic's public repository for Agent Skills: folders of instructions, scripts, and resources that teach an agent to do one job the right way. Seventeen hundred stars a day on a repo that mostly holds folders of markdown tells you where the agent wave actually lives now — not in bigger models, in better instructions.",
+        "app": ""
+      },
+      {
+        "rank": 6,
+        "name": "janestreet/agent_skills",
+        "stars": "★4.8k, +1,622/day",
+        "desc": "Jane Street's first public skill collection — the trading firm famous for hiring sharp people just published the skills it uses to teach agents to tutor, Socratic style. Seven days old, nearly five thousand stars. When a firm that guarded its edge for decades starts publishing, I pay attention.",
+        "app": ""
+      },
+      {
+        "rank": 7,
+        "name": "anefzaoui/misterdownloadmanager",
+        "stars": "★6.3k, +1,405/day",
+        "desc": "The ultimate open-source, clean-room download manager, written from scratch in pure Rust for Windows, Mac, and Linux. Thirteen days old, and it pulled in more than fourteen hundred stars in the last day alone. Download managers look like a solved problem — until a fresh one shows up and reminds you the old ones all have rough edges.",
+        "app": "https://misterdownloadmanager.com"
+      },
+      {
+        "rank": 8,
+        "name": "mattpocock/skills",
+        "stars": "★321.5k, +1,200 today",
+        "desc": "A small set of reusable instructions that make coding agents work like a careful senior engineer instead of guessing. Matt Pocock teaches TypeScript to hundreds of thousands of developers, and this is the skill pack distilled from how he actually works, straight from his .agents directory. Three hundred twenty-one thousand stars says the \"just tell the agent to be careful\" era is over.",
+        "app": "https://aihero.dev/skills"
+      },
+      {
+        "rank": 9,
+        "name": "homeassistant-ai/ha-mcp",
+        "stars": "★7.0k, +790 today",
+        "desc": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants. Your lights, your locks, your thermostat — driven by the same agent that writes your code. Seven thousand stars and climbing, because the smart home finally got a front door your agent can walk through.",
+        "app": "https://homeassistant-ai.github.io/ha-mcp/"
+      },
+      {
+        "rank": 10,
+        "name": "ranxianglei/billion-context",
+        "stars": "★6.7k, +375 today",
+        "desc": "A context-compression plugin for month-long single sessions — billions of tokens through a window as small as 100K, with five times fewer tokens burned. The least flashy idea on today's board and maybe the most useful: an agent that doesn't forget what you built last week, or last month.",
+        "app": ""
+      }
+    ]
+  },
+  {
+    "id": "2026-11-10",
     "label": "Daily Edition — Tuesday, November 10, 2026",
     "headline": "Sherlock Hunts 400 Networks, Meta's Design System Keeps Climbing, and a Download Manager Built From Scratch — Today's 10 Open-Source Breakouts",
     "html": "<p>I'll be honest: today's board is a search party. The top spot goes to a tool that can find one username on more than 400 social networks, and right behind it sit three repos that barely existed a week ago — an iOS tweaker, a download manager written from scratch in Rust, and a third-party client pulling in nearly three thousand stars a day. The giants are still here too: Meta's design system gained another 3,300 stars overnight, and Anthropic's own skills repo sits at 191,000. When the old names and the brand-new ones climb together, that's a board worth reading twice.</p>\n\n    <p><strong>1. sherlock-project/sherlock (★108.3k, +4,267 today)</strong> — Hand it a username and it checks more than 400 social networks, then writes every match to a file, a CSV, or a spreadsheet. Run several names at once, narrow it to specific sites, or route it through a proxy. It's the OSINT staple, and today it posted the biggest daily gain on GitHub. If you've ever wondered where a name shows up online, this is the ten-second answer.</p>\n\n    <p><strong>2. meta/astryx (★21.5k, +3,278 today)</strong> — Meta's open-source, agent-ready design system, built inside the company over eight years: 150+ accessible React components, brand theming, dark mode, ready-made templates, and a CLI as one cohesive system. It was ninth on yesterday's board and it's still gaining three thousand stars a day. Eight years of internal polish, now free for anyone to build on.</p>\n\n    <p><strong>3. huamidev/GestaltX (★3.9k, +3,018/day)</strong> — A MobileGestalt editor for iOS, with region-code tweaks, device presets, backups, and support for seven languages. One day old and already the fastest-rising brand-new repo on the board. Tools that poke at device identity values aren't for everyone, and I'd read the warnings before touching it — but three thousand stars in a day says a lot of people were waiting for exactly this.</p>\n\n    <p><strong>4. Minireel/HGhub (★7.7k, +2,869/day)</strong> — A third-party client for YellowFruit, six days old and climbing nearly three thousand stars a day. Third-party clients live or die on how fast they ship what the official app won't, and this one's velocity says it's shipping the right things.</p>\n\n    <p><strong>5. anefzaoui/misterdownloadmanager (★5.0k, +2,536/24h)</strong> — The ultimate open-source, clean-room download manager, written from scratch in pure Rust for Windows, Mac, and Linux. Twelve days old, and it pulled in more than twenty-five hundred stars in the last day alone. Download managers are the kind of tool everyone assumes is a solved problem — until a fresh one shows up and reminds you the old ones all have rough edges.</p>\n\n    <!-- Ad slot: in-content — reserved for a future ad network. Empty until ads are enabled. -->\n    <div class=\"ad-slot ad-incontent\" aria-hidden=\"true\"></div>\n\n    <p><strong>6. storytold/craft-anything (★25.5k, +1,743/day)</strong> — Study how any app or game works, then have an agent rebuild it. A clean-room engine in pure Rust: it studies the original with real inspection tools, then your coding agent builds your version in the stack you name and refines it against the original. Early alpha, 314 tools, and it was second on Sunday's board. Still climbing, still the most ambitious idea on the list.</p>\n\n    <p><strong>7. anthropics/skills (★191.8k, +1,038 today)</strong> — Anthropic's public repository for Agent Skills: folders of instructions, scripts, and resources that teach an agent to do one job the right way. A thousand stars a day on a repo that mostly holds folders of markdown tells you where the agent wave actually lives now — not in bigger models, in better instructions.</p>\n\n    <p><strong>8. vercel-labs/agent-browser (★48.9k, +916 today)</strong> — A browser CLI for AI agents, built on accessibility-tree snapshots, so your agent can click, read, and fill in forms the way a person does — no screenshots, no guessing. Version 0.42.0 just added experimental saved flows, and that small change is the kind of thing that turns a demo into a daily driver.</p>\n\n    <p><strong>9. vercel-labs/agent-desktop (★21.0k, +12.1k this week)</strong> — The desktop half of the same idea: a computer-use CLI that lets an agent read and operate desktop apps through the operating system's accessibility tree, with no pixel matching. It gained more than twelve thousand stars this week — the biggest weekly gain on GitHub. Your agent, driving the apps you already use.</p>\n\n    <p><strong>10. google-deepmind/mujoco (★17.2k, +574 today)</strong> — Google DeepMind's physics engine for robotics research and simulation: multi-joint dynamics with contact, built for the kind of sim work that trains real robots. It's the oldest project on today's board and the least flashy — and it's still here, because every robotics demo you've seen this year probably ran through it first.</p>\n\n    <p>That's your ten. My pick? Sherlock — because a tool that answers \"where does this name exist\" in ten seconds is the kind of thing you reach for once a year and never forget. If I've got an hour free, I'm reading the anthropics/skills repo first, because the agent wave is being won by whoever writes the best instructions, not whoever trains the biggest model.</p>\n\n    <p class=\"footnote\">Star counts reflect the November 10 morning trending snapshot (GitHub Trending daily, Nov 10, 2026; Trendoday daily, Nov 10, 2026; Trendar rising now, updated 2026-11-10 12:00 UTC; GitDiscover daily picks, Tue Nov 10, 2026; ghtrends daily, Nov 10, 2026).</p>",
