@@ -1,6 +1,84 @@
 [
   {
     "id": "today",
+    "label": "Daily Edition — Thursday, November 12, 2026",
+    "headline": "A Cage for Claude, Meta's Design System Still Climbing, and a Zelda Rebuild for the Switch 2 — Today's 10 Open-Source Breakouts",
+    "html": "<p>I'll be honest: today's board is the one where the agent wave starts putting guardrails on itself. The fastest-rising brand-new repo is a lightweight virtual machine built to cage Claude Code so nothing leaks over the network, and right behind it Meta's design system just stacked another 2,800 stars. Around them: a username hunter, a Zelda rebuild, and a finance app people self-host.</p>\n\n    <p><strong>1. Lee-xeo/Claude-Cage (★4.4k, +1,855 today)</strong> — A lightweight VM made for Claude, and its whole pitch is one line: no network leaks, ever. It wraps your coding agent in a small virtual machine, works across platforms, handles multiple accounts, drives from your phone. Eleven days old — the first repo I'd install before letting agents loose on anything serious.</p>\n\n    <p><strong>2. meta/astryx (★25.9k, +2,842 today)</strong> — Meta's open-source design system is still the biggest gainer on the board. It's the system Meta's own teams built on for eight years: 150+ accessible React components, brand theming, dark mode, templates, and a CLI, packaged so your agent can build with it too. Still the day's biggest gainer.</p>\n\n    <p><strong>3. sherlock-project/sherlock (★110.4k, +2,393 today)</strong> — Type in a username and Sherlock checks it across 400+ social networks and tells you where it lives. It's been the standard OSINT tool in its lane for years, and it's still adding 2,400 stars a day. Never run it? The one-line install is the whole demo.</p>\n\n    <p><strong>4. storytold/craft-anything (★29.3k, +2,260 today)</strong> — Point it at any app or game and it figures out how the thing works, then your agent rebuilds your version in the stack you pick. Pure Rust, 314 tools, clean-room inspection with real tools like Hopper and Ghidra. Third straight day on this board.</p>\n\n    <p><strong>5. janestreet/agent_skills (★7.0k, +1,927 today)</strong> — Jane Street open-sourced the agent skills its own engineers use, and the dev world noticed: up 55% in a day. Skills are the quiet infrastructure of the agent wave: little instruction packs that teach your agent one job properly, from a firm famous for not shipping sloppy work.</p>\n\n    <!-- Ad slot: in-content — reserved for a future ad network. Empty until ads are enabled. -->\n    <div class=\"ad-slot ad-incontent\" aria-hidden=\"true\"></div>\n\n    <p><strong>6. debpalash/VoiceStudio (★108.8k, +1,861 today)</strong> — The fully local ElevenLabs alternative keeps climbing: voice cloning, voice design, video dubbing, dictation, transcription, and audiobooks in 646 languages, all on your own hardware. If you make anything with a voice in it, try this before paying for a cloud service.</p>\n\n    <p><strong>7. pingdotgg/t3code (★57.8k, +1,299 today)</strong> — One control panel for every coding agent on your machine — Claude Code, Codex, and the rest — from any computer or phone. The T3 team's take on the agent dashboard. If your agents live on three machines and you check them from the couch, this is the app.</p>\n\n    <p><strong>8. NotRexed/Hookshot (★8.3k, +1,179 today)</strong> — A native recompilation of The Legend of Zelda: Ocarina of Time for the Nintendo Switch 2. Six days old, and it's the kind of project that reminds you open source is, at heart, people rebuilding the things they love. Bring your own game files; the code does the rest.</p>\n\n    <p><strong>9. we-promise/sure (★13.5k, +1,078 today)</strong> — A personal finance app you can self-host, with multiple clients and investment tracking built in. Finance apps are the category people keep taking back from subscriptions, and Sure's pitch — your money data stays on your machine — is landing exactly on time.</p>\n\n    <p><strong>10. expo/exact (★3.2k, +905 today)</strong> — Write an app once and it runs natively on the web, macOS, iOS, and Linux — and an AI agent can build it, run it, see it, and test it on every one of them. Ten days old. Expo's bet: the next wave of apps gets built by agents, and Exact is the toolkit that makes it real.</p>\n\n    <p>That's the list for Thursday, November 12, 2026. The thread: agents are getting real jobs, and the tools around them are catching up — cages to keep them honest, skills to teach them the trade, dashboards to watch them work. Tomorrow's board will tell us which keeps climbing. My money's on the cage.</p>\n\n    <p class=\"footnote\">Star counts reflect the November 12 morning trending snapshot (GitDiscover daily picks, Thu Nov 12, 2026; ghtrends daily, Nov 12, 2026; Toolclove trending roundup, Nov 2026).</p>",
+    "projects": [
+      {
+        "rank": 1,
+        "name": "Lee-xeo/Claude-Cage",
+        "stars": "★4.4k, +1,855 today",
+        "desc": "A lightweight VM made for Claude, and its whole pitch is one line: no network leaks, ever. It wraps your coding agent in a small virtual machine, works across platforms, handles multiple accounts, drives from your phone. Eleven days old — the first repo I'd install before letting agents loose on anything serious.",
+        "app": "https://lee-xeo.github.io/Claude-Cage/"
+      },
+      {
+        "rank": 2,
+        "name": "meta/astryx",
+        "stars": "★25.9k, +2,842 today",
+        "desc": "Meta's open-source design system is still the biggest gainer on the board. It's the system Meta's own teams built on for eight years: 150+ accessible React components, brand theming, dark mode, templates, and a CLI, packaged so your agent can build with it too. Still the day's biggest gainer.",
+        "app": "http://astryx.atmeta.com"
+      },
+      {
+        "rank": 3,
+        "name": "sherlock-project/sherlock",
+        "stars": "★110.4k, +2,393 today",
+        "desc": "Type in a username and Sherlock checks it across 400+ social networks and tells you where it lives. It's been the standard OSINT tool in its lane for years, and it's still adding 2,400 stars a day. Never run it? The one-line install is the whole demo.",
+        "app": "https://sherlockproject.xyz"
+      },
+      {
+        "rank": 4,
+        "name": "storytold/craft-anything",
+        "stars": "★29.3k, +2,260 today",
+        "desc": "Point it at any app or game and it figures out how the thing works, then your agent rebuilds your version in the stack you pick. Pure Rust, 314 tools, clean-room inspection with real tools like Hopper and Ghidra. Third straight day on this board.",
+        "app": ""
+      },
+      {
+        "rank": 5,
+        "name": "janestreet/agent_skills",
+        "stars": "★7.0k, +1,927 today",
+        "desc": "Jane Street open-sourced the agent skills its own engineers use, and the dev world noticed: up 55% in a day. Skills are the quiet infrastructure of the agent wave: little instruction packs that teach your agent one job properly, from a firm famous for not shipping sloppy work.",
+        "app": ""
+      },
+      {
+        "rank": 6,
+        "name": "debpalash/VoiceStudio",
+        "stars": "★108.8k, +1,861 today",
+        "desc": "The fully local ElevenLabs alternative keeps climbing: voice cloning, voice design, video dubbing, dictation, transcription, and audiobooks in 646 languages, all on your own hardware. If you make anything with a voice in it, try this before paying for a cloud service.",
+        "app": "https://voicestudio.sh"
+      },
+      {
+        "rank": 7,
+        "name": "pingdotgg/t3code",
+        "stars": "★57.8k, +1,299 today",
+        "desc": "One control panel for every coding agent on your machine — Claude Code, Codex, and the rest — from any computer or phone. The T3 team's take on the agent dashboard. If your agents live on three machines and you check them from the couch, this is the app.",
+        "app": "https://t3.codes"
+      },
+      {
+        "rank": 8,
+        "name": "NotRexed/Hookshot",
+        "stars": "★8.3k, +1,179 today",
+        "desc": "A native recompilation of The Legend of Zelda: Ocarina of Time for the Nintendo Switch 2. Six days old, and it's the kind of project that reminds you open source is, at heart, people rebuilding the things they love. Bring your own game files; the code does the rest.",
+        "app": ""
+      },
+      {
+        "rank": 9,
+        "name": "we-promise/sure",
+        "stars": "★13.5k, +1,078 today",
+        "desc": "A personal finance app you can self-host, with multiple clients and investment tracking built in. Finance apps are the category people keep taking back from subscriptions, and Sure's pitch — your money data stays on your machine — is landing exactly on time.",
+        "app": "https://sure.am"
+      },
+      {
+        "rank": 10,
+        "name": "expo/exact",
+        "stars": "★3.2k, +905 today",
+        "desc": "Write an app once and it runs natively on the web, macOS, iOS, and Linux — and an AI agent can build it, run it, see it, and test it on every one of them. Ten days old. Expo's bet: the next wave of apps gets built by agents, and Exact is the toolkit that makes it real.",
+        "app": ""
+      }
+    ]
+  },
+  {
+    "id": "2026-11-11",
     "label": "Daily Edition — Wednesday, November 11, 2026",
     "headline": "Meta's Design System Won't Slow Down, an iOS Switch-Flipper Surges, and the Skills Wave Rolls On — Today's 10 Open-Source Breakouts",
     "html": "<p>I'll be honest: today's board has a theme, and it's not subtle. Four of the ten are agent skills — little instruction packs that teach your coding agent to do one job properly — and the top spot belongs to Meta's design system, which has now stacked more than nine thousand stars in three days. Around them: an iOS tool that flips hidden device switches, a download manager built from scratch in Rust, and a plugin that claims your agent sessions can run for a month. Wednesday, November 11, 2026 — here's the ten.</p>\n\n    <p><strong>1. meta/astryx (★24.2k, +3,100 today)</strong> — Meta's open-source, agent-ready design system, built inside the company over eight years: 150+ accessible React components, brand theming, dark mode, ready-made templates, and a CLI as one cohesive system. Second yesterday, still gaining three thousand stars a day. Eight years of internal polish, now free for anyone to build on.</p>\n\n    <p><strong>2. huamidev/GestaltX (★5.8k, +2,519/day)</strong> — A MobileGestalt editor for iOS 27.x, with region-code tweaks, device presets, backups, and support for seven languages. Two days old and the fastest-rising brand-new repo on the board. Tools that poke at device identity values aren't for everyone — I'd read the warnings first — but twenty-five hundred stars a day says a lot of people were waiting for exactly this.</p>\n\n    <p><strong>3. storytold/craft-anything (★27.7k, +1,936/day)</strong> — Study how any app or game works, then have an agent rebuild it. A clean-room engine in pure Rust: it studies the original with real inspection tools, then your coding agent builds your version in the stack you name and refines it against the original. Early alpha, 314 tools, third straight day on this board.</p>\n\n    <p><strong>4. morluto/rea (★451.5k, +1,804 today)</strong> — Point your agent at any app and learn how it works. It inspects native binaries through Hopper or Ghidra, JavaScript and Electron apps, .NET assemblies, and websites, then explains how a feature works — with the evidence, and the limits, behind each conclusion. The analysis runs locally. Four hundred and fifty-one thousand stars, still gaining nearly two thousand a day.</p>\n\n    <p><strong>5. anthropics/skills (★192.8k, +1,700 today)</strong> — Anthropic's public repository for Agent Skills: folders of instructions, scripts, and resources that teach an agent to do one job the right way. Seventeen hundred stars a day on a repo that mostly holds folders of markdown tells you where the agent wave actually lives now — not in bigger models, in better instructions.</p>\n\n    <!-- Ad slot: in-content — reserved for a future ad network. Empty until ads are enabled. -->\n    <div class=\"ad-slot ad-incontent\" aria-hidden=\"true\"></div>\n\n    <p><strong>6. janestreet/agent_skills (★4.8k, +1,622/day)</strong> — Jane Street's first public skill collection — the trading firm famous for hiring sharp people just published the skills it uses to teach agents to tutor, Socratic style. Seven days old, nearly five thousand stars. When a firm that guarded its edge for decades starts publishing, I pay attention.</p>\n\n    <p><strong>7. anefzaoui/misterdownloadmanager (★6.3k, +1,405/day)</strong> — The ultimate open-source, clean-room download manager, written from scratch in pure Rust for Windows, Mac, and Linux. Thirteen days old, and it pulled in more than fourteen hundred stars in the last day alone. Download managers look like a solved problem — until a fresh one shows up and reminds you the old ones all have rough edges.</p>\n\n    <p><strong>8. mattpocock/skills (★321.5k, +1,200 today)</strong> — A small set of reusable instructions that make coding agents work like a careful senior engineer instead of guessing. Matt Pocock teaches TypeScript to hundreds of thousands of developers, and this is the skill pack distilled from how he actually works, straight from his .agents directory. Three hundred twenty-one thousand stars says the \"just tell the agent to be careful\" era is over.</p>\n\n    <p><strong>9. homeassistant-ai/ha-mcp (★7.0k, +790 today)</strong> — Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants. Your lights, your locks, your thermostat — driven by the same agent that writes your code. Seven thousand stars and climbing, because the smart home finally got a front door your agent can walk through.</p>\n\n    <p><strong>10. ranxianglei/billion-context (★6.7k, +375 today)</strong> — A context-compression plugin for month-long single sessions — billions of tokens through a window as small as 100K, with five times fewer tokens burned. The least flashy idea on today's board and maybe the most useful: an agent that doesn't forget what you built last week, or last month.</p>\n\n    <p>That's your ten. My pick? janestreet/agent_skills — because when a firm that kept its edge locked away for decades starts publishing how it teaches agents, that's a signal worth reading. If I've got an hour free, I'm installing billion-context first, because an agent that remembers last month is the difference between a tool and a teammate.</p>\n\n    <p class=\"footnote\">Star counts reflect the November 11 morning trending snapshot (Daily Diff, Nov 11, 2026; GitDiscover daily picks, Wed Nov 11, 2026; Trendar rising now, updated 2026-11-11 06:00 UTC; ghtrends daily, Nov 11, 2026).</p>",

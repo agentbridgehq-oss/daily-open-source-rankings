@@ -16,6 +16,7 @@ window.VIDEOS = [
   { src: '/assets/vid-pool-2026-11-09.mp4', poster: '/assets/vid-pool-2026-11-09-poster.jpg', title: 'Code, decoded by agents', sub: 'rea — from today\'s Top 10.' },
   { src: '/assets/vid-pool-2026-11-10.mp4', poster: '/assets/vid-pool-2026-11-10-poster.jpg', title: 'Hunting a username across 400 networks', sub: 'sherlock-project/sherlock — from today\'s Top 10.' },
   { src: '/assets/vid-pool-2026-11-11.mp4', poster: '/assets/vid-pool-2026-11-11-poster.jpg', title: 'A design system opened up', sub: 'meta/astryx — from today\'s Top 10.' },
+  { src: '/assets/vid-pool-2026-11-12.mp4', poster: '/assets/vid-pool-2026-11-12-poster.jpg', title: 'A cage for Claude', sub: 'Lee-xeo/Claude-Cage — from today's Top 10.' },
 ];
 window.AVATAR_VIDEOS = [
   { src: '/assets/vid-avatar-desk.mp4', poster: '/assets/vid-avatar-desk-poster.jpg', title: 'At the desk', sub: "Inside the Operator Suite office — putting today's rankings together." },
