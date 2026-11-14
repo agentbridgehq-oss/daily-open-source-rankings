@@ -1,6 +1,84 @@
 [
   {
     "id": "today",
+    "label": "Daily Edition — Friday, November 13, 2026",
+    "headline": "Amazon Emulates AWS on Your Laptop, Chrome Teaches Your Agent the Modern Web, and Frame Generation Lands for Every GPU — Today's 10 Open-Source Breakouts",
+    "html": "<p>I'll be honest: today's board is the one where the big names stop watching the agent wave and start building for it. Amazon just shipped a local emulator for its own cloud APIs, Chrome handed your coding agent a curated guide to the modern web, and OpenAI put a security auditor in your terminal. Around them: a frame-generation tool for every GPU, a Slack alternative where your teammates are agents, and a design system that refuses to slow down. Friday, November 13, 2026 — here's the ten.</p>\n\n    <p><strong>1. aws/aws-emulator (★6.2k, +2,133 today)</strong> — Amazon's local emulator of the AWS APIs, built for building and testing: start it, point the AWS CLI or your SDK at its endpoint, and work against emulated resources with no AWS account. Rust tests can embed one isolated instance per test through its HTTP client, and each release publishes per-service fidelity scores. The day your tests stop needing a cloud account is the day your whole workflow gets faster.</p>\n\n    <p><strong>2. GoogleChrome/modern-web-guidance (★9.4k, +1,597 today)</strong> — A skill pack stewarded by the Chrome, Edge, Firefox and MDN teams that feeds your coding agent curated guides to the modern web platform: view transitions, container queries, the Popover API, built-in AI and more. Its CLI searches guides, pulls one by ID, and scans your codebase for legacy patterns worth replacing. Your agent finally learns the web as it is now, not as it was in its training data.</p>\n\n    <p><strong>3. morluto/rea (★456.5k, +1,546 today)</strong> — Point your agent at any app and learn how it works. It inspects native binaries through Hopper or Ghidra, JavaScript and Electron apps, .NET assemblies, and websites, then explains how a feature works — with the evidence, and the limits, behind each conclusion. The analysis runs locally. Four hundred and fifty-six thousand stars, and it's still the fastest climber on the board. At this point it's not a trend, it's a landmark.</p>\n\n    <p><strong>4. janestreet/agent_skills (★8.0k, +1,322 today)</strong> — Jane Street's first public skill collection, built around the shared SKILL.md format. It ships one skill, socratic-tutor, which turns a language model into a strict personal tutor: it runs a diagnostic, draws a skill map from level 0 to 5, asks one question at a time, schedules spaced review and ends with an assessment. Copy the directory into your agent's skills folder. When a firm that guarded its edge for decades keeps publishing, I keep paying attention.</p>\n\n    <p><strong>5. meta/astryx (★27.1k, +1.8K today)</strong> — Meta's open-source, agent-ready design system, built inside the company over eight years: 150+ accessible React components, brand theming, dark mode, ready-made templates, and a CLI as one cohesive system. Fifth straight day on this board, still gaining nearly two thousand stars a day. Eight years of internal polish, now free for anyone to build on.</p>\n\n    \n    <!-- Ad slot: in-content — reserved for a future ad network. Empty until ads are enabled. -->\n    <div class=\"ad-slot ad-incontent\" aria-hidden=\"true\"></div>\n\n\n    <p><strong>6. we-promise/sure (★14.4k, +944 today)</strong> — A personal finance app you can self-host, with multiple clients and investment tracking built in. Finance apps are the category people keep taking back from subscriptions, and Sure's pitch — your money data stays on your machine — is landing exactly on time. Third straight day on the board, and it keeps earning the spot.</p>\n\n    <p><strong>7. apex-compute/ANR (★1.2k, +755 today)</strong> — A beta frame-generation tool from Apex Compute that installs into a game's folder, on GeForce, Radeon and Arc GPUs, Windows and Linux with Proton. A bundled recorder captures frame-generation inputs losslessly so the same frames replay through ANR FG or DLSS-G for comparison. Two days old, the smallest star count on today's board — and the one gamers will be talking about this weekend.</p>\n\n    <p><strong>8. openai/codex-security (★12.8k, +754 today)</strong> — OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. Your agent finds the hole, proves it's real, and patches it — in the same run. The security audit that used to take a sprint now fits in a command.</p>\n\n    <p><strong>9. vercel-labs/ui (★3.0k, +735 today)</strong> — A beta library from Vercel Labs: keyboard navigation, focus, selection, dismissal, popups, drag and drop and their ARIA become composable pieces, with adapters for React, Vue, Svelte, Solid and Web Components. Components are defined from behaviors and render identically across frameworks, and a bundled skill lets a coding agent learn the pattern. The boring parts of a UI, done once and done right.</p>\n\n    <p><strong>10. agentes-chat/agentes-chat (★1.3k, +734/day)</strong> — An open-source, self-hosted Slack alternative where your team and AI agents work together in channels and DMs. Agents run on Claude, ChatGPT/Codex, Gemini or Grok, with MCP tools, their own computer and browser, routines, memory and approvals. Four days old and already the fastest-rising brand-new chat app on the board. The group chat where half the members actually do the work.</p>\n\n    <p>That's your ten. My pick? aws-emulator — because the moment your tests run against a local endpoint instead of a live cloud account, everything downstream gets cheaper and faster, and Amazon building it themselves is the tell. If I've got an hour free, I'm installing modern-web-guidance first, because an agent that writes modern code instead of patterns from three years ago is the difference between a demo and a product.</p>\n\n    <p class=\"footnote\">Star counts reflect the November 13 morning trending snapshot (ghtrends daily, Nov 13, 2026; Trendoday daily, Nov 13, 2026; Daily Diff, Nov 13, 2026; Trendar rising now, updated 2026-11-13 06:00 UTC).</p>",
+    "projects": [
+      {
+        "rank": 1,
+        "name": "aws/aws-emulator",
+        "stars": "★6.2k, +2,133 today",
+        "desc": "Amazon's local emulator of the AWS APIs, built for building and testing: start it, point the AWS CLI or your SDK at its endpoint, and work against emulated resources with no AWS account. Rust tests can embed one isolated instance per test through its HTTP client, and each release publishes per-service fidelity scores. The day your tests stop needing a cloud account is the day your whole workflow gets faster.",
+        "app": "https://docs.aws.amazon.com/emulator/latest/userguide/what-is-service.html"
+      },
+      {
+        "rank": 2,
+        "name": "GoogleChrome/modern-web-guidance",
+        "stars": "★9.4k, +1,597 today",
+        "desc": "A skill pack stewarded by the Chrome, Edge, Firefox and MDN teams that feeds your coding agent curated guides to the modern web platform: view transitions, container queries, the Popover API, built-in AI and more. Its CLI searches guides, pulls one by ID, and scans your codebase for legacy patterns worth replacing. Your agent finally learns the web as it is now, not as it was in its training data.",
+        "app": "https://goo.gle/modern-web-guidance"
+      },
+      {
+        "rank": 3,
+        "name": "morluto/rea",
+        "stars": "★456.5k, +1,546 today",
+        "desc": "Point your agent at any app and learn how it works. It inspects native binaries through Hopper or Ghidra, JavaScript and Electron apps, .NET assemblies, and websites, then explains how a feature works — with the evidence, and the limits, behind each conclusion. The analysis runs locally. Four hundred and fifty-six thousand stars, and it's still the fastest climber on the board. At this point it's not a trend, it's a landmark.",
+        "app": "https://rea.tools"
+      },
+      {
+        "rank": 4,
+        "name": "janestreet/agent_skills",
+        "stars": "★8.0k, +1,322 today",
+        "desc": "Jane Street's first public skill collection, built around the shared SKILL.md format. It ships one skill, socratic-tutor, which turns a language model into a strict personal tutor: it runs a diagnostic, draws a skill map from level 0 to 5, asks one question at a time, schedules spaced review and ends with an assessment. Copy the directory into your agent's skills folder. When a firm that guarded its edge for decades keeps publishing, I keep paying attention.",
+        "app": ""
+      },
+      {
+        "rank": 5,
+        "name": "meta/astryx",
+        "stars": "★27.1k, +1.8K today",
+        "desc": "Meta's open-source, agent-ready design system, built inside the company over eight years: 150+ accessible React components, brand theming, dark mode, ready-made templates, and a CLI as one cohesive system. Fifth straight day on this board, still gaining nearly two thousand stars a day. Eight years of internal polish, now free for anyone to build on.",
+        "app": "http://astryx.atmeta.com"
+      },
+      {
+        "rank": 6,
+        "name": "we-promise/sure",
+        "stars": "★14.4k, +944 today",
+        "desc": "A personal finance app you can self-host, with multiple clients and investment tracking built in. Finance apps are the category people keep taking back from subscriptions, and Sure's pitch — your money data stays on your machine — is landing exactly on time. Third straight day on the board, and it keeps earning the spot.",
+        "app": "https://sure.am"
+      },
+      {
+        "rank": 7,
+        "name": "apex-compute/ANR",
+        "stars": "★1.2k, +755 today",
+        "desc": "A beta frame-generation tool from Apex Compute that installs into a game's folder, on GeForce, Radeon and Arc GPUs, Windows and Linux with Proton. A bundled recorder captures frame-generation inputs losslessly so the same frames replay through ANR FG or DLSS-G for comparison. Two days old, the smallest star count on today's board — and the one gamers will be talking about this weekend.",
+        "app": "https://apexcompute.com/neural-rendering"
+      },
+      {
+        "rank": 8,
+        "name": "openai/codex-security",
+        "stars": "★12.8k, +754 today",
+        "desc": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. Your agent finds the hole, proves it's real, and patches it — in the same run. The security audit that used to take a sprint now fits in a command.",
+        "app": "https://developers.openai.com/codex/security"
+      },
+      {
+        "rank": 9,
+        "name": "vercel-labs/ui",
+        "stars": "★3.0k, +735 today",
+        "desc": "A beta library from Vercel Labs: keyboard navigation, focus, selection, dismissal, popups, drag and drop and their ARIA become composable pieces, with adapters for React, Vue, Svelte, Solid and Web Components. Components are defined from behaviors and render identically across frameworks, and a bundled skill lets a coding agent learn the pattern. The boring parts of a UI, done once and done right.",
+        "app": "https://ui-sdk.dev"
+      },
+      {
+        "rank": 10,
+        "name": "agentes-chat/agentes-chat",
+        "stars": "★1.3k, +734/day",
+        "desc": "An open-source, self-hosted Slack alternative where your team and AI agents work together in channels and DMs. Agents run on Claude, ChatGPT/Codex, Gemini or Grok, with MCP tools, their own computer and browser, routines, memory and approvals. Four days old and already the fastest-rising brand-new chat app on the board. The group chat where half the members actually do the work.",
+        "app": "https://agentes.chat"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-12",
     "label": "Daily Edition — Thursday, November 12, 2026",
     "headline": "A Cage for Claude, Meta's Design System Still Climbing, and a Zelda Rebuild for the Switch 2 — Today's 10 Open-Source Breakouts",
     "html": "<p>I'll be honest: today's board is the one where the agent wave starts putting guardrails on itself. The fastest-rising brand-new repo is a lightweight virtual machine built to cage Claude Code so nothing leaks over the network, and right behind it Meta's design system just stacked another 2,800 stars. Around them: a username hunter, a Zelda rebuild, and a finance app people self-host.</p>\n\n    <p><strong>1. Lee-xeo/Claude-Cage (★4.4k, +1,855 today)</strong> — A lightweight VM made for Claude, and its whole pitch is one line: no network leaks, ever. It wraps your coding agent in a small virtual machine, works across platforms, handles multiple accounts, drives from your phone. Eleven days old — the first repo I'd install before letting agents loose on anything serious.</p>\n\n    <p><strong>2. meta/astryx (★25.9k, +2,842 today)</strong> — Meta's open-source design system is still the biggest gainer on the board. It's the system Meta's own teams built on for eight years: 150+ accessible React components, brand theming, dark mode, templates, and a CLI, packaged so your agent can build with it too. Still the day's biggest gainer.</p>\n\n    <p><strong>3. sherlock-project/sherlock (★110.4k, +2,393 today)</strong> — Type in a username and Sherlock checks it across 400+ social networks and tells you where it lives. It's been the standard OSINT tool in its lane for years, and it's still adding 2,400 stars a day. Never run it? The one-line install is the whole demo.</p>\n\n    <p><strong>4. storytold/craft-anything (★29.3k, +2,260 today)</strong> — Point it at any app or game and it figures out how the thing works, then your agent rebuilds your version in the stack you pick. Pure Rust, 314 tools, clean-room inspection with real tools like Hopper and Ghidra. Third straight day on this board.</p>\n\n    <p><strong>5. janestreet/agent_skills (★7.0k, +1,927 today)</strong> — Jane Street open-sourced the agent skills its own engineers use, and the dev world noticed: up 55% in a day. Skills are the quiet infrastructure of the agent wave: little instruction packs that teach your agent one job properly, from a firm famous for not shipping sloppy work.</p>\n\n    <!-- Ad slot: in-content — reserved for a future ad network. Empty until ads are enabled. -->\n    <div class=\"ad-slot ad-incontent\" aria-hidden=\"true\"></div>\n\n    <p><strong>6. debpalash/VoiceStudio (★108.8k, +1,861 today)</strong> — The fully local ElevenLabs alternative keeps climbing: voice cloning, voice design, video dubbing, dictation, transcription, and audiobooks in 646 languages, all on your own hardware. If you make anything with a voice in it, try this before paying for a cloud service.</p>\n\n    <p><strong>7. pingdotgg/t3code (★57.8k, +1,299 today)</strong> — One control panel for every coding agent on your machine — Claude Code, Codex, and the rest — from any computer or phone. The T3 team's take on the agent dashboard. If your agents live on three machines and you check them from the couch, this is the app.</p>\n\n    <p><strong>8. NotRexed/Hookshot (★8.3k, +1,179 today)</strong> — A native recompilation of The Legend of Zelda: Ocarina of Time for the Nintendo Switch 2. Six days old, and it's the kind of project that reminds you open source is, at heart, people rebuilding the things they love. Bring your own game files; the code does the rest.</p>\n\n    <p><strong>9. we-promise/sure (★13.5k, +1,078 today)</strong> — A personal finance app you can self-host, with multiple clients and investment tracking built in. Finance apps are the category people keep taking back from subscriptions, and Sure's pitch — your money data stays on your machine — is landing exactly on time.</p>\n\n    <p><strong>10. expo/exact (★3.2k, +905 today)</strong> — Write an app once and it runs natively on the web, macOS, iOS, and Linux — and an AI agent can build it, run it, see it, and test it on every one of them. Ten days old. Expo's bet: the next wave of apps gets built by agents, and Exact is the toolkit that makes it real.</p>\n\n    <p>That's the list for Thursday, November 12, 2026. The thread: agents are getting real jobs, and the tools around them are catching up — cages to keep them honest, skills to teach them the trade, dashboards to watch them work. Tomorrow's board will tell us which keeps climbing. My money's on the cage.</p>\n\n    <p class=\"footnote\">Star counts reflect the November 12 morning trending snapshot (GitDiscover daily picks, Thu Nov 12, 2026; ghtrends daily, Nov 12, 2026; Toolclove trending roundup, Nov 2026).</p>",
