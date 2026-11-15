@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nov 14, 2026 Edition — The Open Source</title>
+<meta name="description" content="Daily edition, Saturday, November 14, 2026: Chrome&#x27;s Web Guide Triples Its Lead, DeepSeek&#x27;s Harness Leads the Day, and Alibaba Opens Its Code Reviewer — Today&#x27;s 10 Open-Source Breakouts">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Open Source">
+<meta property="og:title" content="Chrome&#x27;s Web Guide Triples Its Lead, DeepSeek&#x27;s Harness Leads the Day, and Alibaba Opens Its Code Reviewer — Today&#x27;s 10 Open-Source Breakouts">
+<meta property="og:description" content="The 10 open-source projects most likely to blow up — daily edition, Saturday, November 14, 2026.">
+<meta property="og:url" content="https://daily-open-source-rankings.netlify.app/editions/2026-11-14.html">
+<meta property="og:image" content="https://daily-open-source-rankings.netlify.app/images/banner-2026-11-14.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230a1120'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23d4af37' font-family='Arial' font-weight='bold'%3E10%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="brand">The Open Source</p>
+    <p class="tagline">The 10 open-source projects most likely to blow up — every morning.</p>
+    <nav class="topnav">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <img src="/images/banner-2026-11-14.webp" alt="The Open Source — daily edition header banner" width="2352" height="1008">
+  </div>
+
+  <!-- Ad slot: leaderboard (728x90) — reserved for a future ad network. Empty until ads are enabled. -->
+  <div class="ad-slot ad-leaderboard" aria-hidden="true"></div>
+
+  <article>
+    <p class="edition-meta">Daily Edition — Saturday, November 14, 2026</p>
+    <h1>Chrome&#x27;s Web Guide Triples Its Lead, DeepSeek&#x27;s Harness Leads the Day, and Alibaba Opens Its Code Reviewer — Today&#x27;s 10 Open-Source Breakouts</h1>
+
+<p>I'll be honest: Saturday's board is the one where the agent wave stops asking permission and starts rebuilding the whole stack underneath it. Chrome's guide for coding agents just posted the biggest single-day gain on GitHub, DeepSeek's plugin harness pulled in three thousand stars before lunch, and Alibaba open-sourced the code reviewer its own engineers use at scale. Around them: a fleet manager for your coding agents, a menu-bar app that points any agent at any model, and a container runtime small enough to forget about. Saturday, November 14, 2026 — here's the ten.</p>
+
+    <p><strong>1. GoogleChrome/modern-web-guidance (★12.5k, +3,355 today)</strong> — The skill pack stewarded by the Chrome, Edge, Firefox and MDN teams, and today it posted the biggest 24-hour gain on GitHub. Its CLI searches curated guides to the modern web platform — view transitions, container queries, the Popover API, built-in AI — pulls one by ID, and scans your codebase for legacy patterns worth replacing. Your agent finally learns the web as it is now, not as it was in its training data.</p>
+
+    <p><strong>2. deepseek-ai/deepseek-harness (★280.9k, +3,136 today)</strong> — DeepSeek's agent harness, built on an everything-is-a-plugin architecture with a local Web UI. It leads the whole day's star count, and the reason is simple: the plugin system means anyone can bolt on new models, tools, and workflows — including free frontier models with no login and no API key. The harness is the platform; the plugins are the party.</p>
+
+    <p><strong>3. morluto/rea (★458.8k, +2,351 today)</strong> — Point your agent at any app and learn how it works. It inspects native binaries through Hopper or Ghidra, JavaScript and Electron apps, .NET assemblies, and websites, then explains how a feature works — with the evidence, and the limits, behind each conclusion. The analysis runs locally. Fourth appearance on this board in six days, and it's still gaining two thousand stars a day. At this point it's not a trend, it's a landmark.</p>
+
+    <p><strong>4. alibaba/open-code-review (★51.1k, #1 on GitHub Trending today)</strong> — Alibaba's internal AI code review tool, now open source. Deterministic pipelines plus an LLM agent write precise line-level comments, backed by a built-in multi-language ruleset. It's the top-trending repo on GitHub this morning, and the pitch is hard to argue with: the review process a company of Alibaba's size actually trusts, free to run yourself.</p>
+
+    <p><strong>5. stablyai/orca (★124.7k, +1,287 today)</strong> — Orca runs a fleet of coding agents — Claude Code, Codex, and the rest — on your own subscription, from desktop, mobile, or a remote runtime. One fleet, one bill, every agent you already pay for. The multi-agent era has a staffing problem, and Orca is applying for the job.</p>
+
+    <!-- Ad slot: in-content — reserved for a future ad network. Empty until ads are enabled. -->
+    <div class="ad-slot ad-incontent" aria-hidden="true"></div>
+
+    <p><strong>6. pingdotgg/t3code (★60.1k, +1,269 today)</strong> — One control panel for every coding agent on your machine — Claude Code, Codex, and the rest — from any computer or phone. The T3 team's take on the agent dashboard, back on the board after its November 12 debut. If your agents live on three machines and you check them from the couch, this is the app.</p>
+
+    <p><strong>7. yetone/magpie (★36.4k, +829 today)</strong> — Every agent's model, in one place. Magpie sits in your menu bar and lets you run Codex on DeepSeek, Claude Code on Kimi, and whatever comes next — same agent, cheaper model, no rewiring. Fifty-one days old and already the day's fastest-rising brand-new idea in model routing. The subscription stack is getting unbundled, one menu bar at a time.</p>
+
+    <p><strong>8. openai/codex-security (★13.4k, +751 today)</strong> — OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. Your agent finds the hole, proves it's real, and patches it — in the same run. Second straight day on the board, and the security audit that used to take a sprint still fits in a command.</p>
+
+    <p><strong>9. libracoder/kiri (★2.7k, +585 today)</strong> — A small, fast container runtime for macOS, Windows, and Linux, written in Rust. Twelve days old, the smallest star count on today's board — and the one with the clearest pitch: containers without the weight. Docker's shadow is long, but two thousand seven hundred stars in twelve days says plenty of people want something lighter.</p>
+
+    <p><strong>10. CopilotKit/OpenBot (★12.2k, +298 today)</strong> — Open-source AI coworkers that each get a computer of their own: a browser, files, and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent. The governance angle is the whole point — an agent that shows its work before it does the work is one you can actually trust with the keys.</p>
+
+    <p>That's your ten. My pick? modern-web-guidance — because the biggest gain on the board is also the most practical one: an agent that writes modern code instead of patterns from three years ago is the difference between a demo and a product. If I've got an hour free, I'm installing magpie first, because pointing the agents I already use at models that cost a fraction of the price pays for itself by lunch.</p>
+
+    <p class="footnote">Star counts reflect the November 14 morning trending snapshot (OpenPulse 24h growth, Nov 14, 2026; GitDiscover daily picks, Sat Nov 14, 2026; Trendoday daily, Nov 14, 2026; Daily Diff, Nov 14, 2026; Trendar rising now, updated 2026-11-14 06:00 UTC; olud.ai AI today, Nov 14, 2026).</p>
+
+  </article>
+
+  <section class="subscribe" id="subscribe-bottom">
+    <h2>Get the Top 10 in your inbox</h2>
+    <p>Every edition, the moment it drops — the open-source projects about to blow up, before everyone else finds them.</p>
+    <form name="rankings-subscribers" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="rankings-subscribers">
+      <p class="hp"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+      <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="fineprint">One email per edition. No spam, unsubscribe anytime.</p>
+  </section>
+
+  <section class="section-block prev-edition">
+    <h2>Latest edition</h2>
+    <p><a href="/">Read today's Top 10 on the homepage</a></p>
+  </section>
+
+  <!-- Ad slot: page bottom (728x90) — reserved for a future ad network. Empty until ads are enabled. -->
+  <div class="ad-slot ad-bottom" aria-hidden="true"></div>
+
+  <footer>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="https://stan.store/hunter82">Stan Store</a>
+    </nav>
+    <p>The Open Source.</p>
+    <p>© 2026 The Open Source. Rankings are editorial picks, not endorsements.</p>
+  </footer>
+
+</div>
+</body>
+</html>

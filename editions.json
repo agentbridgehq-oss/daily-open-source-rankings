@@ -1,6 +1,84 @@
 [
   {
     "id": "today",
+    "label": "Daily Edition — Sunday, November 15, 2026",
+    "headline": "Chrome's Web Guide Adds 3,400 Stars in a Day, Android Apps Go Native on Windows, and the Agent Review Desk Tops the Chart — Today's 10 Open-Source Breakouts",
+    "html": "<p>I'll be honest: Sunday's board is the one where the agent wave gets its own furniture. Chrome's guide for coding agents just added another 3,400 stars, its third straight day leading the pile — and right behind it, a tool that runs Android apps on Windows like they belong there. Around them: a review desk for your agents, a container runtime, and a finance app people keep coming back to. Sunday, November 15, 2026 — here's the ten.</p>\n\n    <p><strong>1. GoogleChrome/modern-web-guidance (★16.6k, +3,400 today)</strong> — The skill pack stewarded by the Chrome, Edge, Firefox and MDN teams — still the biggest gainer on GitHub. Its CLI pulls curated guides to the modern web and scans your code for legacy patterns. Third straight day at number one.</p>\n\n    <p><strong>2. RoutineMiku/apkstart (★4.6k, +2,056 today)</strong> — Double-click an APK on Windows and it installs and runs in its own window — no emulator window to babysit. Its own QEMU runtime makes Android apps behave like native Windows apps. The day's second-biggest gain.</p>\n\n    <p><strong>3. libracoder/kiri (★4.7k, +1,541 today)</strong> — A small, fast container runtime for macOS, Windows, and Linux in Rust — gaining 1,541 stars a day after yesterday's debut here. The pitch hasn't changed: containers without the weight, plus a free ngrok alternative baked in.</p>\n\n    <p><strong>4. deepseek-ai/chat-demo (★2.1k, +1,080 today)</strong> — DeepSeek's static chat demo, powered by its API — two days old and already past two thousand stars, the simplest proof the harness era is real: a chat front end you can run yourself, pointed at DeepSeek's models. Small repo, big signal.</p>\n\n    <p><strong>5. backnotprop/plannotator (★11.6k, +860 today)</strong> — The number-one repo on GitHub Trending this morning. Your agents run off and do things, and you lose track — Plannotator is a local review surface: annotate plans and diffs, then send feedback to the agent in one click.</p>\n\n    <!-- Ad slot: in-content — reserved for a future ad network. Empty until ads are enabled. -->\n    <div class=\"ad-slot ad-incontent\" aria-hidden=\"true\"></div>\n\n    <p><strong>6. Likely7/Veyra-NRVideo (★2.6k, +731 today)</strong> — A Windows video player and capture tool that pipes video through AI super resolution, DLSS 5, and frame generation in real time — the repo's headline claim is bringing PS5 GTA 6 to 120 FPS. Take the marketing with a grain of salt.</p>\n\n    <p><strong>7. tradermonty/claude-trading-skills (★5.2k, +707 today)</strong> — A Claude Skills toolkit for individual investors: market analysis, charting, economic calendars, screeners, and strategy — built around long-term ETF and dividend investing. The repo is blunt that it's not a signal service.</p>\n\n    <p><strong>8. alibaba/open-code-review (★51.7k, +688 today)</strong> — Alibaba's internal AI code review tool, now open source — second straight day on this board. Deterministic pipelines plus an LLM agent write precise line-level comments, backed by a built-in multi-language ruleset.</p>\n\n    <p><strong>9. ChromeDevTools/chrome-devtools-mcp (★56.6k, +664 today)</strong> — Chrome DevTools for coding agents, as an MCP server or CLI. Your agent drives a live Chrome — network analysis, screenshots, console messages with source-mapped stack traces. An agent that can see the browser is one that can actually fix the website.</p>\n\n    <p><strong>10. we-promise/sure (★15.5k, +520 today)</strong> — A personal finance app you can self-host — a community fork of the abandoned Maybe Finance project, back on the board after its November 13 debut. Your money data stays on your machine.</p>\n\n    <p>That's your ten. My pick? apkstart — the day your phone apps run on your PC like native software, the line between the two machines gets thinner — and this one does it with a double-click. If I've got an hour free, I'm installing plannotator first: an agent that shows me its plan is one I can trust with real work.</p>\n\n    <p class=\"footnote\">Star counts reflect the November 15 morning trending snapshot (Trendoday, Daily Diff, Trendar, ghtrends, GitDiscover — Nov 15, 2026).</p>",
+    "projects": [
+      {
+        "rank": 1,
+        "name": "GoogleChrome/modern-web-guidance",
+        "stars": "★16.6k, +3,400 today",
+        "desc": "The skill pack stewarded by the Chrome, Edge, Firefox and MDN teams — still the biggest gainer on GitHub. Its CLI pulls curated guides to the modern web and scans your code for legacy patterns. Third straight day at number one.",
+        "app": "https://goo.gle/modern-web-guidance"
+      },
+      {
+        "rank": 2,
+        "name": "RoutineMiku/apkstart",
+        "stars": "★4.6k, +2,056 today",
+        "desc": "Double-click an APK on Windows and it installs and runs in its own window — no emulator window to babysit. Its own QEMU runtime makes Android apps behave like native Windows apps. The day's second-biggest gain.",
+        "app": ""
+      },
+      {
+        "rank": 3,
+        "name": "libracoder/kiri",
+        "stars": "★4.7k, +1,541 today",
+        "desc": "A small, fast container runtime for macOS, Windows, and Linux in Rust — gaining 1,541 stars a day after yesterday's debut here. The pitch hasn't changed: containers without the weight, plus a free ngrok alternative baked in.",
+        "app": "https://runkiri.com"
+      },
+      {
+        "rank": 4,
+        "name": "deepseek-ai/chat-demo",
+        "stars": "★2.1k, +1,080 today",
+        "desc": "DeepSeek's static chat demo, powered by its API — two days old and already past two thousand stars, the simplest proof the harness era is real: a chat front end you can run yourself, pointed at DeepSeek's models. Small repo, big signal.",
+        "app": "https://deepseek-ai.github.io/chat-demo/"
+      },
+      {
+        "rank": 5,
+        "name": "backnotprop/plannotator",
+        "stars": "★11.6k, +860 today",
+        "desc": "The number-one repo on GitHub Trending this morning. Your agents run off and do things, and you lose track — Plannotator is a local review surface: annotate plans and diffs, then send feedback to the agent in one click.",
+        "app": "https://plannotator.ai"
+      },
+      {
+        "rank": 6,
+        "name": "Likely7/Veyra-NRVideo",
+        "stars": "★2.6k, +731 today",
+        "desc": "A Windows video player and capture tool that pipes video through AI super resolution, DLSS 5, and frame generation in real time — the repo's headline claim is bringing PS5 GTA 6 to 120 FPS. Take the marketing with a grain of salt.",
+        "app": ""
+      },
+      {
+        "rank": 7,
+        "name": "tradermonty/claude-trading-skills",
+        "stars": "★5.2k, +707 today",
+        "desc": "A Claude Skills toolkit for individual investors: market analysis, charting, economic calendars, screeners, and strategy — built around long-term ETF and dividend investing. The repo is blunt that it's not a signal service.",
+        "app": "https://tradermonty.github.io/claude-trading-skills/"
+      },
+      {
+        "rank": 8,
+        "name": "alibaba/open-code-review",
+        "stars": "★51.7k, +688 today",
+        "desc": "Alibaba's internal AI code review tool, now open source — second straight day on this board. Deterministic pipelines plus an LLM agent write precise line-level comments, backed by a built-in multi-language ruleset.",
+        "app": "https://open-codereview.ai"
+      },
+      {
+        "rank": 9,
+        "name": "ChromeDevTools/chrome-devtools-mcp",
+        "stars": "★56.6k, +664 today",
+        "desc": "Chrome DevTools for coding agents, as an MCP server or CLI. Your agent drives a live Chrome — network analysis, screenshots, console messages with source-mapped stack traces. An agent that can see the browser is one that can actually fix the website.",
+        "app": "https://developer.chrome.com/docs/devtools/agents"
+      },
+      {
+        "rank": 10,
+        "name": "we-promise/sure",
+        "stars": "★15.5k, +520 today",
+        "desc": "A personal finance app you can self-host — a community fork of the abandoned Maybe Finance project, back on the board after its November 13 debut. Your money data stays on your machine.",
+        "app": "https://sure.am"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-14",
     "label": "Daily Edition — Saturday, November 14, 2026",
     "headline": "Chrome's Web Guide Triples Its Lead, DeepSeek's Harness Leads the Day, and Alibaba Opens Its Code Reviewer — Today's 10 Open-Source Breakouts",
     "html": "<p>I'll be honest: Saturday's board is the one where the agent wave stops asking permission and starts rebuilding the whole stack underneath it. Chrome's guide for coding agents just posted the biggest single-day gain on GitHub, DeepSeek's plugin harness pulled in three thousand stars before lunch, and Alibaba open-sourced the code reviewer its own engineers use at scale. Around them: a fleet manager for your coding agents, a menu-bar app that points any agent at any model, and a container runtime small enough to forget about. Saturday, November 14, 2026 — here's the ten.</p>\n\n    <p><strong>1. GoogleChrome/modern-web-guidance (★12.5k, +3,355 today)</strong> — The skill pack stewarded by the Chrome, Edge, Firefox and MDN teams, and today it posted the biggest 24-hour gain on GitHub. Its CLI searches curated guides to the modern web platform — view transitions, container queries, the Popover API, built-in AI — pulls one by ID, and scans your codebase for legacy patterns worth replacing. Your agent finally learns the web as it is now, not as it was in its training data.</p>\n\n    <p><strong>2. deepseek-ai/deepseek-harness (★280.9k, +3,136 today)</strong> — DeepSeek's agent harness, built on an everything-is-a-plugin architecture with a local Web UI. It leads the whole day's star count, and the reason is simple: the plugin system means anyone can bolt on new models, tools, and workflows — including free frontier models with no login and no API key. The harness is the platform; the plugins are the party.</p>\n\n    <p><strong>3. morluto/rea (★458.8k, +2,351 today)</strong> — Point your agent at any app and learn how it works. It inspects native binaries through Hopper or Ghidra, JavaScript and Electron apps, .NET assemblies, and websites, then explains how a feature works — with the evidence, and the limits, behind each conclusion. The analysis runs locally. Fourth appearance on this board in six days, and it's still gaining two thousand stars a day. At this point it's not a trend, it's a landmark.</p>\n\n    <p><strong>4. alibaba/open-code-review (★51.1k, #1 on GitHub Trending today)</strong> — Alibaba's internal AI code review tool, now open source. Deterministic pipelines plus an LLM agent write precise line-level comments, backed by a built-in multi-language ruleset. It's the top-trending repo on GitHub this morning, and the pitch is hard to argue with: the review process a company of Alibaba's size actually trusts, free to run yourself.</p>\n\n    <p><strong>5. stablyai/orca (★124.7k, +1,287 today)</strong> — Orca runs a fleet of coding agents — Claude Code, Codex, and the rest — on your own subscription, from desktop, mobile, or a remote runtime. One fleet, one bill, every agent you already pay for. The multi-agent era has a staffing problem, and Orca is applying for the job.</p>\n\n    <!-- Ad slot: in-content — reserved for a future ad network. Empty until ads are enabled. -->\n    <div class=\"ad-slot ad-incontent\" aria-hidden=\"true\"></div>\n\n    <p><strong>6. pingdotgg/t3code (★60.1k, +1,269 today)</strong> — One control panel for every coding agent on your machine — Claude Code, Codex, and the rest — from any computer or phone. The T3 team's take on the agent dashboard, back on the board after its November 12 debut. If your agents live on three machines and you check them from the couch, this is the app.</p>\n\n    <p><strong>7. yetone/magpie (★36.4k, +829 today)</strong> — Every agent's model, in one place. Magpie sits in your menu bar and lets you run Codex on DeepSeek, Claude Code on Kimi, and whatever comes next — same agent, cheaper model, no rewiring. Fifty-one days old and already the day's fastest-rising brand-new idea in model routing. The subscription stack is getting unbundled, one menu bar at a time.</p>\n\n    <p><strong>8. openai/codex-security (★13.4k, +751 today)</strong> — OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. Your agent finds the hole, proves it's real, and patches it — in the same run. Second straight day on the board, and the security audit that used to take a sprint still fits in a command.</p>\n\n    <p><strong>9. libracoder/kiri (★2.7k, +585 today)</strong> — A small, fast container runtime for macOS, Windows, and Linux, written in Rust. Twelve days old, the smallest star count on today's board — and the one with the clearest pitch: containers without the weight. Docker's shadow is long, but two thousand seven hundred stars in twelve days says plenty of people want something lighter.</p>\n\n    <p><strong>10. CopilotKit/OpenBot (★12.2k, +298 today)</strong> — Open-source AI coworkers that each get a computer of their own: a browser, files, and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent. The governance angle is the whole point — an agent that shows its work before it does the work is one you can actually trust with the keys.</p>\n\n    <p>That's your ten. My pick? modern-web-guidance — because the biggest gain on the board is also the most practical one: an agent that writes modern code instead of patterns from three years ago is the difference between a demo and a product. If I've got an hour free, I'm installing magpie first, because pointing the agents I already use at models that cost a fraction of the price pays for itself by lunch.</p>\n\n    <p class=\"footnote\">Star counts reflect the November 14 morning trending snapshot (OpenPulse 24h growth, Nov 14, 2026; GitDiscover daily picks, Sat Nov 14, 2026; Trendoday daily, Nov 14, 2026; Daily Diff, Nov 14, 2026; Trendar rising now, updated 2026-11-14 06:00 UTC; olud.ai AI today, Nov 14, 2026).</p>",
