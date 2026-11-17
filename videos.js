@@ -25,4 +25,5 @@ window.VIDEOS = [
   { src: '/assets/vid-pool-2026-11-13.mp4', poster: '/assets/vid-pool-2026-11-13-poster.jpg', title: 'AWS, emulated on your laptop', sub: 'aws/aws-emulator — #1 on Nov 13.' },
   { src: '/assets/vid-pool-2026-11-14.mp4', poster: '/assets/vid-pool-2026-11-14-poster.jpg', title: 'The modern web, taught to your agent', sub: 'GoogleChrome/modern-web-guidance — #1 on Nov 14.' },
   { src: '/assets/vid-pool-2026-11-15.mp4', poster: '/assets/vid-pool-2026-11-15-poster.jpg', title: 'Your agent, finally fluent in the modern web', sub: 'GoogleChrome/modern-web-guidance — #1 on Nov 15.' },
+  { src: '/assets/vid-pool-2026-11-16.mp4', poster: '/assets/vid-pool-2026-11-16-poster.jpg', title: 'Your own AI office', sub: 'dream-num/univer — #1 on Nov 16.' },
 ];
