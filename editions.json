@@ -1,6 +1,162 @@
 [
   {
     "id": "today",
+    "label": "Daily Edition — Wednesday, November 18, 2026",
+    "headline": "1,914 Stars in One Day: A 350 KB Battery Widget Just Beat Every AI Agent on GitHub — Today's 10 Open-Source Breakouts",
+    "html": "<p>I'll be honest: I had a different number two lined up this morning, and GitHub pulled it before I finished my coffee. A script that automated claiming a 12-month Google One AI Ultra trial picked up 1,372 stars overnight — then vanished, 404 by the time I went to verify it. That's the pace of this list now: a project can blow up and disappear in a single morning.</p>\n\n    <p>Wednesday, November 18, 2026 is the day the chart stopped being all agents, all the time. The new number one is a 350 KB tray app that shows your mouse battery on the Windows taskbar. No AI, no agents, no skills — just a tiny utility that fixes a daily annoyance better than the vendor software does. And right behind it, security tooling took two of the next three spots. Here's the ten.</p>\n\n    <p><strong>1. krisgfx9/Wireless-Device-Battery-Monitor (★3,505, +1,914 today)</strong> — A tiny C++ tray app that puts wireless mouse, headset, keyboard and controller battery levels on the Windows taskbar: about 350 KB, 2 MB of RAM, no service, no admin rights. It talks to devices directly, so Logitech, Razer, Corsair, PlayStation and Xbox controllers and Galaxy Buds show up without opening G HUB, Synapse or iCUE. Red means 15 percent, a bolt means charging. The most-starred project on GitHub today doesn't use AI at all — it just kills bloatware.</p>\n\n    <p><strong>2. morluto/rea (★467.4k, +1,346 today)</strong> — Point your agent at any app and learn how it works. It inspects native binaries through Hopper or Ghidra, JavaScript and Electron apps, .NET assemblies and websites, then explains how a feature works — with the evidence, and the limits, behind each conclusion. The analysis runs locally. Third day on the board, still gaining 1,300 a day. At this point it's not a trend, it's a landmark.</p>\n\n    <p><strong>3. BaaRai/ARTEX (★7,902, +1,293 today)</strong> — A self-hosted, LLM-driven penetration testing platform, in an English mirror of the upstream project. A planner splits the goal into intents, workers run real tools, and every finding carries the captured request and response as evidence. Scope rules and approval gates keep autonomous actions inside authorized boundaries. One Go binary embeds the Next.js UI over PostgreSQL.</p>\n\n    <p><strong>4. elementalsouls/Claude-BugHunter (★10.4k, +1,252 today)</strong> — A Claude Code skill bundle for authorized bug hunting and red-team work: 83 skills that load by topic when you describe the target. Fifty-eight hunt skills turn 681 disclosed HackerOne reports into detection patterns across 24 vulnerability classes. Second day on the board, still climbing.</p>\n\n    <p><strong>5. erkamyaman/rust-anything (★2,451, +1,046 today)</strong> — Records what your TypeScript, Python, C, Go, Ruby or Java program does, then checks each piece of the Rust rewrite against that recording, until the app is pure Rust. Your agent writes the Rust; the tool replays the recording and flags mismatches. Benchmarks show 3 to 20 times faster runs with identical results. A port stops being a leap of faith.</p>\n\n    <p><strong>6. google-research/paper-orchestra (★3,687, +976 today)</strong> — A multi-agent framework from Google Cloud AI Research that turns raw ideas, experiment logs and notes into submission-ready LaTeX manuscripts. Specialized agents cover outlining, literature synthesis, section writing, refinement and plots. Agents writing the papers about agents — the loop keeps closing.</p>\n\n    <p><strong>7. anefzaoui/misterdownloadmanager (★12.7k, +817 today)</strong> — The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac and Linux. No upload, no bundled junk — a from-scratch answer to the download managers everyone loved and then learned to distrust.</p>\n\n    <p><strong>8. pingdotgg/t3code (★64.7k, +805 today)</strong> — From the T3 team, one control surface for the coding agents already installed on your machine. It drives Claude Code, Codex, Cursor, Grok Build, OpenCode, Antigravity and fx through your own subscriptions, from a mobile app, web app or Electron desktop app. If it drifts, the code is all there to fork.</p>\n\n    <p><strong>9. nexu-io/openmotion (★11.6k, +775 today)</strong> — An open-source agentic video studio in the spirit of Claude Motion and CapCut. Upload a reference video or paste a link, and agents rebuild it as editable motion graphics on a timeline, your brand kit applied. Export MP4s sized for YouTube, Shorts, TikTok and ads. Needs Node.js 22.18 or newer.</p>\n\n    <p><strong>10. Ebony-Vinyl/dsh-our-free-model (★79.4k, +751 today)</strong> — A plugin for the DeepSeek Harness shell: install it and the model picker fills with free frontier models like DeepSeek V4.1 Flash and Kimi K3, no login or key needed. Free lanes come straight from OpenCode's Zen and Kilo AI's public gateways, re-pulled every refresh. A local OpenAI-compatible relay port lets other tools call the same models, and usage stats stay on the machine.</p>\n\n    <p>So what does today actually tell us? The agent wave isn't slowing down — eight of the ten are agent tools or skills. But the two that aren't tell the other half of the story: people still want small tools that respect their machine, and researchers still want the writing done for them. The battery widget at number one is the most honest signal on the board. Tomorrow's edition lands at the same time — and if today is any guide, at least one of these ten will be gone by then, and something none of us have heard of will be sitting at the top. I'll be watching.</p>\n\n    <p class=\"footnote\">Star counts reflect the November 18 morning trending snapshot (ghtrends.dev, gitofanton, Daily Diff, GitDiscover — Nov 18, 2026).</p>",
+    "projects": [
+      {
+        "rank": 1,
+        "name": "krisgfx9/Wireless-Device-Battery-Monitor",
+        "stars": "★3,505, +1,914 today",
+        "desc": "A tiny C++ tray app that puts wireless mouse, headset, keyboard and controller battery levels on the Windows taskbar: about 350 KB, 2 MB of RAM, no service, no admin rights. It talks to devices directly, so Logitech, Razer, Corsair, PlayStation and Xbox controllers and Galaxy Buds show up without opening G HUB, Synapse or iCUE. Red means 15 percent, a bolt means charging. The most-starred project on GitHub today doesn't use AI at all — it just kills bloatware.",
+        "app": ""
+      },
+      {
+        "rank": 2,
+        "name": "morluto/rea",
+        "stars": "★467.4k, +1,346 today",
+        "desc": "Point your agent at any app and learn how it works. It inspects native binaries through Hopper or Ghidra, JavaScript and Electron apps, .NET assemblies and websites, then explains how a feature works — with the evidence, and the limits, behind each conclusion. The analysis runs locally. Third day on the board, still gaining 1,300 a day. At this point it's not a trend, it's a landmark.",
+        "app": "https://rea.tools"
+      },
+      {
+        "rank": 3,
+        "name": "BaaRai/ARTEX",
+        "stars": "★7,902, +1,293 today",
+        "desc": "A self-hosted, LLM-driven penetration testing platform, in an English mirror of the upstream project. A planner splits the goal into intents, workers run real tools, and every finding carries the captured request and response as evidence. Scope rules and approval gates keep autonomous actions inside authorized boundaries. One Go binary embeds the Next.js UI over PostgreSQL.",
+        "app": ""
+      },
+      {
+        "rank": 4,
+        "name": "elementalsouls/Claude-BugHunter",
+        "stars": "★10.4k, +1,252 today",
+        "desc": "A Claude Code skill bundle for authorized bug hunting and red-team work: 83 skills that load by topic when you describe the target. Fifty-eight hunt skills turn 681 disclosed HackerOne reports into detection patterns across 24 vulnerability classes. Second day on the board, still climbing.",
+        "app": "https://elementalsouls.github.io/Claude-BugHunter"
+      },
+      {
+        "rank": 5,
+        "name": "erkamyaman/rust-anything",
+        "stars": "★2,451, +1,046 today",
+        "desc": "Records what your TypeScript, Python, C, Go, Ruby or Java program does, then checks each piece of the Rust rewrite against that recording, until the app is pure Rust. Your agent writes the Rust; the tool replays the recording and flags mismatches. Benchmarks show 3 to 20 times faster runs with identical results. A port stops being a leap of faith.",
+        "app": "https://www.npmjs.com/package/rust-anything"
+      },
+      {
+        "rank": 6,
+        "name": "google-research/paper-orchestra",
+        "stars": "★3,687, +976 today",
+        "desc": "A multi-agent framework from Google Cloud AI Research that turns raw ideas, experiment logs and notes into submission-ready LaTeX manuscripts. Specialized agents cover outlining, literature synthesis, section writing, refinement and plots. Agents writing the papers about agents — the loop keeps closing.",
+        "app": "https://yiwen-song.github.io/paper_orchestra/"
+      },
+      {
+        "rank": 7,
+        "name": "anefzaoui/misterdownloadmanager",
+        "stars": "★12.7k, +817 today",
+        "desc": "The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac and Linux. No upload, no bundled junk — a from-scratch answer to the download managers everyone loved and then learned to distrust.",
+        "app": "https://misterdownloadmanager.com"
+      },
+      {
+        "rank": 8,
+        "name": "pingdotgg/t3code",
+        "stars": "★64.7k, +805 today",
+        "desc": "From the T3 team, one control surface for the coding agents already installed on your machine. It drives Claude Code, Codex, Cursor, Grok Build, OpenCode, Antigravity and fx through your own subscriptions, from a mobile app, web app or Electron desktop app. If it drifts, the code is all there to fork.",
+        "app": "https://t3.codes"
+      },
+      {
+        "rank": 9,
+        "name": "nexu-io/openmotion",
+        "stars": "★11.6k, +775 today",
+        "desc": "An open-source agentic video studio in the spirit of Claude Motion and CapCut. Upload a reference video or paste a link, and agents rebuild it as editable motion graphics on a timeline, your brand kit applied. Export MP4s sized for YouTube, Shorts, TikTok and ads. Needs Node.js 22.18 or newer.",
+        "app": "https://open-design.ai/motion/"
+      },
+      {
+        "rank": 10,
+        "name": "Ebony-Vinyl/dsh-our-free-model",
+        "stars": "★79.4k, +751 today",
+        "desc": "A plugin for the DeepSeek Harness shell: install it and the model picker fills with free frontier models like DeepSeek V4.1 Flash and Kimi K3, no login or key needed. Free lanes come straight from OpenCode's Zen and Kilo AI's public gateways, re-pulled every refresh. A local OpenAI-compatible relay port lets other tools call the same models, and usage stats stay on the machine.",
+        "app": ""
+      }
+    ]
+  },
+  {
+    "id": "2026-11-17",
+    "label": "Daily Edition — Tuesday, November 17, 2026",
+    "headline": "1,900 Stars in One Day: Superpowers' 319K-Star Skills Framework Takes the Crown — Today's 10 Open-Source Breakouts",
+    "html": "<p>I'll be honest: I did not expect the biggest project on today's board to be a skills framework with 319,000 stars. But Tuesday, November 17, 2026 is the day the agent wave stopped being about the agents themselves and started being about what you teach them — half of today's ten are skills, frameworks for skills, or tools that grade skills.</p>\n\n    <p>Univer is still right there, holding on after yesterday's coronation, and the rest of the board splits between familiar giants and two brand-new arrivals: an 82-skill bug hunter and NVIDIA's own skill evaluator. Here's the ten.</p>\n\n    <p><strong>1. obra/superpowers (★319.0k, +1.9K today)</strong> — An agentic skills framework and software development methodology that turns Claude Code into a disciplined partner: brainstorming that reads the project before asking questions, spec-writing, test-driven development, debugging. Three hundred nineteen thousand stars, and it just added another 1,900 in a day. When the biggest gainer on GitHub is a set of instructions for your agent, the skills layer isn't a side story anymore — it's the story.</p>\n\n    <p><strong>2. dream-num/univer (★28.7k, +1.8K today)</strong> — The open-source office SDK is still the fastest-rising new idea on the board, a day after taking the crown: spreadsheets, docs, calculation and collaboration you drop into your own product, so people and AI agents can edit real files together. Google Docs as a building block, not a destination — and the stars keep coming.</p>\n\n    <p><strong>3. morluto/rea (★465.3k, +1.6K today)</strong> — Point your agent at any app and learn how it works. It inspects native binaries through Hopper or Ghidra, JavaScript and Electron apps, .NET assemblies, and websites, then explains how a feature works — with the evidence, and the limits, behind each conclusion. The analysis runs locally. Four hundred sixty-five thousand stars, and it's still gaining 1,600 a day. At this point it's not a trend, it's a landmark.</p>\n\n    <p><strong>4. ag-ui-protocol/ag-ui (★19.8k, +1.4K today)</strong> — An open, event-based protocol that plugs AI agents into frontend apps, so the agent and the interface finally speak the same language. Third straight day on the board, still pulling 1,400 stars a day. The plumbing every agent app ends up needing — and the board keeps agreeing.</p>\n\n    <p><strong>5. janestreet/agent_skills (★9.8k, +1,128 today)</strong> — Jane Street's first public skill collection, built around the shared SKILL.md format. It ships one skill, socratic-tutor, which turns a language model into a strict personal tutor: it runs a diagnostic, draws a skill map from level 0 to 5, asks one question at a time, schedules spaced review and ends with an assessment. Copy the directory into your agent's skills folder. When a firm that guarded its edge for decades keeps publishing, I keep paying attention.</p>\n\n    <p><strong>6. deepseek-ai/chat-demo (★4.4k, +1,066 today)</strong> — DeepSeek's static chat demo, powered by its API — a chat front end you can run yourself, pointed at DeepSeek's models. Four days old and already past four thousand stars. It's the simplest proof the harness era is real: the chat window is now a commodity, and the value moved to what you plug into it.</p>\n\n    <p><strong>7. elementalsouls/Claude-BugHunter (★8.2k, +1,000 today)</strong> — A Claude Code skill bundle for bug hunting and external red-team work: 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity and infrastructure attack matrices. The number-one repo on GitHub Trending this morning, and the freshest face on today's board. Your agent, taught to think like an attacker before the real ones show up.</p>\n\n    <p><strong>8. alibaba/open-code-review (★53.4k, +951 today)</strong> — Alibaba's internal AI code review tool, now open source — back on the board after a day off. Deterministic pipelines plus an LLM agent write precise line-level comments, backed by a built-in multi-language ruleset. This is the review process a company of Alibaba's size actually trusts, free to run yourself.</p>\n\n    <p><strong>9. huamidev/GestaltX (★8.0k, +901 today)</strong> — A MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, and backups. The one pick today that has nothing to do with agents — and that's exactly why it stands out. Eight thousand stars in eight days for a tool that lets you reshape your own phone. The board isn't all agents, all the time, and the exceptions keep proving it.</p>\n\n    <p><strong>10. NVIDIA/SkillEvaluator (★3.2k, +873 today)</strong> — NVIDIA's multi-tier framework for evaluating AI agent skills and plugins, with quality gates, semantic overlap detection, and synthetic evaluation dataset generation. Brand new, and the timing tells you everything: the day skills become the layer everyone builds on is the day someone has to grade them. NVIDIA just volunteered.</p>\n\n    <p>That's your ten. My pick? Claude-BugHunter — because an agent that can find the hole before a stranger does is the one I'd trust with real code, and 82 skills built on real disclosed reports is a curriculum, not a demo. If I've got an hour free, I'm installing superpowers first — 319,000 stars don't lie about what the community actually uses.</p>\n\n    <p>Tomorrow's edition lands Wednesday morning. The question I'm watching: Univer has held the top two days running — does the office SDK make it three, or does the skills wave crown a new name? And SkillEvaluator is brand new with NVIDIA behind it — if it doubles overnight, the grading era starts fast. Come back and see.</p>\n\n    <p class=\"footnote\">Star counts reflect the November 17 morning trending snapshot (Trendoday, Daily Diff, Trendar, GitDiscover — Nov 17, 2026).</p>",
+    "projects": [
+      {
+        "rank": 1,
+        "name": "obra/superpowers",
+        "stars": "★319.0k, +1.9K today",
+        "desc": "An agentic skills framework and software development methodology that turns Claude Code into a disciplined partner: brainstorming that reads the project before asking questions, spec-writing, test-driven development, debugging. Three hundred nineteen thousand stars, and it just added another 1,900 in a day. When the biggest gainer on GitHub is a set of instructions for your agent, the skills layer isn't a side story anymore — it's the story.",
+        "app": ""
+      },
+      {
+        "rank": 2,
+        "name": "dream-num/univer",
+        "stars": "★28.7k, +1.8K today",
+        "desc": "The open-source office SDK is still the fastest-rising new idea on the board, a day after taking the crown: spreadsheets, docs, calculation and collaboration you drop into your own product, so people and AI agents can edit real files together. Google Docs as a building block, not a destination — and the stars keep coming.",
+        "app": "https://univer.ai"
+      },
+      {
+        "rank": 3,
+        "name": "morluto/rea",
+        "stars": "★465.3k, +1.6K today",
+        "desc": "Point your agent at any app and learn how it works. It inspects native binaries through Hopper or Ghidra, JavaScript and Electron apps, .NET assemblies, and websites, then explains how a feature works — with the evidence, and the limits, behind each conclusion. The analysis runs locally. Four hundred sixty-five thousand stars, and it's still gaining 1,600 a day. At this point it's not a trend, it's a landmark.",
+        "app": "https://rea.tools"
+      },
+      {
+        "rank": 4,
+        "name": "ag-ui-protocol/ag-ui",
+        "stars": "★19.8k, +1.4K today",
+        "desc": "An open, event-based protocol that plugs AI agents into frontend apps, so the agent and the interface finally speak the same language. Third straight day on the board, still pulling 1,400 stars a day. The plumbing every agent app ends up needing — and the board keeps agreeing.",
+        "app": "https://ag-ui.com"
+      },
+      {
+        "rank": 5,
+        "name": "janestreet/agent_skills",
+        "stars": "★9.8k, +1,128 today",
+        "desc": "Jane Street's first public skill collection, built around the shared SKILL.md format. It ships one skill, socratic-tutor, which turns a language model into a strict personal tutor: it runs a diagnostic, draws a skill map from level 0 to 5, asks one question at a time, schedules spaced review and ends with an assessment. Copy the directory into your agent's skills folder. When a firm that guarded its edge for decades keeps publishing, I keep paying attention.",
+        "app": ""
+      },
+      {
+        "rank": 6,
+        "name": "deepseek-ai/chat-demo",
+        "stars": "★4.4k, +1,066 today",
+        "desc": "DeepSeek's static chat demo, powered by its API — a chat front end you can run yourself, pointed at DeepSeek's models. Four days old and already past four thousand stars. It's the simplest proof the harness era is real: the chat window is now a commodity, and the value moved to what you plug into it.",
+        "app": "https://deepseek-ai.github.io/chat-demo/"
+      },
+      {
+        "rank": 7,
+        "name": "elementalsouls/Claude-BugHunter",
+        "stars": "★8.2k, +1,000 today",
+        "desc": "A Claude Code skill bundle for bug hunting and external red-team work: 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity and infrastructure attack matrices. The number-one repo on GitHub Trending this morning, and the freshest face on today's board. Your agent, taught to think like an attacker before the real ones show up.",
+        "app": "https://elementalsouls.github.io/Claude-BugHunter"
+      },
+      {
+        "rank": 8,
+        "name": "alibaba/open-code-review",
+        "stars": "★53.4k, +951 today",
+        "desc": "Alibaba's internal AI code review tool, now open source — back on the board after a day off. Deterministic pipelines plus an LLM agent write precise line-level comments, backed by a built-in multi-language ruleset. This is the review process a company of Alibaba's size actually trusts, free to run yourself.",
+        "app": "https://open-codereview.ai"
+      },
+      {
+        "rank": 9,
+        "name": "huamidev/GestaltX",
+        "stars": "★8.0k, +901 today",
+        "desc": "A MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, and backups. The one pick today that has nothing to do with agents — and that's exactly why it stands out. Eight thousand stars in eight days for a tool that lets you reshape your own phone. The board isn't all agents, all the time, and the exceptions keep proving it.",
+        "app": ""
+      },
+      {
+        "rank": 10,
+        "name": "NVIDIA/SkillEvaluator",
+        "stars": "★3.2k, +873 today",
+        "desc": "NVIDIA's multi-tier framework for evaluating AI agent skills and plugins, with quality gates, semantic overlap detection, and synthetic evaluation dataset generation. Brand new, and the timing tells you everything: the day skills become the layer everyone builds on is the day someone has to grade them. NVIDIA just volunteered.",
+        "app": "https://docs.nvidia.com/skills/skillevaluator/"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-16",
     "label": "Daily Edition — Monday, November 16, 2026",
     "headline": "1,878 Stars in One Day: Univer's AI Office Dethrones Chrome's Web Guide — Today's 10 Open-Source Breakouts",
     "html": "<p>Chrome's web guide finally lost its grip. After two straight days at number one, Google's modern-web-guidance got knocked off the top overnight — and the project that did it isn't another agent skill or a coding wrapper. It's an office suite you can build into your own apps. I'll be honest, I didn't see that one coming.</p>\n\n    <p>Monday, November 16, 2026 is the day the chart stopped being all agents, all the time. An office SDK took the crown, Google's own research team showed up with agents that write research papers, and a Chinese history atlas muscled onto a board full of code tools. Here's the ten.</p>\n\n    <p><strong>1. dream-num/univer (★27.5k, +1,878 today)</strong> — An open-source office SDK: spreadsheets, docs, calculation and collaboration you drop into your own product, so people and AI agents can edit real files together. Google Docs as a building block, not a destination.</p>\n\n    <p><strong>2. GoogleChrome/modern-web-guidance-src (★7.7k, +1,219 today)</strong> — The source repo behind Chrome's skill pack for keeping your coding agent on the modern web: curated guides to view transitions, container queries, the Popover API and built-in AI. Still pulling 1,200 stars a day.</p>\n\n    <p><strong>3. ChromeDevTools/chrome-devtools-mcp (★57.4k, +837 today)</strong> — Chrome DevTools wired straight into your coding agent through MCP and the command line. Your agent pokes at a live page, reads the console, and fixes what it actually sees instead of guessing.</p>\n\n    <p><strong>4. ag-ui-protocol/ag-ui (★18.4k, +790 today)</strong> — An open, event-based protocol that plugs AI agents into frontend apps, so the agent and the interface finally speak the same language. The plumbing every agent app ends up needing.</p>\n\n    <p><strong>5. backnotprop/plannotator (★12.2k, +689 today)</strong> — A local review space where you shape, annotate and approve your agent's plans and diffs before anything ships, then send the feedback back with one click. Back for a second day — the human-in-the-loop idea keeps rolling.</p>\n\n    <p><strong>6. Tencent/LoopForge (★2.2k, +423 today)</strong> — Tencent's self-hosted workflows for coding-agent delivery: orchestrate CodeBuddy, Codex and Claude Code into one pipeline you run yourself. Small star count, big ambition.</p>\n\n    <p><strong>7. kajisho5/ffmpeg-skill (★6.1k, +331 today)</strong> — A local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server. Cut, captions, reframe, loudness, platform exports — no cloud, no API keys.</p>\n\n    <p><strong>8. google-research/paper-orchestra (★1.0k, +306 today)</strong> — Google Research's multi-agent framework for writing AI research papers: agents that draft, review and revise together. Only 1,012 stars, but agents writing the papers about agents is too good to ignore.</p>\n\n    <p><strong>9. DeanChensj/jiangshan-map (★6.5k, +285 today)</strong> — An interactive atlas of Chinese history, 403 BCE to today: 18 dynasties, 198 territory snapshots, place genealogy and poetry routes. Proof the chart isn't all agents — beautiful, obsessive craft still pulls 285 stars a day.</p>\n\n    <p><strong>10. google-labs-code/stitch-skills (★9.6k, +247 today)</strong> — Google Labs' agent skills for the Stitch MCP server: the design-to-code pipeline, taught to your agent. Works with Antigravity, Gemini CLI, Claude Code and Cursor. The skills wave rolls on.</p>\n\n    <p>That's your ten. My pick? Univer — because the biggest gain on the board is also the most practical one: an office your agents can actually work in beats another chat window every time. If I've got an hour free, I'm installing ffmpeg-skill first — 42 tools that let my agent cut video like it cuts code, no cloud, no API key, no monthly bill.</p>\n\n    <p>Tomorrow's edition lands Tuesday morning. The question I'm watching: Cloudflare just open-sourced Kitesurf, its browser for AI agents, and Qwen dropped a 2.4-trillion-parameter model with a million-token window. If either one catches fire overnight, the crown moves again. Come back and see.</p>\n\n    <p class=\"footnote\">Star counts reflect the November 16 morning trending snapshot (GitHub Trending, Daily Diff, dev.to — Nov 16, 2026).</p>",

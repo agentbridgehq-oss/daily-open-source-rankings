@@ -26,4 +26,6 @@ window.VIDEOS = [
   { src: '/assets/vid-pool-2026-11-14.mp4', poster: '/assets/vid-pool-2026-11-14-poster.jpg', title: 'The modern web, taught to your agent', sub: 'GoogleChrome/modern-web-guidance — #1 on Nov 14.' },
   { src: '/assets/vid-pool-2026-11-15.mp4', poster: '/assets/vid-pool-2026-11-15-poster.jpg', title: 'Your agent, finally fluent in the modern web', sub: 'GoogleChrome/modern-web-guidance — #1 on Nov 15.' },
   { src: '/assets/vid-pool-2026-11-16.mp4', poster: '/assets/vid-pool-2026-11-16-poster.jpg', title: 'Your own AI office', sub: 'dream-num/univer — #1 on Nov 16.' },
+  { src: '/assets/vid-pool-2026-11-17.mp4', poster: '/assets/vid-pool-2026-11-17-poster.jpg', title: 'Skills that teach your agent new tricks', sub: 'obra/superpowers — #1 on Nov 17.' },
+  { src: '/assets/vid-pool-2026-11-18.mp4', poster: '/assets/vid-pool-2026-11-18-poster.jpg', title: 'A battery widget that beat the agents', sub: 'krisgfx9/Wireless-Device-Battery-Monitor — #1 on Nov 18.' },
 ];
