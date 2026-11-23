@@ -8,22 +8,22 @@ The **Top 10 open-source projects most likely to blow up**, ranked and written u
 2. **Create a free account** — https://daily-open-source-rankings.netlify.app/join.html — name + email, and the Top 10 lands in your inbox every morning. Free forever, no card, unsubscribe anytime.
 3. **Grab the free Starter Stack** — 12 free tools that replace paid subscriptions, on the Stan store: https://stan.store/hunter82
 
-## Latest Top 10 — November 18, 2026
+## Latest Top 10 — November 22, 2026
 
-**Your mouse dying with zero warning?** A tiny free tool shows the battery of your mouse, keyboard, headphones and controller right on your screen — 1,900 people grabbed it in a single day. It's #1 in today's Top 10 free AI tools, every one explained in plain English: what it does, why you'd want it, no tech degree needed.
+**GTA 6 isn't even out yet — and someone already claims they rebuilt it for your PC.** Nearly 10,000 people grabbed it in two days. Is it real? Treat it as a promise, not a fact — but it's the wildest thing on today's list. It's #1 in today's Top 10 free AI tools, every one explained in plain English: what it does, why you'd want it, no tech degree needed.
 
 Read the full list free: https://daily-open-source-rankings.netlify.app — a new Top 10 lands every morning. Subscribe on the site and it comes to your inbox.
 
-1. **Wireless Device Battery Monitor** — see your mouse, keyboard, headset and controller battery at a glance (+1,914 in one day) — https://github.com/krisgfx9/Wireless-Device-Battery-Monitor
-2. **rea** — point your AI helper at any app and learn how it works (+1,346) — https://github.com/morluto/rea
-3. **ARTEX** — a self-hosted AI security tester that probes your own systems for weaknesses (+1,293) — https://github.com/BaaRai/ARTEX
-4. **Claude BugHunter** — 83 AI skills that hunt bugs in your code for you (+1,252) — https://github.com/elementalsouls/Claude-BugHunter
-5. **rust-anything** — records what your program does, then checks every step for mistakes (+1,046) — https://github.com/erkamyaman/rust-anything
-6. **paper-orchestra** — a team of AI agents from Google that turns rough ideas into finished research (+976) — https://github.com/google-research/paper-orchestra
-7. **misterdownloadmanager** — a clean, from-scratch download manager in Rust (+817) — https://github.com/anefzaoui/misterdownloadmanager
-8. **t3code** — one control panel for all the AI coding helpers on your machine (+805) — https://github.com/pingdotgg/t3code
-9. **openmotion** — an open-source AI video studio: upload a clip, describe the edit, get a video back (+775) — https://github.com/nexu-io/openmotion
-10. **dsh-our-free-model** — a plug-in that fills the DeepSeek app with free AI models to pick from (+751) — https://github.com/Ebony-Vinyl/dsh-our-free-model
+1. **Leonida** — a project that claims to rebuild GTA 6 for the PC, before the game is even out (+5,800 in two days) — https://github.com/ItsNotRexed/Leonida
+2. **Claude BugHunter** — 82 AI skills that hunt security holes in your code before hackers do (+1,803) — https://github.com/elementalsouls/Claude-BugHunter
+3. **t3code** — one remote control for every AI coding helper on your computer (+1,800) — https://github.com/pingdotgg/t3code
+4. **misterdownloadmanager** — a clean download manager built from scratch, no junk bundled in (+1,700) — https://github.com/anefzaoui/misterdownloadmanager
+5. **ARTEX** — a self-hosted AI security tester that probes your own systems for weaknesses (+1,500) — https://github.com/BaaRai/ARTEX
+6. **rea** — point your AI helper at any app and it explains how the app works (+1,300) — https://github.com/morluto/rea
+7. **firecrawl** — search, scrape and pull data from 550+ sources through one connection (+1,006) — https://github.com/firecrawl/firecrawl
+8. **superpowers** — a step-by-step method that turns your AI coding helper into a disciplined partner (+883) — https://github.com/obra/superpowers
+9. **CLI-Anything** — turns any software into something your AI helper can actually use (+769) — https://github.com/HKUDS/CLI-Anything
+10. **autoclip** — paste one link and it cuts a long video into short clips with captions, ready to post (+683) — https://github.com/zhouxiaoka/autoclip
 
 Want the step-by-step system for using AI to make money? That's on the Stan store: https://stan.store/hunter82
 
