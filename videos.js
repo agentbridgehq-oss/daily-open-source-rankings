@@ -28,4 +28,6 @@ window.VIDEOS = [
   { src: '/assets/vid-pool-2026-11-16.mp4', poster: '/assets/vid-pool-2026-11-16-poster.jpg', title: 'Your own AI office', sub: 'dream-num/univer — #1 on Nov 16.' },
   { src: '/assets/vid-pool-2026-11-17.mp4', poster: '/assets/vid-pool-2026-11-17-poster.jpg', title: 'Skills that teach your agent new tricks', sub: 'obra/superpowers — #1 on Nov 17.' },
   { src: '/assets/vid-pool-2026-11-18.mp4', poster: '/assets/vid-pool-2026-11-18-poster.jpg', title: 'A battery widget that beat the agents', sub: 'krisgfx9/Wireless-Device-Battery-Monitor — #1 on Nov 18.' },
+  { src: '/assets/vid-pool-2026-11-22.mp4', poster: '/assets/vid-pool-2026-11-22-poster.jpg', title: 'A classic game, rebuilt in gold code', sub: 'ItsNotRexed/Leonida — #1 on Nov 22.' },
+  { src: '/assets/vid-pool-2026-11-23.mp4', poster: '/assets/vid-pool-2026-11-23-poster.jpg', title: 'GTA 6, rebuilt in gold code', sub: 'ItsNotRexed/Leonida — #1 on Nov 23.' },
 ];

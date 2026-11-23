@@ -1,6 +1,162 @@
 [
   {
     "id": "today",
+    "label": "Daily Edition — Monday, November 23, 2026",
+    "headline": "19,340 Stars and Counting: Leonida's GTA 6 Rebuild Just Doubled Overnight — Today's 10 Open-Source Breakouts",
+    "html": "<p>I'll be honest: I checked Leonida's star count twice this morning because I thought the page was glitching. Yesterday it sat at 9,848 stars. This morning it's 19,340 — it nearly doubled overnight, and the game still doesn't boot. That's the top of today's board, and honestly, the rest of the list is the more useful half.</p>\n\n    <p>Monday, November 23, 2026 is the day the chart split cleanly in two. One half is the GTA 6 recompilation circus. The other half is the agent wave getting sharper — a Rust tool that only ports the slow 5% of your app, a Chrome extension that kills Google's QR dance, and a whole fleet of coding agents you can run from your phone. Here's the ten.</p>\n\n    <p><strong>1. ItsNotRexed/Leonida (★19,340, +8,400 today)</strong> — The repo says it's a native PC recompilation of the Xbox version of Grand Theft Auto 6, built from your own copy: the console CPU is x86-64 like a PC, so game code runs natively while the system software is reimplemented, and all 26,503 RDNA2 shaders are translated to SPIR-V for Vulkan. The game does not boot yet, and the repo holds no game files. It nearly doubled overnight anyway — watch it, don't install it blind.</p>\n\n    <p><strong>2. pingdotgg/t3code (★73,607, +2,800 today)</strong> — One control surface for the coding agents already on your machine: Claude Code, Codex, Cursor, Grok Build, OpenCode, Antigravity and fx, driven from a phone, a web app or an Electron desktop app through your own subscriptions. Fourth appearance here, still pulling 2,800 a day.</p>\n\n    <p><strong>3. elementalsouls/Claude-BugHunter (★18,877, +1,800 today)</strong> — A Claude Code skill bundle for bug hunting and red-team work: 82 skills, 15 slash commands, 681 disclosed-report patterns across 24 vulnerability classes. Fifth day on the board and still gaining 1,800 a day — the skills wave has a security wing now.</p>\n\n    <p><strong>4. EL4CTEO/fast-anything (★2,682, +1,600 today)</strong> — Don't rewrite it in Rust — rewrite the 5% that's slow. It profiles your Python, Node or Ruby app, ranks the hot functions, hands just those to your coding agent as one-function Rust crates, then replays up to 500 recorded real calls against the release build to prove the port behaves the same. One marked block swaps the result in or out, byte for byte reversible.</p>\n\n    <p><strong>5. morluto/rea (★474,930, +1,400 today)</strong> — Point your agent at any app and learn how it works. It inspects native binaries through Hopper or Ghidra, JavaScript and Electron apps, .NET assemblies and websites, then explains how a feature works — with the evidence, and the limits, behind each conclusion. The analysis runs locally. Still gaining 1,400 a day at nearly 475,000 stars.</p>\n\n    <p><strong>6. havenicec/google-qr-sms-helper (★3,949, +1,400 today)</strong> — A Chrome extension that switches Google's mandatory QR code verification back to standard 6-digit SMS verification, via an iPad Mini profile and an RPC fallback. No AI, no agents — just a small fix for a daily annoyance thousands of people hit every week.</p>\n\n    <p><strong>7. stablyai/orca (★133,891, +1,300 today)</strong> — Run a fleet of coding agents with your own subscription: Claude Code, Codex, Grok and more, each in its own worktree, on desktop, mobile or a remote runtime. Bots take requests from Slack, Linear or GitHub and come back with a tested pull request. YC-backed, 133,891 stars, still adding 1,300 a day.</p>\n\n    <p><strong>8. BaaRai/ARTEX (★16,982, +1,100 today)</strong> — A self-hosted, LLM-driven penetration testing platform, in an English mirror of the upstream project. A planner splits the goal into intents, workers run real tools, and every finding carries the captured request and response as evidence. Scope rules and approval gates keep autonomous actions inside authorized boundaries.</p>\n\n    <p><strong>9. Ebony-Vinyl/dsh-our-free-model (★84,682, +1,100 today)</strong> — A plugin for the DeepSeek Harness shell: install it and the model picker fills with free frontier models like DeepSeek V4.1 Flash and Kimi K3, no login or key needed. Free lanes come straight from OpenCode's Zen and Kilo AI's public gateways, re-pulled every refresh. A local OpenAI-compatible relay port lets other tools call the same models, and usage stats stay on the machine.</p>\n\n    <p><strong>10. XiaoYouChR/Ghost-Downloader-3 (★15,893, +1,000 today)</strong> — The only downloader you need, says the repo — a kitchen-sink downloader that keeps climbing: 15,893 stars and 1,000 more today. Download managers never stop being useful, and this one is collecting the crowd that outgrew the rest.</p>\n\n    <p>That's your ten. My pick? fast-anything — because a one-command experiment you can fully undo beats a rewrite you can't, and 500 recorded calls is proof, not a promise. If I've got an hour free, I'm installing orca first — a fleet of agents with a phone in my pocket is the setup the whole board is pointing at.</p>\n\n    <p>Tomorrow's edition lands Tuesday morning. The question I'm watching: Leonida is either the fastest-rising repo of the month or a claim that stalls the moment someone asks it to boot — either way, the next 24 hours will tell. And Claude-BugHunter is 1,123 stars from 20,000; if it crosses that line, the security wing of the skills wave takes the crown for real. Come back and see.</p>\n\n    <p class=\"footnote\">Star counts reflect the November 23 morning trending snapshot (GitHub Trending, Git of Anton, ghtrends.dev, OSS Today, GitDiscover — Nov 23, 2026).</p>",
+    "projects": [
+      {
+        "rank": 1,
+        "name": "ItsNotRexed/Leonida",
+        "stars": "★19,340, +8,400 today",
+        "desc": "The repo says it's a native PC recompilation of the Xbox version of Grand Theft Auto 6, built from your own copy: the console CPU is x86-64 like a PC, so game code runs natively while the system software is reimplemented, and all 26,503 RDNA2 shaders are translated to SPIR-V for Vulkan. The game does not boot yet, and the repo holds no game files. It nearly doubled overnight anyway — watch it, don't install it blind.",
+        "app": ""
+      },
+      {
+        "rank": 2,
+        "name": "pingdotgg/t3code",
+        "stars": "★73,607, +2,800 today",
+        "desc": "One control surface for the coding agents already on your machine: Claude Code, Codex, Cursor, Grok Build, OpenCode, Antigravity and fx, driven from a phone, a web app or an Electron desktop app through your own subscriptions. Fourth appearance here, still pulling 2,800 a day.",
+        "app": "https://t3.codes"
+      },
+      {
+        "rank": 3,
+        "name": "elementalsouls/Claude-BugHunter",
+        "stars": "★18,877, +1,800 today",
+        "desc": "A Claude Code skill bundle for bug hunting and red-team work: 82 skills, 15 slash commands, 681 disclosed-report patterns across 24 vulnerability classes. Fifth day on the board and still gaining 1,800 a day — the skills wave has a security wing now.",
+        "app": "https://elementalsouls.github.io/Claude-BugHunter"
+      },
+      {
+        "rank": 4,
+        "name": "EL4CTEO/fast-anything",
+        "stars": "★2,682, +1,600 today",
+        "desc": "Don't rewrite it in Rust — rewrite the 5% that's slow. It profiles your Python, Node or Ruby app, ranks the hot functions, hands just those to your coding agent as one-function Rust crates, then replays up to 500 recorded real calls against the release build to prove the port behaves the same. One marked block swaps the result in or out, byte for byte reversible.",
+        "app": "https://www.npmjs.com/package/@el4cteo/fast-anything"
+      },
+      {
+        "rank": 5,
+        "name": "morluto/rea",
+        "stars": "★474,930, +1,400 today",
+        "desc": "Point your agent at any app and learn how it works. It inspects native binaries through Hopper or Ghidra, JavaScript and Electron apps, .NET assemblies and websites, then explains how a feature works — with the evidence, and the limits, behind each conclusion. The analysis runs locally. Still gaining 1,400 a day at nearly 475,000 stars.",
+        "app": "https://rea.tools"
+      },
+      {
+        "rank": 6,
+        "name": "havenicec/google-qr-sms-helper",
+        "stars": "★3,949, +1,400 today",
+        "desc": "A Chrome extension that switches Google's mandatory QR code verification back to standard 6-digit SMS verification, via an iPad Mini profile and an RPC fallback. No AI, no agents — just a small fix for a daily annoyance thousands of people hit every week.",
+        "app": ""
+      },
+      {
+        "rank": 7,
+        "name": "stablyai/orca",
+        "stars": "★133,891, +1,300 today",
+        "desc": "Run a fleet of coding agents with your own subscription: Claude Code, Codex, Grok and more, each in its own worktree, on desktop, mobile or a remote runtime. Bots take requests from Slack, Linear or GitHub and come back with a tested pull request. YC-backed, 133,891 stars, still adding 1,300 a day.",
+        "app": "https://orca.dev"
+      },
+      {
+        "rank": 8,
+        "name": "BaaRai/ARTEX",
+        "stars": "★16,982, +1,100 today",
+        "desc": "A self-hosted, LLM-driven penetration testing platform, in an English mirror of the upstream project. A planner splits the goal into intents, workers run real tools, and every finding carries the captured request and response as evidence. Scope rules and approval gates keep autonomous actions inside authorized boundaries.",
+        "app": ""
+      },
+      {
+        "rank": 9,
+        "name": "Ebony-Vinyl/dsh-our-free-model",
+        "stars": "★84,682, +1,100 today",
+        "desc": "A plugin for the DeepSeek Harness shell: install it and the model picker fills with free frontier models like DeepSeek V4.1 Flash and Kimi K3, no login or key needed. Free lanes come straight from OpenCode's Zen and Kilo AI's public gateways, re-pulled every refresh. A local OpenAI-compatible relay port lets other tools call the same models, and usage stats stay on the machine.",
+        "app": ""
+      },
+      {
+        "rank": 10,
+        "name": "XiaoYouChR/Ghost-Downloader-3",
+        "stars": "★15,893, +1,000 today",
+        "desc": "The only downloader you need, says the repo — a kitchen-sink downloader that keeps climbing: 15,893 stars and 1,000 more today. Download managers never stop being useful, and this one is collecting the crowd that outgrew the rest.",
+        "app": "https://gd.xychr.com/"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-22",
+    "label": "Daily Edition — Sunday, November 22, 2026",
+    "headline": "9,848 Stars in Two Days: A GTA 6 Recompilation Claim Just Took Over GitHub — Today's 10 Open-Source Breakouts",
+    "html": "<p>I'll be honest: I did not expect the biggest project on GitHub this morning to be a repo that claims to recompile Grand Theft Auto 6 for the PC. It appeared two days ago, it's already past 9,800 stars, and the claim itself is doing most of the work — GTA 6 isn't out yet, so treat the pitch as a promise, not a fact. But the number is real, and it's the wildest thing on a board that otherwise belongs to the skills wave.</p>\n\n    <p>Sunday, November 22, 2026 is the day the chart split in two. The agent tools kept climbing — the bug hunter, the control panel, the security tester — and the internet's weird side showed up at the top anyway. Here's the ten.</p>\n\n    <p><strong>1. ItsNotRexed/Leonida (★9,848, +5,800 today)</strong> — The repo says it's a native PC recompilation of the Xbox version of Grand Theft Auto 6. Two days old, nearly ten thousand stars, and a claim that deserves a raised eyebrow until someone shows the thing running. Recompilation projects are real — the community has done it for older games — but this one is moving faster than the evidence. Watch it, don't install it blind.</p>\n\n    <p><strong>2. elementalsouls/Claude-BugHunter (★16,863, +1,803 today)</strong> — A Claude Code skill bundle for bug hunting and red-team work: 82 skills, 15 slash commands, 681 disclosed-report patterns across 24 vulnerability classes. Fourth day on the board and still gaining 1,800 a day. The skills wave has a security wing now, and it's not slowing down.</p>\n\n    <p><strong>3. pingdotgg/t3code (★70,595, +1,800 today)</strong> — One control surface for the coding agents already on your machine: Claude Code, Codex, Cursor, Grok Build, OpenCode, Antigravity and fx, driven from a phone, a web app or an Electron desktop app through your own subscriptions. Third appearance here, still pulling 1,800 a day.</p>\n\n    <p><strong>4. anefzaoui/misterdownloadmanager (★16,307, +1,700 today)</strong> — The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac and Linux. No upload, no bundled junk — a from-scratch answer to the download managers everyone loved and then learned to distrust.</p>\n\n    <p><strong>5. BaaRai/ARTEX (★15,650, +1,500 today)</strong> — A self-hosted, LLM-driven penetration testing platform, in an English mirror of the upstream project. A planner splits the goal into intents, workers run real tools, and every finding carries the captured request and response as evidence. Scope rules and approval gates keep autonomous actions inside authorized boundaries.</p>\n\n    <p><strong>6. morluto/rea (★473,455, +1,300 today)</strong> — Point your agent at any app and learn how it works. It inspects native binaries through Hopper or Ghidra, JavaScript and Electron apps, .NET assemblies and websites, then explains how a feature works — with the evidence, and the limits, behind each conclusion. The analysis runs locally. Still gaining 1,300 a day at nearly half a million stars.</p>\n\n    <p><strong>7. firecrawl/firecrawl (★206,584, +1,006 today)</strong> — Knowledge infrastructure to make your agents smarter: search, scrape and access 550+ data providers through one API. Back on the board after a break — the data layer underneath the agent wave keeps paying rent.</p>\n\n    <p><strong>8. obra/superpowers (★323,816, +883 today)</strong> — An agentic skills framework and software development methodology that turns Claude Code into a disciplined partner: brainstorming that reads the project first, spec-writing, test-driven development, debugging. Three hundred twenty-three thousand stars and still adding nearly 900 a day.</p>\n\n    <p><strong>9. HKUDS/CLI-Anything (★62,417, +769 today)</strong> — Make any software agent-native through a CLI. It generates CLIs from existing software so agents like Claude Code and Cursor can use it, and CLI-Hub lets you browse and install community-built ones. The quiet plumbing behind the agent wave — every tool your agent can't call is a tool it can't use.</p>\n\n    <p><strong>10. zhouxiaoka/autoclip (★13,165, +683 today)</strong> — Open-source AI video clipping: paste one link and it cuts a long podcast, interview or course into short clips with subtitles, covers and posting copy, sized for TikTok, Reels and Shorts. The one pick today that speaks to creators, not coders — and 683 stars a day says plenty of them are listening.</p>\n\n    <p>That's your ten. My pick? Claude-BugHunter — because an agent that can find the hole before a stranger does is the one I'd trust with real code, and 82 skills built on real disclosed reports is a curriculum, not a demo. If I've got an hour free, I'm installing CLI-Anything first — every tool my agent can't reach is a job it can't do.</p>\n\n    <p>Tomorrow's edition lands Monday morning. The question I'm watching: Leonida is either the fastest-rising repo of the month or a claim that falls apart on contact with reality — either way, the next 24 hours will tell. And Claude-BugHunter has held the top three for four days running; if it takes the crown, the security wing of the skills wave becomes the story. Come back and see.</p>\n\n    <p class=\"footnote\">Star counts reflect the November 22 morning trending snapshot (Git of Anton, OSS Today, Trendoday, OctoCounts, Daily Diff — Nov 22, 2026).</p>",
+    "projects": [
+      {
+        "rank": 1,
+        "name": "ItsNotRexed/Leonida",
+        "stars": "★9,848, +5,800 today",
+        "desc": "The repo says it's a native PC recompilation of the Xbox version of Grand Theft Auto 6. Two days old, nearly ten thousand stars, and a claim that deserves a raised eyebrow until someone shows the thing running. Recompilation projects are real — the community has done it for older games — but this one is moving faster than the evidence. Watch it, don't install it blind.",
+        "app": ""
+      },
+      {
+        "rank": 2,
+        "name": "elementalsouls/Claude-BugHunter",
+        "stars": "★16,863, +1,803 today",
+        "desc": "A Claude Code skill bundle for bug hunting and red-team work: 82 skills, 15 slash commands, 681 disclosed-report patterns across 24 vulnerability classes. Fourth day on the board and still gaining 1,800 a day. The skills wave has a security wing now, and it's not slowing down.",
+        "app": "https://elementalsouls.github.io/Claude-BugHunter"
+      },
+      {
+        "rank": 3,
+        "name": "pingdotgg/t3code",
+        "stars": "★70,595, +1,800 today",
+        "desc": "One control surface for the coding agents already on your machine: Claude Code, Codex, Cursor, Grok Build, OpenCode, Antigravity and fx, driven from a phone, a web app or an Electron desktop app through your own subscriptions. Third appearance here, still pulling 1,800 a day.",
+        "app": "https://t3.codes"
+      },
+      {
+        "rank": 4,
+        "name": "anefzaoui/misterdownloadmanager",
+        "stars": "★16,307, +1,700 today",
+        "desc": "The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac and Linux. No upload, no bundled junk — a from-scratch answer to the download managers everyone loved and then learned to distrust.",
+        "app": "https://misterdownloadmanager.com"
+      },
+      {
+        "rank": 5,
+        "name": "BaaRai/ARTEX",
+        "stars": "★15,650, +1,500 today",
+        "desc": "A self-hosted, LLM-driven penetration testing platform, in an English mirror of the upstream project. A planner splits the goal into intents, workers run real tools, and every finding carries the captured request and response as evidence. Scope rules and approval gates keep autonomous actions inside authorized boundaries.",
+        "app": ""
+      },
+      {
+        "rank": 6,
+        "name": "morluto/rea",
+        "stars": "★473,455, +1,300 today",
+        "desc": "Point your agent at any app and learn how it works. It inspects native binaries through Hopper or Ghidra, JavaScript and Electron apps, .NET assemblies and websites, then explains how a feature works — with the evidence, and the limits, behind each conclusion. The analysis runs locally. Still gaining 1,300 a day at nearly half a million stars.",
+        "app": "https://rea.tools"
+      },
+      {
+        "rank": 7,
+        "name": "firecrawl/firecrawl",
+        "stars": "★206,584, +1,006 today",
+        "desc": "Knowledge infrastructure to make your agents smarter: search, scrape and access 550+ data providers through one API. Back on the board after a break — the data layer underneath the agent wave keeps paying rent.",
+        "app": "https://firecrawl.dev"
+      },
+      {
+        "rank": 8,
+        "name": "obra/superpowers",
+        "stars": "★323,816, +883 today",
+        "desc": "An agentic skills framework and software development methodology that turns Claude Code into a disciplined partner: brainstorming that reads the project first, spec-writing, test-driven development, debugging. Three hundred twenty-three thousand stars and still adding nearly 900 a day.",
+        "app": ""
+      },
+      {
+        "rank": 9,
+        "name": "HKUDS/CLI-Anything",
+        "stars": "★62,417, +769 today",
+        "desc": "Make any software agent-native through a CLI. It generates CLIs from existing software so agents like Claude Code and Cursor can use it, and CLI-Hub lets you browse and install community-built ones. The quiet plumbing behind the agent wave — every tool your agent can't call is a tool it can't use.",
+        "app": "https://clianything.cc/"
+      },
+      {
+        "rank": 10,
+        "name": "zhouxiaoka/autoclip",
+        "stars": "★13,165, +683 today",
+        "desc": "Open-source AI video clipping: paste one link and it cuts a long podcast, interview or course into short clips with subtitles, covers and posting copy, sized for TikTok, Reels and Shorts. The one pick today that speaks to creators, not coders — and 683 stars a day says plenty of them are listening.",
+        "app": "https://zhouxiaoka.github.io/autoclip_intro/"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-18",
     "label": "Daily Edition — Wednesday, November 18, 2026",
     "headline": "1,914 Stars in One Day: A 350 KB Battery Widget Just Beat Every AI Agent on GitHub — Today's 10 Open-Source Breakouts",
     "html": "<p>I'll be honest: I had a different number two lined up this morning, and GitHub pulled it before I finished my coffee. A script that automated claiming a 12-month Google One AI Ultra trial picked up 1,372 stars overnight — then vanished, 404 by the time I went to verify it. That's the pace of this list now: a project can blow up and disappear in a single morning.</p>\n\n    <p>Wednesday, November 18, 2026 is the day the chart stopped being all agents, all the time. The new number one is a 350 KB tray app that shows your mouse battery on the Windows taskbar. No AI, no agents, no skills — just a tiny utility that fixes a daily annoyance better than the vendor software does. And right behind it, security tooling took two of the next three spots. Here's the ten.</p>\n\n    <p><strong>1. krisgfx9/Wireless-Device-Battery-Monitor (★3,505, +1,914 today)</strong> — A tiny C++ tray app that puts wireless mouse, headset, keyboard and controller battery levels on the Windows taskbar: about 350 KB, 2 MB of RAM, no service, no admin rights. It talks to devices directly, so Logitech, Razer, Corsair, PlayStation and Xbox controllers and Galaxy Buds show up without opening G HUB, Synapse or iCUE. Red means 15 percent, a bolt means charging. The most-starred project on GitHub today doesn't use AI at all — it just kills bloatware.</p>\n\n    <p><strong>2. morluto/rea (★467.4k, +1,346 today)</strong> — Point your agent at any app and learn how it works. It inspects native binaries through Hopper or Ghidra, JavaScript and Electron apps, .NET assemblies and websites, then explains how a feature works — with the evidence, and the limits, behind each conclusion. The analysis runs locally. Third day on the board, still gaining 1,300 a day. At this point it's not a trend, it's a landmark.</p>\n\n    <p><strong>3. BaaRai/ARTEX (★7,902, +1,293 today)</strong> — A self-hosted, LLM-driven penetration testing platform, in an English mirror of the upstream project. A planner splits the goal into intents, workers run real tools, and every finding carries the captured request and response as evidence. Scope rules and approval gates keep autonomous actions inside authorized boundaries. One Go binary embeds the Next.js UI over PostgreSQL.</p>\n\n    <p><strong>4. elementalsouls/Claude-BugHunter (★10.4k, +1,252 today)</strong> — A Claude Code skill bundle for authorized bug hunting and red-team work: 83 skills that load by topic when you describe the target. Fifty-eight hunt skills turn 681 disclosed HackerOne reports into detection patterns across 24 vulnerability classes. Second day on the board, still climbing.</p>\n\n    <p><strong>5. erkamyaman/rust-anything (★2,451, +1,046 today)</strong> — Records what your TypeScript, Python, C, Go, Ruby or Java program does, then checks each piece of the Rust rewrite against that recording, until the app is pure Rust. Your agent writes the Rust; the tool replays the recording and flags mismatches. Benchmarks show 3 to 20 times faster runs with identical results. A port stops being a leap of faith.</p>\n\n    <p><strong>6. google-research/paper-orchestra (★3,687, +976 today)</strong> — A multi-agent framework from Google Cloud AI Research that turns raw ideas, experiment logs and notes into submission-ready LaTeX manuscripts. Specialized agents cover outlining, literature synthesis, section writing, refinement and plots. Agents writing the papers about agents — the loop keeps closing.</p>\n\n    <p><strong>7. anefzaoui/misterdownloadmanager (★12.7k, +817 today)</strong> — The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac and Linux. No upload, no bundled junk — a from-scratch answer to the download managers everyone loved and then learned to distrust.</p>\n\n    <p><strong>8. pingdotgg/t3code (★64.7k, +805 today)</strong> — From the T3 team, one control surface for the coding agents already installed on your machine. It drives Claude Code, Codex, Cursor, Grok Build, OpenCode, Antigravity and fx through your own subscriptions, from a mobile app, web app or Electron desktop app. If it drifts, the code is all there to fork.</p>\n\n    <p><strong>9. nexu-io/openmotion (★11.6k, +775 today)</strong> — An open-source agentic video studio in the spirit of Claude Motion and CapCut. Upload a reference video or paste a link, and agents rebuild it as editable motion graphics on a timeline, your brand kit applied. Export MP4s sized for YouTube, Shorts, TikTok and ads. Needs Node.js 22.18 or newer.</p>\n\n    <p><strong>10. Ebony-Vinyl/dsh-our-free-model (★79.4k, +751 today)</strong> — A plugin for the DeepSeek Harness shell: install it and the model picker fills with free frontier models like DeepSeek V4.1 Flash and Kimi K3, no login or key needed. Free lanes come straight from OpenCode's Zen and Kilo AI's public gateways, re-pulled every refresh. A local OpenAI-compatible relay port lets other tools call the same models, and usage stats stay on the machine.</p>\n\n    <p>So what does today actually tell us? The agent wave isn't slowing down — eight of the ten are agent tools or skills. But the two that aren't tell the other half of the story: people still want small tools that respect their machine, and researchers still want the writing done for them. The battery widget at number one is the most honest signal on the board. Tomorrow's edition lands at the same time — and if today is any guide, at least one of these ten will be gone by then, and something none of us have heard of will be sitting at the top. I'll be watching.</p>\n\n    <p class=\"footnote\">Star counts reflect the November 18 morning trending snapshot (ghtrends.dev, gitofanton, Daily Diff, GitDiscover — Nov 18, 2026).</p>",
